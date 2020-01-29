@@ -167,6 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6412204159596150279}
+  - component: {fileID: 5783878079509342612}
   m_Layer: 0
   m_Name: Card_Display
   m_TagString: Untagged
@@ -192,6 +193,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5783878079509342612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6412204159596150272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29c49188bef35c41b906aba0ef30a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Card: {fileID: 0}
+  Name: {fileID: 0}
+  Cost: {fileID: 0}
+  Description: {fileID: 0}
+  Art: {fileID: 0}
 --- !u!1 &6412204159780709169
 GameObject:
   m_ObjectHideFlags: 0
