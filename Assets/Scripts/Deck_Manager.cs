@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Deck_Manager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private int Deck_Size;
+    private GameObject[,] Deck;
 
-    // Update is called once per frame
-    void Update()
+    public void Shuffle_Deck()
     {
-        
+
     }
 }
