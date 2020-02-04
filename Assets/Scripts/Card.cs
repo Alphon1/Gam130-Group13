@@ -5,9 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")]
 public class Card : ScriptableObject
 {
-    public string Name;
-    public string Description;
-    public Sprite Art;
-    public int Cost;
+    [SerializeField]
+    private string Name;
+    [SerializeField]
+    private string Description;
+    [SerializeField]
+    private Sprite Art;
+    [SerializeField]
+    private int Cost;
 
 }
