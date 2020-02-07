@@ -26,4 +26,20 @@ public class Deck_Manager : MonoBehaviour
         Deck = Discard;
         Shuffle_Deck();
     }
+
+    public void Add_Card(Card Added_Card)
+    {
+        if (Deck.Count < 15)
+        {
+            Deck.Add(Added_Card);
+        }
+    }
+
+    public void Remove_Card(Card Removed_Card)
+    {
+        if (Deck.Count > 0 || Deck.Contains(Removed_Card))
+        {
+            Deck.Remove(Removed_Card);
+        }
+    }
 }
