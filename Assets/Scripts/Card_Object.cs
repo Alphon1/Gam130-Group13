@@ -13,5 +13,7 @@ public class Card : ScriptableObject
     private Sprite Art;
     [SerializeField]
     private int Cost;
+    [SerializeField]
+    private string Function;
 
 }
