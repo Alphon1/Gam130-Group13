@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: a7e051eccf2ddb548975111fc028dcf6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Boundary
+    100002: Door_Face_1
+    100004: Door_Frame_1
+    100006: Door_Frame_2_group1
+    100008: group1_Door_Face_2
+    100010: group2_pasted__pCube10
+    100012: group2_pasted__pCube11
+    100014: group2_pasted__pCube12
+    100016: group2_pasted__pCube13
+    100018: group2_pasted__pCube14
+    100020: group2_pasted__pCube15
+    100022: group2_pasted__pCube9
+    100024: group2_pasted__pCylinder1
+    100026: group3_pasted__pCube1
+    100028: group3_pasted__pCube2
+    100030: group3_pasted__pCube4
+    100032: group3_pasted__pCube5
+    100034: pasted__pCube6_group3
+    100036: pasted__pCube8_group2
+    100038: //RootNode
+    400000: Boundary
+    400002: Door_Face_1
+    400004: Door_Frame_1
+    400006: Door_Frame_2_group1
+    400008: group1_Door_Face_2
+    400010: group2_pasted__pCube10
+    400012: group2_pasted__pCube11
+    400014: group2_pasted__pCube12
+    400016: group2_pasted__pCube13
+    400018: group2_pasted__pCube14
+    400020: group2_pasted__pCube15
+    400022: group2_pasted__pCube9
+    400024: group2_pasted__pCylinder1
+    400026: group3_pasted__pCube1
+    400028: group3_pasted__pCube2
+    400030: group3_pasted__pCube4
+    400032: group3_pasted__pCube5
+    400034: pasted__pCube6_group3
+    400036: pasted__pCube8_group2
+    400038: //RootNode
+    2100000: BoundaryMat
+    2100002: Door_Face_1Mat
+    2100004: Door_Frame_1Mat
+    2100006: Door_Frame_2_group1Mat
+    2100008: group1_Door_Face_2Mat
+    2100010: group2_pasted__pCube10Mat
+    2100012: group2_pasted__pCube11Mat
+    2100014: group2_pasted__pCube12Mat
+    2100016: group2_pasted__pCube13Mat
+    2100018: group2_pasted__pCube14Mat
+    2100020: group2_pasted__pCube15Mat
+    2100022: group2_pasted__pCube9Mat
+    2100024: group2_pasted__pCylinder1Mat
+    2100026: group3_pasted__pCube1Mat
+    2100028: group3_pasted__pCube2Mat
+    2100030: group3_pasted__pCube4Mat
+    2100032: group3_pasted__pCube5Mat
+    2100034: pasted__pCube6_group3Mat
+    2100036: pasted__pCube8_group2Mat
+    2300000: Boundary
+    2300002: Door_Face_1
+    2300004: Door_Frame_1
+    2300006: Door_Frame_2_group1
+    2300008: group1_Door_Face_2
+    2300010: group2_pasted__pCube10
+    2300012: group2_pasted__pCube11
+    2300014: group2_pasted__pCube12
+    2300016: group2_pasted__pCube13
+    2300018: group2_pasted__pCube14
+    2300020: group2_pasted__pCube15
+    2300022: group2_pasted__pCube9
+    2300024: group2_pasted__pCylinder1
+    2300026: group3_pasted__pCube1
+    2300028: group3_pasted__pCube2
+    2300030: group3_pasted__pCube4
+    2300032: group3_pasted__pCube5
+    2300034: pasted__pCube6_group3
+    2300036: pasted__pCube8_group2
+    3300000: Boundary
+    3300002: Door_Face_1
+    3300004: Door_Frame_1
+    3300006: Door_Frame_2_group1
+    3300008: group1_Door_Face_2
+    3300010: group2_pasted__pCube10
+    3300012: group2_pasted__pCube11
+    3300014: group2_pasted__pCube12
+    3300016: group2_pasted__pCube13
+    3300018: group2_pasted__pCube14
+    3300020: group2_pasted__pCube15
+    3300022: group2_pasted__pCube9
+    3300024: group2_pasted__pCylinder1
+    3300026: group3_pasted__pCube1
+    3300028: group3_pasted__pCube2
+    3300030: group3_pasted__pCube4
+    3300032: group3_pasted__pCube5
+    3300034: pasted__pCube6_group3
+    3300036: pasted__pCube8_group2
+    4300000: Boundary
+    4300002: Door_Face_1
+    4300004: Door_Frame_1
+    4300006: Door_Frame_2_group1
+    4300008: group1_Door_Face_2
+    4300010: group2_pasted__pCube10
+    4300012: group2_pasted__pCube11
+    4300014: group2_pasted__pCube12
+    4300016: group2_pasted__pCube13
+    4300018: group2_pasted__pCube14
+    4300020: group2_pasted__pCube15
+    4300022: group2_pasted__pCube9
+    4300024: group2_pasted__pCylinder1
+    4300026: group3_pasted__pCube1
+    4300028: group3_pasted__pCube2
+    4300030: group3_pasted__pCube4
+    4300032: group3_pasted__pCube5
+    4300034: pasted__pCube6_group3
+    4300036: pasted__pCube8_group2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
