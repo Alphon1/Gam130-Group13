@@ -5,8 +5,9 @@ using UnityEngine;
 public class Deck_Manager : MonoBehaviour
 {
     [SerializeField]
-    private List<Card> Deck;
-    private List<Card> Discard;
+    protected List<Card> Deck;
+    protected List<Card> Discard;
+    protected List<Card> Exhaust;
     private int Random_Position;
     private Card Temp_Card;
 
