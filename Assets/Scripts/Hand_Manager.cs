@@ -20,15 +20,7 @@ public class Hand_Manager : Deck_Manager
         }
         
     }
-    public void Play_Card(Card Played_Card)
-    {
-        switch (Played_Card.Function)
-        {
-            case "Draw":
-                Draw_Card(1);
-            break;
-        }
-    }
+
 
     public void Reset_Hand()
     {

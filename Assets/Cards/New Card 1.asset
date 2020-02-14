@@ -10,10 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Sustain
+  m_Name: New Card 1
   m_EditorClassIdentifier: Assembly-CSharp::Card
-  Name: Sustain
-  Description: Gain 10 health. Lose it at the start of your next turn
+  Name: Terry
+  Description: The most magical man in existance
   Art: {fileID: 0}
-  Cost: 2
-  Function: Sustain
+  Cost: 0
+  Function1: god
+  Function1_value: 0
+  Function2: 
+  Function2_value: 0
+  Function3: 
+  Function3_value: 0
+  Function4: 
+  Function4_value: 0
+  Function5: 
+  Function5_value: 0
