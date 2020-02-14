@@ -25,6 +25,7 @@ public class Deck_Manager : MonoBehaviour
     public void Deck_Out()
     {
         Deck = Discard;
+        Discard = null;
         Shuffle_Deck();
     }
 
