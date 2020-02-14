@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: New Card 2
+  m_EditorClassIdentifier: Assembly-CSharp::Card
+  Name: Bad card
+  Description: testing this shit
+  Art: {fileID: 0}
+  Cost: 2
+  Function1: yes
+  Function1_value: 5
+  Function2: 
+  Function2_value: 0
+  Function3: 
+  Function3_value: 0
+  Function4: 
+  Function4_value: 0
+  Function5: 
+  Function5_value: 0
