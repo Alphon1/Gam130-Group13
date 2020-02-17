@@ -26,46 +26,16 @@ public class Hand_Manager : Deck_Manager
 
     public void Play_Card(Card Played_Card)
     {
-            switch (Played_Card.Function1)
+        for (int i = 0; i < Played_Card.Functions.Count; i++)
+            switch (Played_Card.Functions[i])
             {
                     case "Draw":
-                        Draw_Card(Played_Card.Function1_value);
+                        Draw_Card(Played_Card.Function_Values[i]);
                         break;
                     case null:
                     goto End_Play;
             }
-            switch (Played_Card.Function2)
-            {
-                case "Draw":
-                    Draw_Card(Played_Card.Function2_value);
-                    break;
-                case null:              
-                goto End_Play;
-        }
-            switch (Played_Card.Function3)
-            {
-                case "Draw":
-                    Draw_Card(Played_Card.Function3_value);
-                    break;
-                case null:   
-                goto End_Play;
-        }
-            switch (Played_Card.Function4)
-            {
-                case "Draw":
-                    Draw_Card(Played_Card.Function4_value);
-                    break;
-                case null:
-                goto End_Play;
-            }
-            switch (Played_Card.Function5)
-            {
-                case "Draw":
-                    Draw_Card(Played_Card.Function5_value);
-                    break;
-                case null:
-                goto End_Play;
-            }
+
     End_Play:;
         Hand.Remove(Played_Card);
         Discard.Add(Played_Card);

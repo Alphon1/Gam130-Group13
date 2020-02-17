@@ -8,14 +8,7 @@ public class Card : ScriptableObject
     public string Description;
     public Sprite Art;
     public int Cost;
-    public string Function1;
-    public int Function1_value;
-    public string Function2;
-    public int Function2_value;
-    public string Function3;
-    public int Function3_value;
-    public string Function4;
-    public int Function4_value;
-    public string Function5;
-    public int Function5_value;
+    public List<string> Functions;
+    public List<int> Function_Values;
+   
 }
