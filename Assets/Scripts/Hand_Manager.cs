@@ -26,6 +26,7 @@ public class Hand_Manager : Deck_Manager
 
     public void Play_Card(Card Played_Card)
     {
+
         if (Player_Manager.Can_Play(Played_Card.Cost))
         {
             for (int i = 0; i < Played_Card.Functions.Count; i++)
@@ -35,14 +36,40 @@ public class Hand_Manager : Deck_Manager
                         Draw_Card(Played_Card.Function_Values[i]);
                         break;
                     case "Damage":
-                        Target.Enemy_Manager.Damage(Played_Card.Function_Values[i]);
+                        Target_Select();
+                        if (Target.tag == "Enemy")
+                        {
+                            Target.Enemy_Manager.Damage(Played_Card.Function_Values[i]);
+                            break;
+                        }
+                        else
+                        {
+                            goto Not_Played;
+                        }
                     case null:
-                        goto End_Play;
+                        break;
                 }
-
-            End_Play:;
             Hand.Remove(Played_Card);
             Discard.Add(Played_Card);
+            Player_Manager.Energy_Loss(Played_Card.Cost);
+        Not_Played:;
+        }
+    }
+
+    IEnumerator Target_Select()
+    {
+        while (true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                RaycastHit Hit = new RaycastHit();
+                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out Hit))
+                {
+                    Target = Hit.transform.gameObject;
+                }
+                yield break;
+            }
+            yield return null;
         }
     }
 

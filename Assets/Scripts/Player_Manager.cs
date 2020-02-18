@@ -27,13 +27,16 @@ public class Player_Manager : MonoBehaviour
     {
         if (Energy - Energy_Cost >= 0)
         {
-            Energy -= Energy_Cost;
             return (true);
         }
         else
         {
             return (false);
         }
-        
+    }
+
+    public void Energy_Loss(int Energy_Lost)
+    {
+        Energy -= Energy_Lost;
     }
 }
