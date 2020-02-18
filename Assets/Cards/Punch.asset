@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: New Card
-  m_EditorClassIdentifier: Assembly-CSharp::Card
-  Name: 
-  Description: 
+  m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
+  m_Name: Punch
+  m_EditorClassIdentifier: 
+  Name: Punch
+  Description: Deal 5 damage
   Art: {fileID: 0}
-  Cost: 0
-  Functions: []
-  Function_Values: 
+  Cost: 2
+  Functions:
+  - Damage
+  Function_Values: 05000000
