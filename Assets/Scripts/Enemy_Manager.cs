@@ -12,6 +12,7 @@ public class Enemy_Manager : MonoBehaviour
     [SerializeField]
     private int Healing;
     private int Decision;
+    private GameObject Player;
 
     private void Awake()
     {
@@ -23,7 +24,7 @@ public class Enemy_Manager : MonoBehaviour
         switch (Decision)
         {
             case 0:
-                Player_Manager.Damage(Damage_Dealt);
+                Player.GetComponent<Player_Manager>().Damage(Damage_Dealt);
                 break;
             case 1:
                 Health += Healing;

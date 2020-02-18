@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player_Manager : MonoBehaviour
 {
-    public static Player_Manager Instance;
     [SerializeField]
     private int Max_Health;
     private int Health;
@@ -16,7 +15,6 @@ public class Player_Manager : MonoBehaviour
     {
         Energy = Max_Energy;
         Health = Max_Health;
-        Instance = this;
     }
     public void Damage(int Damage_Taking)
     {

@@ -7,6 +7,12 @@ public class Hand_Manager : Deck_Manager
     [SerializeField]
     private List<Card> Hand;
     private GameObject Target;
+    private GameObject Player;
+
+    private void Awake()
+    {
+        Player = GameObject.FindWithTag("Player");
+    }
 
     public void Draw_Card(int cards_drawn)
     {
@@ -27,7 +33,7 @@ public class Hand_Manager : Deck_Manager
     public void Play_Card(Card Played_Card)
     {
 
-        if (Player_Manager.Can_Play(Played_Card.Cost))
+        if (Player.GetComponent<Player_Manager>().Can_Play(Played_Card.Cost))
         {
             for (int i = 0; i < Played_Card.Functions.Count; i++)
                 switch (Played_Card.Functions[i])
@@ -39,7 +45,7 @@ public class Hand_Manager : Deck_Manager
                         Target_Select();
                         if (Target.tag == "Enemy")
                         {
-                            Target.Enemy_Manager.Damage(Played_Card.Function_Values[i]);
+                            Target.GetComponent<Enemy_Manager>().Damage(Played_Card.Function_Values[i]);
                             break;
                         }
                         else
@@ -51,7 +57,7 @@ public class Hand_Manager : Deck_Manager
                 }
             Hand.Remove(Played_Card);
             Discard.Add(Played_Card);
-            Player_Manager.Energy_Loss(Played_Card.Cost);
+            Player.GetComponent<Player_Manager>().Energy_Loss(Played_Card.Cost);
         Not_Played:;
         }
     }
