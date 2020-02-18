@@ -6,6 +6,7 @@ public class Hand_Manager : Deck_Manager
 {
     [SerializeField]
     private List<Card> Hand;
+    private GameObject Target;
 
     public void Draw_Card(int cards_drawn)
     {
@@ -20,26 +21,29 @@ public class Hand_Manager : Deck_Manager
             {
                 Deck_Out();
             }
-        }
-        
+        }      
     }
 
     public void Play_Card(Card Played_Card)
     {
-        for (int i = 0; i < Played_Card.Functions.Count; i++)
-            switch (Played_Card.Functions[i])
-            {
+        if (Player_Manager.Can_Play(Played_Card.Cost))
+        {
+            for (int i = 0; i < Played_Card.Functions.Count; i++)
+                switch (Played_Card.Functions[i])
+                {
                     case "Draw":
                         Draw_Card(Played_Card.Function_Values[i]);
                         break;
+                    case "Damage":
+                        Target.Enemy_Manager.Damage(Played_Card.Function_Values[i]);
                     case null:
-                    goto End_Play;
-            }
+                        goto End_Play;
+                }
 
-    End_Play:;
-        Hand.Remove(Played_Card);
-        Discard.Add(Played_Card);
-        
+            End_Play:;
+            Hand.Remove(Played_Card);
+            Discard.Add(Played_Card);
+        }
     }
 
 

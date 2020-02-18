@@ -1,0 +1,39 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player_Manager : MonoBehaviour
+{
+    public static Player_Manager Instance;
+    [SerializeField]
+    private int Max_Health;
+    private int Health;
+    [SerializeField]
+    private int Max_Energy;
+    private int Energy;
+
+    private void Awake()
+    {
+        Energy = Max_Energy;
+        Health = Max_Health;
+        Instance = this;
+    }
+    public void Damage(int Damage_Taking)
+    {
+        Health -= Damage_Taking;
+    }
+
+    public bool Can_Play(int Energy_Cost)
+    {
+        if (Energy - Energy_Cost >= 0)
+        {
+            Energy -= Energy_Cost;
+            return (true);
+        }
+        else
+        {
+            return (false);
+        }
+        
+    }
+}
