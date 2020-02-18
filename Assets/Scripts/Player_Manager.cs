@@ -16,9 +16,13 @@ public class Player_Manager : MonoBehaviour
         Energy = Max_Energy;
         Health = Max_Health;
     }
-    public void Damage(int Damage_Taking)
+    public void Health_Change(int Health_Removed)
     {
-        Health -= Damage_Taking;
+        Health -= Health_Removed;
+        if (Health > Max_Health)
+        {
+            Health = Max_Health;
+        }
     }
 
     public bool Can_Play(int Energy_Cost)
@@ -33,8 +37,12 @@ public class Player_Manager : MonoBehaviour
         }
     }
 
-    public void Energy_Loss(int Energy_Lost)
+    public void Energy_Change(int Energy_Removed)
     {
-        Energy -= Energy_Lost;
+        Energy -= Energy_Removed;
+        if (Energy > Max_Energy)
+        {
+            Energy = Max_Energy;
+        }
     }
 }

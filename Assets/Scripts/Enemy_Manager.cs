@@ -24,7 +24,7 @@ public class Enemy_Manager : MonoBehaviour
         switch (Decision)
         {
             case 0:
-                Player.GetComponent<Player_Manager>().Damage(Damage_Dealt);
+                Player.GetComponent<Player_Manager>().Health_Change(Damage_Dealt);
                 break;
             case 1:
                 Health += Healing;
@@ -39,5 +39,18 @@ public class Enemy_Manager : MonoBehaviour
     public void Damage(int Damage_Taking)
     {
         Health -= Damage_Taking;
+    }
+
+    public bool Lethal_Damage(int Damage_Taking)
+    {
+        Damage(Damage_Taking);
+        if (Health <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

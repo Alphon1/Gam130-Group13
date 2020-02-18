@@ -12,17 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: New Card
   m_EditorClassIdentifier: Assembly-CSharp::Card
-  Name: Name
-  Description: Description
+  Name: 
+  Description: 
   Art: {fileID: 0}
-  Cost: 3
-  Function1: draw
-  Function1_value: 0
-  Function2: 
-  Function2_value: 0
-  Function3: 
-  Function3_value: 0
-  Function4: 
-  Function4_value: 0
-  Function5: 
-  Function5_value: 0
+  Cost: 0
+  Functions: []
+  Function_Values: 
