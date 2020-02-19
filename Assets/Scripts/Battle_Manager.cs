@@ -23,11 +23,12 @@ public class Battle_Manager : MonoBehaviour
                 GameObject.FindGameObjectsWithTag("Enemy")[i].GetComponent<Enemy_Manager>().Enemy_Turn();
             }
             Turn_Switch();
-            Player.GetComponent<Hand_Manager>().Reset_Hand();
         }
         else
         {
             Is_Player_Turn = true;
+            Player.GetComponent<Hand_Manager>().Reset_Hand();
+            Player.GetComponent<Player_Manager>().Reset_Energy();
         }
     }
 

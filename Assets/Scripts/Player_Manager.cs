@@ -42,7 +42,12 @@ public class Player_Manager : MonoBehaviour
         Energy -= Energy_Removed;
         if (Energy > Max_Energy)
         {
-            Energy = Max_Energy;
+            Reset_Energy();
         }
+    }
+
+    public void Reset_Energy()
+    {
+        Energy = Max_Energy;
     }
 }
