@@ -33,7 +33,7 @@ public class Hand_Manager : Deck_Manager
     }
     public void Play_Card(Card Played_Card)
     {
-        if (Turn_Order.GetComponent<Battle_Manager>().Is_Player_Turn == true)
+        if (Turn_Order.GetComponent<Battle_Manager>().Player_Control() == true)
         {
             if (Player.GetComponent<Player_Manager>().Can_Play(Played_Card.Cost))
             {

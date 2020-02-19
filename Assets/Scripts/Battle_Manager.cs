@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Battle_Manager : MonoBehaviour
 {
-    public bool Is_Player_Turn;
+    private bool Is_Player_Turn;
     private GameObject Player;
 
     void Start()
@@ -36,6 +36,18 @@ public class Battle_Manager : MonoBehaviour
         if (Is_Player_Turn)
         {
             Turn_Switch();
+        }
+    }
+
+    public bool Player_Control()
+    {
+        if (Is_Player_Turn)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
