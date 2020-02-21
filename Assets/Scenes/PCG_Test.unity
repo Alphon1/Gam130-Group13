@@ -289,17 +289,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1824299130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a1099d7f4757ae4589a383b69a12211, type: 3}
+  m_Script: {fileID: 11500000, guid: 26cda31c490dac14bb1f8e28bb693330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startRoomPrefab: {fileID: 2236696260145204988, guid: 681d8bd83aecac54b846cd8082fc682f,
+  startRoomPrefab: {fileID: 3431246914056991530, guid: a76436308d15fb54f910d945b6b31d26,
     type: 3}
-  endRoomPrefab: {fileID: 2877804362412082816, guid: 70e96e391d7157746b25a815d9a85f84,
+  endRoomPrefab: {fileID: 5593739359184649167, guid: 7f9906f6c30a1ed4b8fcae4c7b5198a2,
     type: 3}
   roomPrefabs:
-  - {fileID: 9170243661577186362, guid: f4063505a17f2fd4393dc6433bfb1693, type: 3}
-  - {fileID: 4296840590074568618, guid: ad6df349a54efad4a904250e17bfaf75, type: 3}
-  iterationRange: {x: 3, y: 8}
+  - {fileID: 8459496441974129832, guid: 3a945fd491a5a1a44af7c3027a500e21, type: 3}
+  - {fileID: 2855884486160243548, guid: 25d4b14892ad14742b1e4989717b82db, type: 3}
+  - {fileID: 8262402577898682332, guid: 5d2d26a531a02c74fa3b807ac76c6419, type: 3}
+  iterationRange: {x: 5, y: 10}
 --- !u!4 &1824299132
 Transform:
   m_ObjectHideFlags: 0
