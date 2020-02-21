@@ -1,6 +1,5 @@
 # Gam130-Group13
 
-Starring:
 ## Programmers
 * Alex Williamson
 * Josh Thompson
