@@ -24,6 +24,10 @@ public class Hand_Manager : Deck_Manager
             {
                 Hand.Add(Deck[0]);
                 Deck.RemoveAt(0);
+                for (int j = 0; j < GameObject.FindGameObjectsWithTag("Card").Length; j++)
+                {
+                    GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display(Hand);
+                }
             }
             if (Deck.Count == 0)
             {
@@ -102,6 +106,10 @@ public class Hand_Manager : Deck_Manager
                 }
                 End_Card:;
                 Hand.Remove(Played_Card);
+                for (int j = 0; j < GameObject.FindGameObjectsWithTag("Card").Length; j++)
+                {
+                    GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display(Hand);
+                }
                 Discard.Add(Played_Card);
                 Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
                 Not_Played:;
@@ -133,6 +141,10 @@ public class Hand_Manager : Deck_Manager
         {
             Discard.Add(Hand[i]);
             Hand.RemoveAt(i);
+            for (int j = 0; j < GameObject.FindGameObjectsWithTag("Card").Length; j++)
+            {
+                GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display(Hand);
+            }
         }
         Draw_Card(5);
     }
