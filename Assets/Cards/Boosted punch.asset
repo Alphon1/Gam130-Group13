@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
-  m_Name: Throw scrap
+  m_Name: Boosted punch
   m_EditorClassIdentifier: 
-  Name: Throw scrap
+  Name: Boosted punch
   Type: Attack
-  Description: Deal 4 damage randomly split amongst all enemies
+  Description: Deal 11 damage
   Art: {fileID: 0}
-  Cost: 1
+  Cost: 4
   Functions:
   - Damage
-  Function_Values: 04000000
+  Function_Values: 0b000000
