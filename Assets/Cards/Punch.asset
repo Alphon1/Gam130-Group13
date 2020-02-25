@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Punch
   m_EditorClassIdentifier: 
   Name: Punch
+  Type: Attack
   Description: Deal 5 damage
   Art: {fileID: 0}
   Cost: 2

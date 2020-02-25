@@ -5,10 +5,10 @@ using UnityEngine;
 public class Card : ScriptableObject
 {
     public string Name;
+    public string Type;
     public string Description;
     public Sprite Art;
     public int Cost;
     public List<string> Functions;
     public List<int> Function_Values;
-   
 }
