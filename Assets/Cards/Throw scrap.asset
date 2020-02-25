@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
   m_Name: Throw scrap
   m_EditorClassIdentifier: 
-  Name: 
-  Type: 
-  Description: 
+  Name: Throw scrap
+  Type: Attack
+  Description: Deal 4 damage randomly split amongst all enemies
   Art: {fileID: 0}
-  Cost: 0
-  Functions: []
-  Function_Values: 
+  Cost: 1
+  Functions:
+  - 4
+  Function_Values: 04000000

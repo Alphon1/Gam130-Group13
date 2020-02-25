@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
   m_Name: Birthday party
   m_EditorClassIdentifier: 
-  Name: 
-  Type: 
-  Description: 
+  Name: Birthday party
+  Type: Attack
+  Description: Deal 9 damage. If this kills the enemy, draw 2 cards
   Art: {fileID: 0}
-  Cost: 0
-  Functions: []
-  Function_Values: 
+  Cost: 4
+  Functions:
+  - Lethal Damage
+  - Draw
+  Function_Values: 0900000002000000

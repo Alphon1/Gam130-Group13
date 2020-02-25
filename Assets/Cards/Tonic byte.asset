@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
   m_Name: Tonic byte
   m_EditorClassIdentifier: 
-  Name: 
-  Type: 
-  Description: 
+  Name: Tonic byte
+  Type: Defence
+  Description: Heal 5 hp
   Art: {fileID: 0}
-  Cost: 0
-  Functions: []
-  Function_Values: 
+  Cost: 2
+  Functions:
+  - Heal
+  Function_Values: 05000000

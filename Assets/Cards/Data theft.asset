@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
   m_Name: Data theft
   m_EditorClassIdentifier: 
-  Name: 
-  Type: 
-  Description: 
+  Name: Data theft
+  Type: Attack
+  Description: Deal 12 damage and draw a card
   Art: {fileID: 0}
-  Cost: 0
-  Functions: []
-  Function_Values: 
+  Cost: 5
+  Functions:
+  - Damage
+  - Draw
+  Function_Values: 0c00000001000000

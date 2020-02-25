@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
-  m_Name: A chink in the system
+  m_Name: Last rites
   m_EditorClassIdentifier: 
-  Name: A chink in the system
+  Name: Last rites
   Type: Attack
-  Description: Deal 6 damage and heal 4 hp
+  Description: Deal 15 damage. Take damage equal to the enemy's remaining health
   Art: {fileID: 0}
   Cost: 3
   Functions:
   - Damage
-  - Heal
-  Function_Values: 0600000004000000
+  Function_Values: 0f000000

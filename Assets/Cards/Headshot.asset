@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
   m_Name: Headshot
   m_EditorClassIdentifier: 
-  Name: 
-  Type: 
-  Description: 
+  Name: Headshot
+  Type: Attack
+  Description: Deal 14 damage
   Art: {fileID: 0}
-  Cost: 0
-  Functions: []
-  Function_Values: 
+  Cost: 5
+  Functions:
+  - Damage
+  Function_Values: 0e000000

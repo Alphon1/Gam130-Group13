@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
-  m_Name: New Card
+  m_Name: Satisfying stomp
   m_EditorClassIdentifier: 
-  Name: 
-  Type: 
-  Description: 
+  Name: Satisfying stomp
+  Type: Attack
+  Description: Deal 11 damage and gain 1 energy
   Art: {fileID: 0}
-  Cost: 0
-  Functions: []
-  Function_Values: 
+  Cost: 4
+  Functions:
+  - Damage
+  - Add energy
+  Function_Values: 0b00000001000000
