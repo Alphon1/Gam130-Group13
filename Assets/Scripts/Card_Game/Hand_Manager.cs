@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hand_Manager : Deck_Manager
+public class Hand_Manager : MonoBehaviour
 {
     [SerializeField]
-    protected List<Card> Hand;
+    private List<Card> Hand;
     private GameObject Target;
-    protected GameObject Player;
+    private GameObject Player;
     private GameObject Turn_Order;
     private bool Card_Enabled;
+    private GameObject Deck_Object;
     
 
     public void Enable_Cards()
@@ -26,7 +27,7 @@ public class Hand_Manager : Deck_Manager
                 GameObject.FindGameObjectsWithTag("Card")[i].SetActive(false);
                 Card_Enabled = false;
             }
-            GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Update_Display(Card_Enabled);
+            GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Update_Display(Card_Enabled, Hand);
         }
     }
 
@@ -34,6 +35,8 @@ public class Hand_Manager : Deck_Manager
     {
         Player = GameObject.FindWithTag("Player");
         Turn_Order = GameObject.FindWithTag("Battle_Manager");
+        Deck_Object = GameObject.FindWithTag("Deck");
+        Draw_Card(5);
     }
 
     public void Draw_Card(int Cards_Drawn)
@@ -42,14 +45,14 @@ public class Hand_Manager : Deck_Manager
         {
             if (Hand.Count < 11)
             {
-                Hand.Add(Deck[0]);
-                Deck.RemoveAt(0);
-                Display_Deck_Count();
+                Hand.Add(Deck_Object.GetComponent<Deck_Manager>().Deck[0]);
+                Deck_Object.GetComponent<Deck_Manager>().Deck.RemoveAt(0);
+                Deck_Object.GetComponent<Deck_Manager>().Display_Deck_Count();
                 Enable_Cards();
             }
-            if (Deck.Count == 0)
+            if (Deck_Object.GetComponent<Deck_Manager>().Deck.Count == 0)
             {
-                Deck_Out();
+                Deck_Object.GetComponent<Deck_Manager>().Deck_Out();
             }
         }      
     }
@@ -98,14 +101,14 @@ public class Hand_Manager : Deck_Manager
                                 goto Not_Played;
                             }
                         case "Shuffle Discard":
-                            for (int j = 0; j < Discard.Count; j++)
+                            for (int j = 0; j < Deck_Object.GetComponent<Deck_Manager>().Discard.Count; j++)
                             {
-                                Deck.Add(Discard[j]);
-                                Display_Deck_Count();
-                                Discard.RemoveAt(j);
-                                Display_Discard_Count();
+                                Deck_Object.GetComponent<Deck_Manager>().Deck.Add(Deck_Object.GetComponent<Deck_Manager>().Discard[j]);
+                                Deck_Object.GetComponent<Deck_Manager>().Display_Deck_Count();
+                                Deck_Object.GetComponent<Deck_Manager>().Discard.RemoveAt(j);
+                                Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
                             }
-                            Shuffle_Deck();
+                            Deck_Object.GetComponent<Deck_Manager>().Shuffle_Deck();
                             break;
                         case "Random Damage":
                             for (int j = 0; j < Played_Card.Function_Values[i]; j++)
@@ -127,7 +130,7 @@ public class Hand_Manager : Deck_Manager
                 End_Card:;
                 Hand.Remove(Played_Card);
                 Enable_Cards();
-                Discard.Add(Played_Card);
+                Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Played_Card);
                 Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
                 Not_Played:;
             }
@@ -156,8 +159,8 @@ public class Hand_Manager : Deck_Manager
     {
        for (int i = 0; i < Hand.Count; i++)
         {
-            Discard.Add(Hand[i]);
-            Display_Discard_Count();
+            Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Hand[i]);
+            Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
             Hand.RemoveAt(i);
             Enable_Cards();
         }

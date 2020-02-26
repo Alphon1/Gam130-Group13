@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Card_Values : Hand_Manager
+public class Card_Values : MonoBehaviour
 {
     private Card Displayed_Card;
     [SerializeField]
@@ -19,11 +19,11 @@ public class Card_Values : Hand_Manager
     [SerializeField]
     private Button Card_Button;
     private int Card_Number;
-
+    private GameObject Hand_Object;
    
     private void Awake()
     {
-        Player = GameObject.FindWithTag("Player");
+        Hand_Object = GameObject.FindWithTag("Hand");
         Card_Number = Get_Card_Number();
     }
 
@@ -56,7 +56,7 @@ public class Card_Values : Hand_Manager
         }
     }
 
-    public void Update_Display(bool Card_Enabled)
+    public void Update_Display(bool Card_Enabled, List<Card> Hand)
     {
         if (Card_Enabled)
         {
@@ -77,6 +77,6 @@ public class Card_Values : Hand_Manager
     public void Set_Card_Function(Card Reset_Card)
     {
         Card_Button.onClick.RemoveAllListeners();
-        Card_Button.onClick.AddListener(delegate { Play_Card(Displayed_Card); });
+        Card_Button.onClick.AddListener(delegate { Hand_Object.GetComponent<Hand_Manager>().Play_Card(Displayed_Card); });
     }
 }
