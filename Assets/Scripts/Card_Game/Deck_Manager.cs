@@ -14,7 +14,7 @@ public class Deck_Manager : MonoBehaviour
     [SerializeField]
     private Text Discard_Text;
 
-    public void Awake()
+    private void Awake()
     {
         Display_Deck_Count();
     }
