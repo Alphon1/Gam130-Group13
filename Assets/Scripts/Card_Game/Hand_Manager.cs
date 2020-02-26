@@ -7,8 +7,28 @@ public class Hand_Manager : Deck_Manager
     [SerializeField]
     protected List<Card> Hand;
     private GameObject Target;
-    private GameObject Player;
+    protected GameObject Player;
     private GameObject Turn_Order;
+    private bool Card_Enabled;
+    
+
+    public void Enable_Cards()
+    {
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Card").Length; i++)
+        {
+             if ( Hand.Count > GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Get_Card_Number())
+            {
+                GameObject.FindGameObjectsWithTag("Card")[i].SetActive(true);
+                Card_Enabled = true;
+            }
+             else
+            {
+                GameObject.FindGameObjectsWithTag("Card")[i].SetActive(false);
+                Card_Enabled = false;
+            }
+            GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Update_Display(Card_Enabled);
+        }
+    }
 
     private void Awake()
     {
@@ -25,10 +45,7 @@ public class Hand_Manager : Deck_Manager
                 Hand.Add(Deck[0]);
                 Deck.RemoveAt(0);
                 Display_Deck_Count();
-                for (int j = 0; j < GameObject.FindGameObjectsWithTag("Card").Length; j++)
-                {
-                    GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display();
-                }
+                Enable_Cards();
             }
             if (Deck.Count == 0)
             {
@@ -109,10 +126,7 @@ public class Hand_Manager : Deck_Manager
                 }
                 End_Card:;
                 Hand.Remove(Played_Card);
-                for (int j = 0; j < GameObject.FindGameObjectsWithTag("Card").Length; j++)
-                {
-                    GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display();
-                }
+                Enable_Cards();
                 Discard.Add(Played_Card);
                 Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
                 Not_Played:;
@@ -145,10 +159,7 @@ public class Hand_Manager : Deck_Manager
             Discard.Add(Hand[i]);
             Display_Discard_Count();
             Hand.RemoveAt(i);
-            for (int j = 0; j < GameObject.FindGameObjectsWithTag("Card").Length; j++)
-            {
-                GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display();
-            }
+            Enable_Cards();
         }
         Draw_Card(5);
     }

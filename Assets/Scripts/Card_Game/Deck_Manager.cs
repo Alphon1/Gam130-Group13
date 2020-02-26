@@ -31,12 +31,12 @@ public class Deck_Manager : MonoBehaviour
 
     public void Display_Deck_Count()
     {
-        gameObject.GetComponent<Text>().text = Deck.Count.ToString();
+        this.GetComponent<Text>().text = "Deck: " + Deck.Count.ToString();
     }
 
     public void Display_Discard_Count()
     {
-        Discard_Text.text = Discard.Count.ToString();
+        Discard_Text.text = "Discard: " + Discard.Count.ToString();
     }
 
     public void Deck_Out()

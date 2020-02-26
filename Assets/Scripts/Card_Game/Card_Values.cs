@@ -18,58 +18,53 @@ public class Card_Values : Hand_Manager
     private Image Artwork;
     [SerializeField]
     private Button Card_Button;
-    private GameObject Player;
     private int Card_Number;
+
+   
     private void Awake()
+    {
+        Player = GameObject.FindWithTag("Player");
+        Card_Number = Get_Card_Number();
+    }
+
+    public int Get_Card_Number()
     {
         switch (this.gameObject.name)
         {
             case "Card 1":
-                Card_Number = 0;
-                break;
+                return 0;
             case "Card 2":
-                Card_Number = 1;
-                break;
+                return 1;
             case "Card 3":
-                Card_Number = 2;
-                break;
+                return 2;
             case "Card 4":
-                Card_Number = 3;
-                break;
+                return 3;
             case "Card 5":
-                Card_Number = 4;
-                break;
+                return 4;
             case "Card 6":
-                Card_Number = 5;
-                break;
+                return 5;
             case "Card 7":
-                Card_Number = 6;
-                break;
+                return 6;
             case "Card 8":
-                Card_Number = 7;
-                break;
+                return 7;
             case "Card 9":
-                Card_Number = 8;
-                break;
+                return 8;
             case "Card 10":
-                Card_Number = 9;
-                break;
+                return 9;
+            default:
+                return 11;           
         }
-        Player = GameObject.FindWithTag("Player");
-        Update_Display();
     }
 
-    public void Update_Display()
+    public void Update_Display(bool Card_Enabled)
     {
-        if (Hand.Count > Card_Number)
+        if (Card_Enabled)
         {
             Displayed_Card = Hand[Card_Number];
-            gameObject.GetComponent<Renderer>().enabled = true;
         }
         else
         {
             Displayed_Card = null;
-            gameObject.GetComponent<Renderer>().enabled = false;
         }
         Name_Text.text = Displayed_Card.Name;
         Cost_Text.text = Displayed_Card.Cost.ToString();
