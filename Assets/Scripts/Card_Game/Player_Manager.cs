@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Manager : MonoBehaviour
 {
@@ -10,12 +11,18 @@ public class Player_Manager : MonoBehaviour
     [SerializeField]
     private int Max_Energy;
     private int Energy;
+    [SerializeField]
+    private Text Energy_Display;
+    [SerializeField]
+    private Slider Health_Display;
 
     //when the player first loads, they have max health and energy
     private void Awake()
     {
         Energy = Max_Energy;
         Health = Max_Health;
+        Health_Display.value = Health;
+        Energy_Display.text = "Energy: " + Energy.ToString();
     }
 
     //Changes the player's health, without letting their health go over max
@@ -26,6 +33,7 @@ public class Player_Manager : MonoBehaviour
         {
             Health = Max_Health;
         }
+        Health_Display.value = Health;
     }
 
     //checks if the player has enough energy for that action
@@ -45,6 +53,7 @@ public class Player_Manager : MonoBehaviour
     public void Energy_Change(int Energy_Removed)
     {
         Energy -= Energy_Removed;
+        Energy_Display.text = "Energy: " + Energy.ToString();
         if (Energy > Max_Energy)
         {
             Reset_Energy();
@@ -55,5 +64,6 @@ public class Player_Manager : MonoBehaviour
     public void Reset_Energy()
     {
         Energy = Max_Energy;
+        Energy_Display.text = "Energy: " + Energy.ToString();
     }
 }

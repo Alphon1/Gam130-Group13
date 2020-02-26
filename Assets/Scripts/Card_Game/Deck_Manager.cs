@@ -15,7 +15,7 @@ public class Deck_Manager : MonoBehaviour
     private Text Discard_Text;
 
     //when the deck is loaded, displays how many cards are in it and the discard pile
-    private void Awake()
+    public void Awake()
     {
         Display_Deck_Count();
         Display_Discard_Count();

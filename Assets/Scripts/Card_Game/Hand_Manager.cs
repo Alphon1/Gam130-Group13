@@ -31,7 +31,7 @@ public class Hand_Manager : MonoBehaviour
 
     //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
     //and calls a function to draw 5 cards
-    private void Start()
+    public void Awake()
     {
         Player = GameObject.FindWithTag("Player");
         Turn_Order = GameObject.FindWithTag("Battle_Manager");
