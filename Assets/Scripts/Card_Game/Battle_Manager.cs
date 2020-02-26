@@ -8,6 +8,7 @@ public class Battle_Manager : MonoBehaviour
     private GameObject Player;
     private GameObject Hand;
 
+    //when the battle manager is loaded, it finds the Player and Hand and declares it is the player's turn
     void Start()
     {
         Is_Player_Turn = true;
@@ -15,6 +16,8 @@ public class Battle_Manager : MonoBehaviour
         Hand = GameObject.FindWithTag("Hand");
     }
 
+    //checks whos turn it is, then changes the turn. If it changes to the enemy's turn it tells the enemy to do something,
+    // if it changes to the player's turn it resets their hand and energy
     public void Turn_Switch()
     {
         if (Is_Player_Turn == true)
@@ -34,6 +37,7 @@ public class Battle_Manager : MonoBehaviour
         }
     }
 
+    //checks if the player can end their turn, if they can then it changes turn
     public void End_Turn()
     {
         if (Is_Player_Turn)
@@ -42,6 +46,7 @@ public class Battle_Manager : MonoBehaviour
         }
     }
 
+    //checks if its the player's turn
     public bool Player_Control()
     {
         if (Is_Player_Turn)

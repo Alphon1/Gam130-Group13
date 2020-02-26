@@ -9,10 +9,10 @@ public class Hand_Manager : MonoBehaviour
     private GameObject Target;
     private GameObject Player;
     private GameObject Turn_Order;
-    private bool Card_Enabled;
     private GameObject Deck_Object;
-    
 
+    //Goes through each card in the scene by tag, and if they are needed to display a card in the hand it enables them
+    //and tells them to update their displayed values. If they aren't needed it disables them
     public void Enable_Cards()
     {
         for (int i = 0; i < GameObject.FindGameObjectsWithTag("Card").Length; i++)
@@ -20,25 +20,27 @@ public class Hand_Manager : MonoBehaviour
              if ( Hand.Count > GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Get_Card_Number())
             {
                 GameObject.FindGameObjectsWithTag("Card")[i].SetActive(true);
-                Card_Enabled = true;
+                GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Update_Display(Hand);
             }
              else
             {
                 GameObject.FindGameObjectsWithTag("Card")[i].SetActive(false);
-                Card_Enabled = false;
-            }
-            GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Update_Display(Card_Enabled, Hand);
+            }         
         }
     }
 
-    private void Awake()
+    //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
+    //and calls a function to draw 5 cards
+    private void Start()
     {
         Player = GameObject.FindWithTag("Player");
         Turn_Order = GameObject.FindWithTag("Battle_Manager");
         Deck_Object = GameObject.FindWithTag("Deck");
-        Draw_Card(5);
+        Reset_Hand();
+        Debug.Log("hand awake");
     }
-
+    //moves a set number of cards from the deck to the hand, 
+    //if the deck runs out of card during this it tells the deck to swap with the discard pile
     public void Draw_Card(int Cards_Drawn)
     {
         for (int i = 0; i < Cards_Drawn; i++)
@@ -56,6 +58,8 @@ public class Hand_Manager : MonoBehaviour
             }
         }      
     }
+
+    //This is called when the card is played, and tells the rest of the game what the card does based on its functions
     public void Play_Card(Card Played_Card)
     {
         if (Turn_Order.GetComponent<Battle_Manager>().Player_Control() == true)
@@ -137,6 +141,7 @@ public class Hand_Manager : MonoBehaviour
         }
     }
 
+    //lets the user choose what to target by left clicking on them
     IEnumerator Target_Select()
     {
         while (true)
@@ -154,7 +159,7 @@ public class Hand_Manager : MonoBehaviour
         }
     }
 
-
+    //empties the player's current hand and draws 5 new cards
     public void Reset_Hand()
     {
        for (int i = 0; i < Hand.Count; i++)

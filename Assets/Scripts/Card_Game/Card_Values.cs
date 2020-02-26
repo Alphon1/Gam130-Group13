@@ -21,12 +21,15 @@ public class Card_Values : MonoBehaviour
     private int Card_Number;
     private GameObject Hand_Object;
    
+    //When the card loads it find the Hand and which number card it is
     private void Awake()
     {
         Hand_Object = GameObject.FindWithTag("Hand");
         Card_Number = Get_Card_Number();
     }
 
+
+    //finds which card this is based on it's name
     public int Get_Card_Number()
     {
         switch (this.gameObject.name)
@@ -56,27 +59,14 @@ public class Card_Values : MonoBehaviour
         }
     }
 
-    public void Update_Display(bool Card_Enabled, List<Card> Hand)
+    //Changes what's written on the card to the proper values of what it's meant to represent
+    public void Update_Display(List<Card> Hand)
     {
-        if (Card_Enabled)
-        {
-            Displayed_Card = Hand[Card_Number];
-        }
-        else
-        {
-            Displayed_Card = null;
-        }
+        Displayed_Card = Hand[Card_Number];
         Name_Text.text = Displayed_Card.Name;
         Cost_Text.text = Displayed_Card.Cost.ToString();
         Description_Text.text = Displayed_Card.Description;
         Type_Text.text = Displayed_Card.Type;
         Artwork.sprite = Displayed_Card.Art;
-        Set_Card_Function(Displayed_Card);
-    }
-
-    public void Set_Card_Function(Card Reset_Card)
-    {
-        Card_Button.onClick.RemoveAllListeners();
-        Card_Button.onClick.AddListener(delegate { Hand_Object.GetComponent<Hand_Manager>().Play_Card(Displayed_Card); });
     }
 }

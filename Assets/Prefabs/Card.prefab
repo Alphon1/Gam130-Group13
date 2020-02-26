@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 8920365338438391990}
   m_Layer: 5
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,9 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8988932afa51b74eb0037fb4b8e7aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Deck: []
-  Discard_Text: {fileID: 0}
-  Hand: []
   Name_Text: {fileID: 6025219341543759370}
   Cost_Text: {fileID: 4751969299885079503}
   Description_Text: {fileID: 7262633342277360445}

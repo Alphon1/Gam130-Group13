@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8794362906466811517}
   m_Layer: 0
   m_Name: Hand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8794362906466811517}
     m_Modifications:
+    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
+        type: 3}
+      propertyPath: m_Name
+      value: Card 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1821696842912236306, guid: ddfe7e02f885ac4468735869b7ea90e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -152,11 +157,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
-        type: 3}
-      propertyPath: m_Name
-      value: Card 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfe7e02f885ac4468735869b7ea90e8, type: 3}
 --- !u!224 &2126902025262492653 stripped
@@ -172,6 +172,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8794362906466811517}
     m_Modifications:
+    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
+        type: 3}
+      propertyPath: m_Name
+      value: Card 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1821696842912236306, guid: ddfe7e02f885ac4468735869b7ea90e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -277,11 +282,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
-        type: 3}
-      propertyPath: m_Name
-      value: Card 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfe7e02f885ac4468735869b7ea90e8, type: 3}
 --- !u!224 &1274840849960628340 stripped
@@ -297,6 +297,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8794362906466811517}
     m_Modifications:
+    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
+        type: 3}
+      propertyPath: m_Name
+      value: Card 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1821696842912236306, guid: ddfe7e02f885ac4468735869b7ea90e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -402,11 +407,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
-        type: 3}
-      propertyPath: m_Name
-      value: Card 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfe7e02f885ac4468735869b7ea90e8, type: 3}
 --- !u!224 &1500958024905829423 stripped
@@ -422,6 +422,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8794362906466811517}
     m_Modifications:
+    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
+        type: 3}
+      propertyPath: m_Name
+      value: Card 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1821696842912236306, guid: ddfe7e02f885ac4468735869b7ea90e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -527,11 +532,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
-        type: 3}
-      propertyPath: m_Name
-      value: Card 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfe7e02f885ac4468735869b7ea90e8, type: 3}
 --- !u!224 &5284622587173615351 stripped
@@ -547,6 +547,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8794362906466811517}
     m_Modifications:
+    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
+        type: 3}
+      propertyPath: m_Name
+      value: Card 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1821696842912236306, guid: ddfe7e02f885ac4468735869b7ea90e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -652,11 +657,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
-        type: 3}
-      propertyPath: m_Name
-      value: Card 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfe7e02f885ac4468735869b7ea90e8, type: 3}
 --- !u!224 &5295171652695857247 stripped
@@ -672,6 +672,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8794362906466811517}
     m_Modifications:
+    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
+        type: 3}
+      propertyPath: m_Name
+      value: Card 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1821696842912236306, guid: ddfe7e02f885ac4468735869b7ea90e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -777,11 +782,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
-        type: 3}
-      propertyPath: m_Name
-      value: Card 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfe7e02f885ac4468735869b7ea90e8, type: 3}
 --- !u!224 &5203488907857297931 stripped
@@ -797,6 +797,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8794362906466811517}
     m_Modifications:
+    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
+        type: 3}
+      propertyPath: m_Name
+      value: Card 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1821696842912236306, guid: ddfe7e02f885ac4468735869b7ea90e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -902,11 +907,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
-        type: 3}
-      propertyPath: m_Name
-      value: Card 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfe7e02f885ac4468735869b7ea90e8, type: 3}
 --- !u!224 &4773921688251535423 stripped
@@ -922,6 +922,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8794362906466811517}
     m_Modifications:
+    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
+        type: 3}
+      propertyPath: m_Name
+      value: Card 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1821696842912236306, guid: ddfe7e02f885ac4468735869b7ea90e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1027,11 +1032,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
-        type: 3}
-      propertyPath: m_Name
-      value: Card 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfe7e02f885ac4468735869b7ea90e8, type: 3}
 --- !u!224 &8846575506188596071 stripped
@@ -1047,6 +1047,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8794362906466811517}
     m_Modifications:
+    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
+        type: 3}
+      propertyPath: m_Name
+      value: Card 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1821696842912236306, guid: ddfe7e02f885ac4468735869b7ea90e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1152,11 +1157,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
-        type: 3}
-      propertyPath: m_Name
-      value: Card 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfe7e02f885ac4468735869b7ea90e8, type: 3}
 --- !u!224 &8584374836796183248 stripped
@@ -1172,6 +1172,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8794362906466811517}
     m_Modifications:
+    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
+        type: 3}
+      propertyPath: m_Name
+      value: Card 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1821696842912236306, guid: ddfe7e02f885ac4468735869b7ea90e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1276,11 +1281,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3832737955866472964, guid: ddfe7e02f885ac4468735869b7ea90e8,
-        type: 3}
-      propertyPath: m_Name
-      value: Card 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfe7e02f885ac4468735869b7ea90e8, type: 3}

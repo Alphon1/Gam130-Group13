@@ -14,10 +14,13 @@ public class Enemy_Manager : MonoBehaviour
     private int Decision;
     private GameObject Player;
 
+    //when an enemy is first loaded it has max health
     private void Awake()
     {
         Health = Max_Health;
     }
+
+    // if it's the enemy's turn, they randomly decide to attack the player for their damage, or heal themselves for their healing
     public void Enemy_Turn()
     {
         Decision = Random.Range(0, 2);
@@ -36,11 +39,13 @@ public class Enemy_Manager : MonoBehaviour
         }
     }
 
+    //takes health away from the enemy
     public void Damage(int Damage_Taking)
     {
         Health -= Damage_Taking;
     }
 
+    //takes health away from the enemy, and says if the damage killed it or not
     public bool Lethal_Damage(int Damage_Taking)
     {
         Damage(Damage_Taking);

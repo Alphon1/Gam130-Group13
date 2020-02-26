@@ -11,11 +11,14 @@ public class Player_Manager : MonoBehaviour
     private int Max_Energy;
     private int Energy;
 
+    //when the player first loads, they have max health and energy
     private void Awake()
     {
         Energy = Max_Energy;
         Health = Max_Health;
     }
+
+    //Changes the player's health, without letting their health go over max
     public void Health_Change(int Health_Removed)
     {
         Health -= Health_Removed;
@@ -25,6 +28,7 @@ public class Player_Manager : MonoBehaviour
         }
     }
 
+    //checks if the player has enough energy for that action
     public bool Can_Play(int Energy_Cost)
     {
         if (Energy - Energy_Cost >= 0)
@@ -37,6 +41,7 @@ public class Player_Manager : MonoBehaviour
         }
     }
 
+    //changes the player's energy, without letting it go over max
     public void Energy_Change(int Energy_Removed)
     {
         Energy -= Energy_Removed;
@@ -46,6 +51,7 @@ public class Player_Manager : MonoBehaviour
         }
     }
 
+    //resets the player's energy to full
     public void Reset_Energy()
     {
         Energy = Max_Energy;
