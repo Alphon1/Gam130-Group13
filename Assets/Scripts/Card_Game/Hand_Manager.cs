@@ -24,6 +24,7 @@ public class Hand_Manager : Deck_Manager
             {
                 Hand.Add(Deck[0]);
                 Deck.RemoveAt(0);
+                Display_Deck_Count();
                 for (int j = 0; j < GameObject.FindGameObjectsWithTag("Card").Length; j++)
                 {
                     GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display(Hand);
@@ -83,6 +84,7 @@ public class Hand_Manager : Deck_Manager
                             for (int j = 0; j < Discard.Count; j++)
                             {
                                 Deck.Add(Discard[j]);
+                                Display_Deck_Count();
                                 Discard.RemoveAt(j);
                             }
                             Shuffle_Deck();

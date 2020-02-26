@@ -106,8 +106,8 @@ GameObject:
   - component: {fileID: 7113372444336969550}
   - component: {fileID: 8633365456712397702}
   m_Layer: 5
-  m_Name: Deck_Display
-  m_TagString: Deck
+  m_Name: Deck_Discard_Display
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

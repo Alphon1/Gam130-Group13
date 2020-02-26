@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Deck_Manager : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class Deck_Manager : MonoBehaviour
     private int Random_Position;
     private Card Temp_Card;
 
+    public void Awake()
+    {
+        Display_Deck_Count();
+    }
     public void Shuffle_Deck()
     {
         for (int i = 0; i < Deck.Count; i++)
@@ -22,9 +27,15 @@ public class Deck_Manager : MonoBehaviour
         }
     }
 
+    public void Display_Deck_Count()
+    {
+        gameObject.GetComponent<Text>().text = Deck.Count.ToString();
+    }
+
     public void Deck_Out()
     {
         Deck = Discard;
+        Display_Deck_Count();
         Discard = null;
         Shuffle_Deck();
     }

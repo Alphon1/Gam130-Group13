@@ -6,11 +6,13 @@ public class Battle_Manager : MonoBehaviour
 {
     private bool Is_Player_Turn;
     private GameObject Player;
+    private GameObject Hand;
 
     void Start()
     {
         Is_Player_Turn = true;
         Player = GameObject.FindWithTag("Player");
+        Hand = GameObject.FindWithTag("Hand");
     }
 
     public void Turn_Switch()
@@ -27,7 +29,7 @@ public class Battle_Manager : MonoBehaviour
         else
         {
             Is_Player_Turn = true;
-            Player.GetComponent<Hand_Manager>().Reset_Hand();
+            Hand.GetComponent<Hand_Manager>().Reset_Hand();
             Player.GetComponent<Player_Manager>().Reset_Energy();
         }
     }
