@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hand_Manager : Deck_Manager
 {
     [SerializeField]
-    private List<Card> Hand;
+    protected List<Card> Hand;
     private GameObject Target;
     private GameObject Player;
     private GameObject Turn_Order;
@@ -27,7 +27,7 @@ public class Hand_Manager : Deck_Manager
                 Display_Deck_Count();
                 for (int j = 0; j < GameObject.FindGameObjectsWithTag("Card").Length; j++)
                 {
-                    GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display(Hand);
+                    GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display();
                 }
             }
             if (Deck.Count == 0)
@@ -111,7 +111,7 @@ public class Hand_Manager : Deck_Manager
                 Hand.Remove(Played_Card);
                 for (int j = 0; j < GameObject.FindGameObjectsWithTag("Card").Length; j++)
                 {
-                    GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display(Hand);
+                    GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display();
                 }
                 Discard.Add(Played_Card);
                 Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
@@ -147,7 +147,7 @@ public class Hand_Manager : Deck_Manager
             Hand.RemoveAt(i);
             for (int j = 0; j < GameObject.FindGameObjectsWithTag("Card").Length; j++)
             {
-                GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display(Hand);
+                GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Update_Display();
             }
         }
         Draw_Card(5);

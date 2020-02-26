@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Card_Values : MonoBehaviour
+public class Card_Values : Hand_Manager
 {
     private Card Displayed_Card;
     [SerializeField]
@@ -23,14 +23,10 @@ public class Card_Values : MonoBehaviour
     void Awake()
     {
         Player = GameObject.FindWithTag("Player");
-        Name_Text.text = Displayed_Card.Name;
-        Cost_Text.text = Displayed_Card.Cost.ToString();
-        Description_Text.text = Displayed_Card.Description;
-        Type_Text.text = Displayed_Card.Type;
-        Artwork.sprite = Displayed_Card.Art;
+        Update_Display();
     }
 
-    public void Update_Display(List<Card> Hand)
+    public void Update_Display()
     {
         switch (this.gameObject.name)
         {
@@ -135,19 +131,26 @@ public class Card_Values : MonoBehaviour
                 }
                 break;
         }
-        Name_Text.text = Displayed_Card.Name;
-        Cost_Text.text = Displayed_Card.Cost.ToString();
-        Description_Text.text = Displayed_Card.Description;
-        Type_Text.text = Displayed_Card.Type;
-        Artwork.sprite = Displayed_Card.Art;
         if (!Card_Active)
         {
             Displayed_Card = null;
-            gameObject.GetComponent <Renderer>().enabled = false;
+            gameObject.GetComponent<Renderer>().enabled = false;
         }
         else
         {
             gameObject.GetComponent<Renderer>().enabled = true;
         }
+        Name_Text.text = Displayed_Card.Name;
+        Cost_Text.text = Displayed_Card.Cost.ToString();
+        Description_Text.text = Displayed_Card.Description;
+        Type_Text.text = Displayed_Card.Type;
+        Artwork.sprite = Displayed_Card.Art;
+        Set_Card_Function(Displayed_Card);
+    }
+
+    public void Set_Card_Function(Card Reset_Card)
+    {
+        Card_Button.onClick.RemoveAllListeners();
+        Card_Button.onClick.AddListener(delegate { Play_Card(Displayed_Card); });
     }
 }
