@@ -11,6 +11,8 @@ public class Deck_Manager : MonoBehaviour
     protected List<Card> Exhaust;
     private int Random_Position;
     private Card Temp_Card;
+    [SerializeField]
+    private Text Discard_Text;
 
     public void Awake()
     {
@@ -32,11 +34,17 @@ public class Deck_Manager : MonoBehaviour
         gameObject.GetComponent<Text>().text = Deck.Count.ToString();
     }
 
+    public void Display_Discard_Count()
+    {
+        Discard_Text.text = Discard.Count.ToString();
+    }
+
     public void Deck_Out()
     {
         Deck = Discard;
         Display_Deck_Count();
         Discard = null;
+        Display_Discard_Count();
         Shuffle_Deck();
     }
 

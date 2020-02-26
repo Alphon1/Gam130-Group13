@@ -177,6 +177,7 @@ MonoBehaviour:
   Description_Text: {fileID: 7262633342277360445}
   Type_Text: {fileID: 1857313756145610516}
   Artwork: {fileID: 1217806844961407520}
+  Card_Button: {fileID: 7586899038942650628}
 --- !u!1 &3844639877129606036
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,12 +6,18 @@ using UnityEngine.UI;
 public class Card_Values : MonoBehaviour
 {
     private Card Displayed_Card;
-    public Text Name_Text;
-    public Text Cost_Text;
-    public Text Description_Text;
-    public Text Type_Text;
-    public Image Artwork;
-    public Button Card_Button;
+    [SerializeField]
+    private Text Name_Text;
+    [SerializeField]
+    private Text Cost_Text;
+    [SerializeField]
+    private Text Description_Text;
+    [SerializeField]
+    private Text Type_Text;
+    [SerializeField]
+    private Image Artwork;
+    [SerializeField]
+    private Button Card_Button;
     private GameObject Player;
     private bool Card_Active;
     void Awake()

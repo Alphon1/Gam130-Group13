@@ -86,6 +86,7 @@ public class Hand_Manager : Deck_Manager
                                 Deck.Add(Discard[j]);
                                 Display_Deck_Count();
                                 Discard.RemoveAt(j);
+                                Display_Discard_Count();
                             }
                             Shuffle_Deck();
                             break;
@@ -142,6 +143,7 @@ public class Hand_Manager : Deck_Manager
        for (int i = 0; i < Hand.Count; i++)
         {
             Discard.Add(Hand[i]);
+            Display_Discard_Count();
             Hand.RemoveAt(i);
             for (int j = 0; j < GameObject.FindGameObjectsWithTag("Card").Length; j++)
             {
