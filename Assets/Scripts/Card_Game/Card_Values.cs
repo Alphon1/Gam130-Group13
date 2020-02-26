@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Card_Values : MonoBehaviour
-{
-    private Card Displayed_Card;
+{ 
+    public Card Displayed_Card;
     [SerializeField]
     private Text Name_Text;
     [SerializeField]
@@ -24,7 +24,9 @@ public class Card_Values : MonoBehaviour
     //When the card loads it find the Hand and which number card it is
     private void Awake()
     {
+       
         Hand_Object = GameObject.FindWithTag("Hand");
+        Card_Button.onClick.AddListener(delegate { Hand_Object.GetComponent<Hand_Manager>().Play_Card(Displayed_Card); });
         Card_Number = Get_Card_Number();
     }
 
