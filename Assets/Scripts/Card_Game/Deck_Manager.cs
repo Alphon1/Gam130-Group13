@@ -21,6 +21,7 @@ public class Deck_Manager : MonoBehaviour
     {
         Display_Deck_Count();
         Display_Discard_Count();
+        Shuffle_Deck();
     }
 
     //moves the cards in the deck around randomly

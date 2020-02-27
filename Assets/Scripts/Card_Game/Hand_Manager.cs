@@ -133,6 +133,7 @@ public class Hand_Manager : MonoBehaviour
                 Hand.Remove(Played_Card);
                 Enable_Cards();
                 Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Played_Card);
+                Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
                 Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
                 Not_Played:;
             }
