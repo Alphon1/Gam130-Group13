@@ -19,5 +19,5 @@ MonoBehaviour:
   Cost: 4
   Functions:
   - Damage
-  - Add energy
+  - Add Energy
   Function_Values: 0b00000001000000
