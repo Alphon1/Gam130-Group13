@@ -321,8 +321,30 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7057163349294326293, guid: 786fced9ff7dfc743b85a4abc2685ea9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Deck
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633365456712397702, guid: 786fced9ff7dfc743b85a4abc2685ea9,
+        type: 3}
+      propertyPath: Deck_Text
+      value: 
+      objectReference: {fileID: 1582025608}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786fced9ff7dfc743b85a4abc2685ea9, type: 3}
+--- !u!114 &1582025608 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3631671220749966334, guid: 786fced9ff7dfc743b85a4abc2685ea9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1117448710}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1740150855
 GameObject:
   m_ObjectHideFlags: 0

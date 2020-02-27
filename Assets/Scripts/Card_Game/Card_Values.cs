@@ -18,8 +18,11 @@ public class Card_Values : MonoBehaviour
     private Image Artwork;
     [SerializeField]
     private Button Card_Button;
+    [SerializeField]
     private int Card_Number;
     private GameObject Hand_Object;
+    [SerializeField]
+    private GameObject Card_Visuals;
    
     //When the card loads it find the Hand and which number card it is
     private void Awake()
@@ -34,7 +37,7 @@ public class Card_Values : MonoBehaviour
     //finds which card this is based on it's name
     public int Get_Card_Number()
     {
-        switch (this.gameObject.name)
+        switch (gameObject.name)
         {
             case "Card 1":
                 return 0;
@@ -57,18 +60,24 @@ public class Card_Values : MonoBehaviour
             case "Card 10":
                 return 9;
             default:
-                return 11;           
+                return 11;    
         }
     }
 
     //Changes what's written on the card to the proper values of what it's meant to represent
-    public void Update_Display(List<Card> Hand)
+    public void Enable_Display(List<Card> Hand)
     {
+        Card_Visuals.SetActive(true);
         Displayed_Card = Hand[Card_Number];
         Name_Text.text = Displayed_Card.Name;
         Cost_Text.text = Displayed_Card.Cost.ToString();
         Description_Text.text = Displayed_Card.Description;
         Type_Text.text = Displayed_Card.Type;
         Artwork.sprite = Displayed_Card.Art;
+    }
+
+    public void Disable_Display()
+    {
+        Card_Visuals.SetActive(false);
     }
 }

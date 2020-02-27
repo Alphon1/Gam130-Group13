@@ -15,16 +15,15 @@ public class Hand_Manager : MonoBehaviour
     //and tells them to update their displayed values. If they aren't needed it disables them
     public void Enable_Cards()
     {
-        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Card").Length; i++)
+        for (int i = 0; i < 10; i++)
         {
-             if ( Hand.Count > GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Get_Card_Number())
+            if ( Hand.Count > GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Get_Card_Number())
             {
-                GameObject.FindGameObjectsWithTag("Card")[i].SetActive(true);
-                GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Update_Display(Hand);
+                GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Enable_Display(Hand);
             }
              else
             {
-                GameObject.FindGameObjectsWithTag("Card")[i].SetActive(false);
+                GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Disable_Display();
             }         
         }
     }
@@ -37,7 +36,6 @@ public class Hand_Manager : MonoBehaviour
         Turn_Order = GameObject.FindWithTag("Battle_Manager");
         Deck_Object = GameObject.FindWithTag("Deck");
         Reset_Hand();
-        Debug.Log("hand awake");
     }
     //moves a set number of cards from the deck to the hand, 
     //if the deck runs out of card during this it tells the deck to swap with the discard pile

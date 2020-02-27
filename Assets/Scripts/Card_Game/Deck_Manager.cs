@@ -13,6 +13,8 @@ public class Deck_Manager : MonoBehaviour
     private Card Temp_Card;
     [SerializeField]
     private Text Discard_Text;
+    [SerializeField]
+    private Text Deck_Text;
 
     //when the deck is loaded, displays how many cards are in it and the discard pile
     public void Awake()
@@ -36,7 +38,7 @@ public class Deck_Manager : MonoBehaviour
     //Displays how many cards are in the deck
     public void Display_Deck_Count()
     {
-        gameObject.GetComponent<Text>().text = "Deck: " + Deck.Count.ToString();
+        Deck_Text.text = "Deck: " + Deck.Count.ToString();
     }
 
     //displays how many cards are in the discard pile
