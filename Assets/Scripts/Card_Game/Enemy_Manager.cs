@@ -43,14 +43,22 @@ public class Enemy_Manager : MonoBehaviour
     public void Damage(int Damage_Taking)
     {
         Health -= Damage_Taking;
+        Death_Check();
     }
-
+    public void Death_Check()
+    {
+        if (Health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+    }
     //takes health away from the enemy, and says if the damage killed it or not
     public bool Lethal_Damage(int Damage_Taking)
     {
         Damage(Damage_Taking);
         if (Health <= 0)
         {
+            Death_Check();
             return true;
         }
         else
