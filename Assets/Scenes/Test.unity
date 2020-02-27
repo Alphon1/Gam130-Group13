@@ -262,7 +262,7 @@ PrefabInstance:
     - target: {fileID: 7763827680490681613, guid: 786fced9ff7dfc743b85a4abc2685ea9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7763827680490681613, guid: 786fced9ff7dfc743b85a4abc2685ea9,
         type: 3}
@@ -360,6 +360,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 9099874a2a4c7df4b978b763cd9d1431,
         type: 2}
+    - target: {fileID: 8633365456712397702, guid: 786fced9ff7dfc743b85a4abc2685ea9,
+        type: 3}
+      propertyPath: Deck.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: cb783332d21b10f4a8e2a2be09de3fa0,
+        type: 2}
     - target: {fileID: 722649945701510096, guid: 786fced9ff7dfc743b85a4abc2685ea9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -445,6 +451,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Max_Health
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Damage_Dealt
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Healing
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534, type: 3}

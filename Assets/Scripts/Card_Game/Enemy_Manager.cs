@@ -6,6 +6,7 @@ public class Enemy_Manager : MonoBehaviour
 {
     [SerializeField]
     private int Max_Health;
+    [SerializeField]
     private int Health;
     [SerializeField]
     private int Damage_Dealt;
@@ -18,6 +19,7 @@ public class Enemy_Manager : MonoBehaviour
     private void Awake()
     {
         Health = Max_Health;
+        Player = GameObject.FindWithTag("Player");
     }
 
     // if it's the enemy's turn, they randomly decide to attack the player for their damage, or heal themselves for their healing
