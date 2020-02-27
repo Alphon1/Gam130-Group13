@@ -163,10 +163,10 @@ public class Hand_Manager : MonoBehaviour
        for (int i = 0; i < Hand.Count; i++)
         {
             Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Hand[i]);
-            Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
-            Hand.RemoveAt(i);
-            Enable_Cards();
         }
+        Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
+        Hand.Clear();
         Draw_Card(5);
+        Enable_Cards();
     }
 }

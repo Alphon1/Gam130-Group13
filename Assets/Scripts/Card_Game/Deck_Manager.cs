@@ -52,7 +52,7 @@ public class Deck_Manager : MonoBehaviour
     {
         Deck = Discard;
         Display_Deck_Count();
-        Discard = null;
+        Discard.Clear();
         Display_Discard_Count();
         Shuffle_Deck();
     }
