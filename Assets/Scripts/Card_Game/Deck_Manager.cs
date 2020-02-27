@@ -50,9 +50,12 @@ public class Deck_Manager : MonoBehaviour
     //The deck becomes the discard pile, and the discard pile gets emptied. Then it shuffles the deck
     public void Deck_Out()
     {
-        Deck = Discard;
-        Display_Deck_Count();
+        for (int i = 0; i < Discard.Count; i++)
+        {
+            Deck.Add(Discard[i]);
+        }
         Discard.Clear();
+        Display_Deck_Count();
         Display_Discard_Count();
         Shuffle_Deck();
     }
