@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy_Manager : MonoBehaviour
 {
@@ -14,12 +15,15 @@ public class Enemy_Manager : MonoBehaviour
     private int Healing;
     private int Decision;
     private GameObject Player;
+    [SerializeField]
+    private Text Health_Display;
 
     //when an enemy is first loaded it has max health
     private void Awake()
     {
         Health = Max_Health;
         Player = GameObject.FindWithTag("Player");
+        Health_Display.text = Health.ToString();
     }
 
     // if it's the enemy's turn, they randomly decide to attack the player for their damage, or heal themselves for their healing
@@ -37,6 +41,7 @@ public class Enemy_Manager : MonoBehaviour
                 {
                     Health = Max_Health;
                 }
+                Health_Display.text = Health.ToString();
                 break;
         }
     }
@@ -45,6 +50,7 @@ public class Enemy_Manager : MonoBehaviour
     public void Damage(int Damage_Taking)
     {
         Health -= Damage_Taking;
+        Health_Display.text = Health.ToString();
         Death_Check();
     }
     public void Death_Check()

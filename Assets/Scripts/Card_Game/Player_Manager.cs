@@ -15,6 +15,8 @@ public class Player_Manager : MonoBehaviour
     private Text Energy_Display;
     [SerializeField]
     private Slider Health_Display;
+    [SerializeField]
+    private Text Numerical_Display;
 
     //when the player first loads, they have max health and energy
     private void Awake()
@@ -22,6 +24,7 @@ public class Player_Manager : MonoBehaviour
         Energy = Max_Energy;
         Health = Max_Health;
         Health_Display.value = Health;
+        Numerical_Display.text = Health.ToString();
         Energy_Display.text = "Energy: " + Energy.ToString();
     }
 
@@ -34,6 +37,7 @@ public class Player_Manager : MonoBehaviour
             Health = Max_Health;
         }
         Health_Display.value = Health;
+        Numerical_Display.text = Health.ToString();
     }
 
     //checks if the player has enough energy for that action
