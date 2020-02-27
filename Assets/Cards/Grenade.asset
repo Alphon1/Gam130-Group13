@@ -18,5 +18,5 @@ MonoBehaviour:
   Art: {fileID: 0}
   Cost: 3
   Functions:
-  - AOE damage
+  - AOE Damage
   Function_Values: 07000000

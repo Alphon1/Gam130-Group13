@@ -29,20 +29,27 @@ public class Enemy_Manager : MonoBehaviour
     // if it's the enemy's turn, they randomly decide to attack the player for their damage, or heal themselves for their healing
     public void Enemy_Turn()
     {
-        Decision = Random.Range(0, 2);
-        switch (Decision)
+        if (Health < Max_Health)
         {
-            case 0:
-                Player.GetComponent<Player_Manager>().Health_Change(Damage_Dealt);
-                break;
-            case 1:
-                Health += Healing;
-                if (Health > Max_Health)
-                {
-                    Health = Max_Health;
-                }
-                Health_Display.text = Health.ToString();
-                break;
+            Decision = Random.Range(0, 2);
+            switch (Decision)
+            {
+                case 0:
+                    Player.GetComponent<Player_Manager>().Health_Change(Damage_Dealt);
+                    break;
+                case 1:
+                    Health += Healing;
+                    if (Health > Max_Health)
+                    {
+                        Health = Max_Health;
+                    }
+                    Health_Display.text = Health.ToString();
+                    break;
+            }
+        }
+        else
+        {
+            Player.GetComponent<Player_Manager>().Health_Change(Damage_Dealt);
         }
     }
 
