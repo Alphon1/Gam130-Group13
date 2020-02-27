@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Battle_Manager : MonoBehaviour
 {
+    [SerializeField]
     private bool Is_Player_Turn;
     private GameObject Player;
     private GameObject Hand;
@@ -41,7 +42,7 @@ public class Battle_Manager : MonoBehaviour
     public void End_Turn()
     {
         if (Is_Player_Turn)
-        {
+        {        
             Turn_Switch();
         }
     }

@@ -194,6 +194,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &944444621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7445701334701231971, guid: 786fced9ff7dfc743b85a4abc2685ea9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1117448710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &944444622
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944444621}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1117448710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -321,6 +339,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7634132936478217082, guid: 786fced9ff7dfc743b85a4abc2685ea9,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 160
+      objectReference: {fileID: 0}
     - target: {fileID: 7057163349294326293, guid: 786fced9ff7dfc743b85a4abc2685ea9,
         type: 3}
       propertyPath: m_TagString
@@ -331,6 +354,11 @@ PrefabInstance:
       propertyPath: Deck_Text
       value: 
       objectReference: {fileID: 1582025608}
+    - target: {fileID: 722649945701510096, guid: 786fced9ff7dfc743b85a4abc2685ea9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786fced9ff7dfc743b85a4abc2685ea9, type: 3}
 --- !u!114 &1582025608 stripped

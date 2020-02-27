@@ -18,7 +18,6 @@ public class Card_Values : MonoBehaviour
     private Image Artwork;
     [SerializeField]
     private Button Card_Button;
-    [SerializeField]
     private int Card_Number;
     private GameObject Hand_Object;
     [SerializeField]
