@@ -13,23 +13,6 @@ public class Hand_Manager : MonoBehaviour
     private bool Stop_Card;
     private bool Stall_Card;
 
-    //Goes through each card in the scene by tag, and if they are needed to display a card in the hand it enables them
-    //and tells them to update their displayed values. If they aren't needed it disables them
-    public void Enable_Cards()
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            if ( Hand.Count > GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Get_Card_Number())
-            {
-                GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Enable_Display(Hand);
-            }
-             else
-            {
-                GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Disable_Display();
-            }         
-        }
-    }
-
     //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
     //and calls a function to draw 5 cards
     public void Awake()
@@ -37,8 +20,25 @@ public class Hand_Manager : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
         Turn_Order = GameObject.FindWithTag("Battle_Manager");
         Deck_Object = GameObject.FindWithTag("Deck");
-        Reset_Hand();
     }
+
+    //Goes through each card in the scene by tag, and if they are needed to display a card in the hand it enables them
+    //and tells them to update their displayed values. If they aren't needed it disables them
+    public void Enable_Cards()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            if (Hand.Count > GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Get_Card_Number())
+            {
+                GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Enable_Display(Hand);
+            }
+            else
+            {
+                GameObject.FindGameObjectsWithTag("Card")[i].GetComponent<Card_Values>().Disable_Display();
+            }
+        }
+    }
+
     //moves a set number of cards from the deck to the hand, 
     //if the deck runs out of card during this it tells the deck to swap with the discard pile
     public void Draw_Card(int Cards_Drawn)

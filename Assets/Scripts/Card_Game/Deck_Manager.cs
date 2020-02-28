@@ -15,24 +15,29 @@ public class Deck_Manager : MonoBehaviour
     private Text Discard_Text;
     [SerializeField]
     private Text Deck_Text;
+    private int Random_Int;
+    private GameObject Hand;
 
     //when the deck is loaded, displays how many cards are in it and the discard pile
     public void Awake()
     {
+        Hand = GameObject.FindWithTag("Hand");
         Display_Deck_Count();
         Display_Discard_Count();
         Shuffle_Deck();
+        Hand.GetComponent<Hand_Manager>().Reset_Hand();
     }
 
     //moves the cards in the deck around randomly
     public void Shuffle_Deck()
     {
-        for (int i = 0; i < Deck.Count; i++)
+        System.Random New_Random = new System.Random();
+        for (int i = 0;  i < Deck.Count; i++)
         {
-            Temp_Card = Deck[i];
-            Random_Position = Random.Range(i, Deck.Count);
-            Deck[i] = Deck[Random_Position];
-            Deck[Random_Position] = Temp_Card;
+            Random_Int = i + (int)(New_Random.NextDouble() * (Random_Int - i));
+            Temp_Card = Deck[Random_Int];
+            Deck[Random_Int] = Deck[i];
+            Deck[i] = Temp_Card;
         }
     }
 
