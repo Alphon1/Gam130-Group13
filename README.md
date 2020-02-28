@@ -11,7 +11,7 @@
 * Adam Mcintosh
 
 ## Artists
-* Ben Pearson
+* ~~Ben Pearson~~
 * Roman Egri-Rowledge
 
 ## Writer
