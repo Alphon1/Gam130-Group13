@@ -10,8 +10,8 @@ public class Hand_Manager : MonoBehaviour
     private GameObject Player;
     private GameObject Turn_Order;
     private GameObject Deck_Object;
-    private bool Stop_Card;
-    private bool Stall_Card;
+    private int Starting_Function;
+    private bool Freeze_Player_Control;
 
     //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
     //and calls a function to draw 5 cards
@@ -20,6 +20,7 @@ public class Hand_Manager : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
         Turn_Order = GameObject.FindWithTag("Battle_Manager");
         Deck_Object = GameObject.FindWithTag("Deck");
+        Starting_Function = 0;
     }
 
     //Goes through each card in the scene by tag, and if they are needed to display a card in the hand it enables them
@@ -62,24 +63,22 @@ public class Hand_Manager : MonoBehaviour
     //This is called when the card is played, and tells the rest of the game what the card does based on its functions
     public void Play_Card(Card Played_Card)
     {
-        if (Turn_Order.GetComponent<Battle_Manager>().Player_Control() == true)
+        if (Turn_Order.GetComponent<Battle_Manager>().Player_Control() == true && Freeze_Player_Control == false)
         {
             if (Player.GetComponent<Player_Manager>().Can_Play(Played_Card.Cost))
             {
-                for (int i = 0; i < Played_Card.Functions.Count; i++)
+                for (int i = Starting_Function; i < Played_Card.Functions.Count; i++)
                 {
-                    if (Stop_Card == true)
-                    {
-                        goto End_Card;
-                    }
                     switch (Played_Card.Functions[i])
                     {
                         case "Draw":
                             Draw_Card(Played_Card.Function_Values[i]);
                             break;
                         case "Damage":
-                            StartCoroutine(Enemy_Select("Damage",Played_Card, i));                     
-                            break;
+                            StartCoroutine(Enemy_Select("Damage",Played_Card, i));
+                            Freeze_Player_Control = true;
+                            Starting_Function = i + 1;
+                            goto End_Card;
                         case "Heal":
                             Player.GetComponent<Player_Manager>().Health_Change(-(Played_Card.Function_Values[i]));
                             break;
@@ -88,7 +87,9 @@ public class Hand_Manager : MonoBehaviour
                             break;
                         case "Lethal Damage":
                             StartCoroutine(Enemy_Select("Lethal Damage",Played_Card, i));
-                            break;
+                            Freeze_Player_Control = true;
+                            Starting_Function = i + 1;
+                            goto End_Card;
                         case "Shuffle Discard":
                             for (int j = 0; j < Deck_Object.GetComponent<Deck_Manager>().Discard.Count; j++)
                             {
@@ -116,12 +117,13 @@ public class Hand_Manager : MonoBehaviour
                             break;
                     }
                 }
-                End_Card:;
+                Starting_Function = 0;        
                 Hand.Remove(Played_Card);
                 Enable_Cards();
                 Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Played_Card);
                 Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
                 Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
+            End_Card:;
             }
         }
     }
@@ -138,19 +140,20 @@ public class Hand_Manager : MonoBehaviour
                 {
                      if (Hit.transform.gameObject.tag == "Enemy")
                     {
+                        Freeze_Player_Control = false;
                         switch (Damage_Type)
                         {
                             case "Damage":
                                 Hit.transform.gameObject.GetComponent<Enemy_Manager>().Damage(Played_Card.Function_Values[Damage]);
+                                Play_Card(Played_Card);
                             break;
                             case "Lethal Damage":
-                                if (Target.GetComponent<Enemy_Manager>().Lethal_Damage(Played_Card.Function_Values[Damage]) == false)
+                                if (Target.GetComponent<Enemy_Manager>().Lethal_Damage(Played_Card.Function_Values[Damage]) == true)
                                 {
-                                   Stop_Card = true;
+                                    Play_Card(Played_Card);
                                 }
                             break;
                         }
-                        Stall_Card = false;
                         yield break;
                     }
                 }           
