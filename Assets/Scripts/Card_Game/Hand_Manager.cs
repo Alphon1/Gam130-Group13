@@ -49,14 +49,14 @@ public class Hand_Manager : MonoBehaviour
             {
                 Hand.Add(Deck_Object.GetComponent<Deck_Manager>().Deck[0]);
                 Deck_Object.GetComponent<Deck_Manager>().Deck.RemoveAt(0);
-                Deck_Object.GetComponent<Deck_Manager>().Display_Deck_Count();
-                Enable_Cards();
             }
             if (Deck_Object.GetComponent<Deck_Manager>().Deck.Count == 0)
             {
                 Deck_Object.GetComponent<Deck_Manager>().Deck_Out();
             }
-        }      
+        }
+        Deck_Object.GetComponent<Deck_Manager>().Display_Deck_Count();
+        Enable_Cards();
     }
 
     //This is called when the card is played, and tells the rest of the game what the card does based on its functions
