@@ -34,7 +34,7 @@ public class Deck_Manager : MonoBehaviour
         System.Random New_Random = new System.Random();
         for (int i = 0;  i < Deck.Count; i++)
         {
-            Random_Int = i + (int)(New_Random.NextDouble() * (Random_Int - i));
+            Random_Int = i + (int)(New_Random.NextDouble() * (Deck.Count - i));
             Temp_Card = Deck[Random_Int];
             Deck[Random_Int] = Deck[i];
             Deck[i] = Temp_Card;
