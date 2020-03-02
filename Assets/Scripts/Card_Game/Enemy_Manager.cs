@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class Enemy_Manager : MonoBehaviour
 {
     [SerializeField]
+    private int Max_Possible_Health;
+    [SerializeField]
+    private int Min_Possible_Health;
     private int Max_Health;
     [SerializeField]
     private int Health;
@@ -27,6 +30,7 @@ public class Enemy_Manager : MonoBehaviour
     //when an enemy is first loaded it has max health
     private void Awake()
     {
+        Max_Health = Random.Range(Min_Possible_Health, Max_Possible_Health);
         Health = Max_Health;
         Player = GameObject.FindWithTag("Player");
         Health_Display.text = Health.ToString();
