@@ -10,8 +10,14 @@ public class Enemy_Manager : MonoBehaviour
     [SerializeField]
     private int Health;
     [SerializeField]
+    private int Min_Damage;
+    [SerializeField]
+    private int Max_Damage;
     private int Damage_Dealt;
     [SerializeField]
+    private int Min_Healing;
+    [SerializeField]
+    private int Max_Healing;
     private int Healing;
     private int Decision;
     private GameObject Player;
@@ -35,9 +41,11 @@ public class Enemy_Manager : MonoBehaviour
             switch (Decision)
             {
                 case 0:
+                    Damage_Dealt = Random.Range(Min_Damage, Max_Damage);
                     Player.GetComponent<Player_Manager>().Health_Change(Damage_Dealt);
                     break;
                 case 1:
+                    Healing = Random.Range(Min_Healing, Max_Healing);
                     Health += Healing;
                     if (Health > Max_Health)
                     {
