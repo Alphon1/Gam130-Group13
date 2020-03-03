@@ -112,6 +112,16 @@ public class Hand_Manager : MonoBehaviour
                                 GameObject.FindGameObjectsWithTag("Enemy")[j].GetComponent<Enemy_Manager>().Damage(Played_Card.Function_Values[i]);
                             }
                             break;
+                        case "Discard":
+                            for (int j = 0; j < 10; j++)
+                            {
+                                GameObject.FindGameObjectsWithTag("Card")[j].GetComponent<Card_Values>().Card_Button.onClick.AddListener(delegate { Discard_Card(); });
+                            }
+                            for (int j = 0; j < Played_Card.Function_Values[i]; j++)
+                            {
+
+                            }
+                            break;
                         case null:
                             break;
                     }
@@ -125,6 +135,11 @@ public class Hand_Manager : MonoBehaviour
             End_Card:;
             }
         }
+    }
+
+    public void Discard_Card()
+    {
+
     }
 
     //lets the user choose what to target by left clicking on them
