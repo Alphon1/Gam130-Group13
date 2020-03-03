@@ -6,6 +6,7 @@ public class Hand_Manager : MonoBehaviour
 {
     [SerializeField]
     private List<Card> Hand;
+    private List<Card> Exhaust;
     private GameObject Player;
     private GameObject Turn_Order;
     private GameObject Deck_Object;
@@ -116,6 +117,12 @@ public class Hand_Manager : MonoBehaviour
                             StartCoroutine(Target_Select("Discard", Played_Card, i));
                             Freeze_Player_Control = true;
                             Starting_Function = i + 1;
+                            goto End_Card;
+                        case "Exhaust":
+                            Starting_Function = 0;
+                            Hand.Remove(Played_Card);
+                            Enable_Cards();
+                            Exhaust.Add(Played_Card);
                             goto End_Card;
                         case null:
                             break;
