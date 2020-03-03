@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Player_Manager : MonoBehaviour
 {
@@ -12,11 +13,11 @@ public class Player_Manager : MonoBehaviour
     private int Max_Energy;
     private int Energy;
     [SerializeField]
-    private Text Energy_Display;
+    private TextMeshProUGUI Energy_Display;
     [SerializeField]
     private Slider Health_Display;
     [SerializeField]
-    private Text Numerical_Display;
+    private TextMeshProUGUI Numerical_Display;
 
     //when the player first loads, they have max health and energy
     private void Awake()
