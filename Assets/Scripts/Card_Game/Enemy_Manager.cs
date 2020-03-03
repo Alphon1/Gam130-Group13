@@ -6,11 +6,10 @@ using UnityEngine.UI;
 public class Enemy_Manager : MonoBehaviour
 {
     [SerializeField]
-    private int Max_Possible_Health;
-    [SerializeField]
     private int Min_Possible_Health;
-    private int Max_Health;
     [SerializeField]
+    private int Max_Possible_Health;
+    private int Max_Health;
     private int Health;
     [SerializeField]
     private int Min_Damage;
@@ -39,13 +38,13 @@ public class Enemy_Manager : MonoBehaviour
     // if it's the enemy's turn, they randomly decide to attack the player for their damage, or heal themselves for their healing
     public void Enemy_Turn()
     {
+        Damage_Dealt = Random.Range(Min_Damage, Max_Damage);
         if (Health < Max_Health)
         {
             Decision = Random.Range(0, 2);
             switch (Decision)
             {
                 case 0:
-                    Damage_Dealt = Random.Range(Min_Damage, Max_Damage);
                     Player.GetComponent<Player_Manager>().Health_Change(Damage_Dealt);
                     break;
                 case 1:

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -276,6 +276,36 @@ PrefabInstance:
       propertyPath: Healing
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Max_Possible_Health
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Min_Possible_Health
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Min_Damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Max_Damage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Min_Healing
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Max_Healing
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534, type: 3}
 --- !u!1 &944444621 stripped
@@ -447,7 +477,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Deck.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 9099874a2a4c7df4b978b763cd9d1431,
+      objectReference: {fileID: 11400000, guid: 80a6f4defe18c0b4995f2c377518af8e,
         type: 2}
     - target: {fileID: 8633365456712397702, guid: 786fced9ff7dfc743b85a4abc2685ea9,
         type: 3}
@@ -925,6 +955,36 @@ PrefabInstance:
         type: 3}
       propertyPath: Healing
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Max_Possible_Health
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Min_Possible_Health
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Min_Damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Max_Damage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Min_Healing
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534,
+        type: 3}
+      propertyPath: Max_Healing
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f6c09b8dd4efb341a5a7d4b71bfc534, type: 3}

@@ -6,7 +6,6 @@ public class Hand_Manager : MonoBehaviour
 {
     [SerializeField]
     private List<Card> Hand;
-    private GameObject Target;
     private GameObject Player;
     private GameObject Turn_Order;
     private GameObject Deck_Object;
@@ -148,9 +147,18 @@ public class Hand_Manager : MonoBehaviour
                                 Play_Card(Played_Card);
                             break;
                             case "Lethal Damage":
-                                if (Target.GetComponent<Enemy_Manager>().Lethal_Damage(Played_Card.Function_Values[Damage]) == true)
+                                if (Hit.transform.gameObject.GetComponent<Enemy_Manager>().Lethal_Damage(Played_Card.Function_Values[Damage]) == true)
                                 {
                                     Play_Card(Played_Card);
+                                }
+                                else
+                                {
+                                    Starting_Function = 0;
+                                    Hand.Remove(Played_Card);
+                                    Enable_Cards();
+                                    Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Played_Card);
+                                    Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
+                                    Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
                                 }
                             break;
                         }
