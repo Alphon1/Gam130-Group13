@@ -127,6 +127,11 @@ public class Hand_Manager : MonoBehaviour
                         case "Max HP Change":
                             Player.GetComponent<Player_Manager>().Max_Health_Change(Played_Card.Function_Values[i]);
                             break;
+                        case "DOT":
+                            StartCoroutine(Target_Select("DOT", Played_Card, i));
+                            Freeze_Player_Control = true;
+                            Starting_Function = i + 1;
+                            goto End_Card;
                         case null:
                             break;
                     }
@@ -176,6 +181,10 @@ public class Hand_Manager : MonoBehaviour
                                     Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
                                     Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
                                 }
+                            break;
+                            case "DOT":
+                                Hit.transform.gameObject.GetComponent<Enemy_Manager>().Set_DOT(Played_Card.Function_Values[Target_Function_Int]);
+                                Play_Card(Played_Card);
                             break;
                         }
                         yield break;

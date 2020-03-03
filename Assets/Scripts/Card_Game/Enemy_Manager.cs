@@ -25,6 +25,8 @@ public class Enemy_Manager : MonoBehaviour
     private GameObject Player;
     [SerializeField]
     private Text Health_Display;
+    private int DOT_Duration;
+    private int DOT_Damage;
 
     //when an enemy is first loaded it has max health
     private void Awake()
@@ -38,6 +40,7 @@ public class Enemy_Manager : MonoBehaviour
     // if it's the enemy's turn, they randomly decide to attack the player for their damage, or heal themselves for their healing
     public void Enemy_Turn()
     {
+        DOT_Tick();
         Damage_Dealt = Random.Range(Min_Damage, Max_Damage);
         if (Health < Max_Health)
         {
@@ -91,5 +94,19 @@ public class Enemy_Manager : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void Set_DOT(int Damage)
+    {
+        DOT_Duration = 3;
+        DOT_Damage = Damage;
+    }
+    public void DOT_Tick()
+    {
+        if (DOT_Duration > 0)
+        {
+            DOT_Duration -= 1;
+            Health -= DOT_Damage;
+        }      
     }
 }
