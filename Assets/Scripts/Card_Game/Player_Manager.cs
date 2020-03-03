@@ -54,6 +54,11 @@ public class Player_Manager : MonoBehaviour
         }
     }
 
+    public void Max_Health_Change(int Change)
+    {
+        Max_Health += Change;
+    }
+
     //changes the player's energy, without letting it go over max
     public void Energy_Change(int Energy_Removed)
     {

@@ -124,6 +124,9 @@ public class Hand_Manager : MonoBehaviour
                             Enable_Cards();
                             Exhaust.Add(Played_Card);
                             goto End_Card;
+                        case "Max HP Change":
+                            Player.GetComponent<Player_Manager>().Max_Health_Change(Played_Card.Function_Values[i]);
+                            break;
                         case null:
                             break;
                     }
