@@ -393,7 +393,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -605,6 +605,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1861499191669628233, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861499191669628233, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861499191669628233, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861499191669628233, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae1b4a59f08581749a564e9c2d3cb5e7, type: 3}
 --- !u!4 &6859750587754943160 stripped
@@ -718,12 +738,12 @@ PrefabInstance:
     - target: {fileID: 8794362906466811517, guid: 5821c25dae3da02499b0650cf527834e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -512
       objectReference: {fileID: 0}
     - target: {fileID: 8794362906466811517, guid: 5821c25dae3da02499b0650cf527834e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -141
+      value: -685
       objectReference: {fileID: 0}
     - target: {fileID: 8794362906466811517, guid: 5821c25dae3da02499b0650cf527834e,
         type: 3}
@@ -773,7 +793,27 @@ PrefabInstance:
     - target: {fileID: 8794362906466811517, guid: 5821c25dae3da02499b0650cf527834e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409462631332949324, guid: 5821c25dae3da02499b0650cf527834e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409462631332949324, guid: 5821c25dae3da02499b0650cf527834e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1230
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409462631332949324, guid: 5821c25dae3da02499b0650cf527834e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 524
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409462631332949324, guid: 5821c25dae3da02499b0650cf527834e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 381
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5821c25dae3da02499b0650cf527834e, type: 3}
