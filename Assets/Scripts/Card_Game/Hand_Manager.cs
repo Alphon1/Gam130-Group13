@@ -6,6 +6,7 @@ public class Hand_Manager : MonoBehaviour
 {
     [SerializeField]
     private List<Card> Hand;
+    private List<Card> Exhaust;
     private GameObject Player;
     private GameObject Turn_Order;
     private GameObject Deck_Object;
@@ -74,7 +75,7 @@ public class Hand_Manager : MonoBehaviour
                             Draw_Card(Played_Card.Function_Values[i]);
                             break;
                         case "Damage":
-                            StartCoroutine(Enemy_Select("Damage",Played_Card, i));
+                            StartCoroutine(Target_Select("Damage",Played_Card, i));
                             Freeze_Player_Control = true;
                             Starting_Function = i + 1;
                             goto End_Card;
@@ -85,7 +86,7 @@ public class Hand_Manager : MonoBehaviour
                             Player.GetComponent<Player_Manager>().Energy_Change(-(Played_Card.Function_Values[i]));
                             break;
                         case "Lethal Damage":
-                            StartCoroutine(Enemy_Select("Lethal Damage",Played_Card, i));
+                            StartCoroutine(Target_Select("Lethal Damage",Played_Card, i));
                             Freeze_Player_Control = true;
                             Starting_Function = i + 1;
                             goto End_Card;
@@ -112,6 +113,25 @@ public class Hand_Manager : MonoBehaviour
                                 GameObject.FindGameObjectsWithTag("Enemy")[j].GetComponent<Enemy_Manager>().Damage(Played_Card.Function_Values[i]);
                             }
                             break;
+                        case "Discard":
+                            StartCoroutine(Target_Select("Discard", Played_Card, i));
+                            Freeze_Player_Control = true;
+                            Starting_Function = i + 1;
+                            goto End_Card;
+                        case "Exhaust":
+                            Starting_Function = 0;
+                            Hand.Remove(Played_Card);
+                            Enable_Cards();
+                            Exhaust.Add(Played_Card);
+                            goto End_Card;
+                        case "Max HP Change":
+                            Player.GetComponent<Player_Manager>().Max_Health_Change(Played_Card.Function_Values[i]);
+                            break;
+                        case "DOT":
+                            StartCoroutine(Target_Select("DOT", Played_Card, i));
+                            Freeze_Player_Control = true;
+                            Starting_Function = i + 1;
+                            goto End_Card;
                         case null:
                             break;
                     }
@@ -128,8 +148,9 @@ public class Hand_Manager : MonoBehaviour
     }
 
     //lets the user choose what to target by left clicking on them
-    IEnumerator Enemy_Select(string Damage_Type, Card Played_Card, int Damage)
+    IEnumerator Target_Select(string Target_Function, Card Played_Card, int Target_Function_Int)
     {
+    Target_Select:;
         while (true)
         {
             if (Input.GetMouseButtonDown(0))
@@ -140,14 +161,14 @@ public class Hand_Manager : MonoBehaviour
                      if (Hit.transform.gameObject.tag == "Enemy")
                     {
                         Freeze_Player_Control = false;
-                        switch (Damage_Type)
+                        switch (Target_Function)
                         {
                             case "Damage":
-                                Hit.transform.gameObject.GetComponent<Enemy_Manager>().Damage(Played_Card.Function_Values[Damage]);
+                                Hit.transform.gameObject.GetComponent<Enemy_Manager>().Damage(Played_Card.Function_Values[Target_Function_Int]);
                                 Play_Card(Played_Card);
                             break;
                             case "Lethal Damage":
-                                if (Hit.transform.gameObject.GetComponent<Enemy_Manager>().Lethal_Damage(Played_Card.Function_Values[Damage]) == true)
+                                if (Hit.transform.gameObject.GetComponent<Enemy_Manager>().Lethal_Damage(Played_Card.Function_Values[Target_Function_Int]) == true)
                                 {
                                     Play_Card(Played_Card);
                                 }
@@ -161,8 +182,29 @@ public class Hand_Manager : MonoBehaviour
                                     Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
                                 }
                             break;
+                            case "DOT":
+                                Hit.transform.gameObject.GetComponent<Enemy_Manager>().Set_DOT(Played_Card.Function_Values[Target_Function_Int]);
+                                Play_Card(Played_Card);
+                            break;
                         }
                         yield break;
+                    }
+                     else if (Hit.transform.gameObject.tag == "Card")
+                    {
+                        switch (Target_Function)
+                        {
+                            case "Discard":
+                                Hand.Remove(Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card);
+                                Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card);
+                                Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
+                                Hit.transform.gameObject.GetComponent<Card_Values>().Disable_Display();
+                                Target_Function_Int -= 1;
+                                if (Target_Function_Int > 0)
+                                {
+                                    goto Target_Select;
+                                }
+                            break;
+                        }
                     }
                 }           
             }
