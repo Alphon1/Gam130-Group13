@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Enemy_Manager : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class Enemy_Manager : MonoBehaviour
     private int Decision;
     private GameObject Player;
     [SerializeField]
-    private Text Health_Display;
+    private TextMeshProUGUI Health_Display;
     private int DOT_Duration;
     private int DOT_Damage;
 
