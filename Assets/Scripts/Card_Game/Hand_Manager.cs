@@ -72,6 +72,11 @@ public class Hand_Manager : MonoBehaviour
             {
                 Hand.Add(Deck_Object.GetComponent<Deck_Manager>().Deck[0]);
                 Deck_Object.GetComponent<Deck_Manager>().Deck.RemoveAt(0);
+                if (Hand[Hand.Count - 1].Functions[0] == "When Drawn")
+                {
+                    Starting_Function = 0;
+                    Play_Card(Hand[Hand.Count - 1]);
+                }
                 if (On_Draw_Damage > 0)
                 {
                     for (int j = 0; j < On_Draw_Damage; j++)
