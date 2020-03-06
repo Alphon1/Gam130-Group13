@@ -30,7 +30,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7625573788699288687}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -216,10 +216,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Displayed_Card: {fileID: 0}
-  Name_Text: {fileID: 0}
-  Cost_Text: {fileID: 0}
-  Description_Text: {fileID: 0}
-  Type_Text: {fileID: 0}
+  Name_Text: {fileID: 1564143702004309123}
+  Cost_Text: {fileID: 7904401919679689112}
+  Description_Text: {fileID: 7538040584026649490}
+  Type_Text: {fileID: 7538040584026649490}
   Artwork: {fileID: 1217806844961407520}
   Card_Button: {fileID: 2190259956470724375}
   Card_Visuals: {fileID: 7767735445316775473}
@@ -327,7 +327,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7625573788699288687}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -643,10 +643,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1627024359765267669}
   - {fileID: 8844811883761938038}
-  - {fileID: 2510013305298645749}
   - {fileID: 5120823573772616564}
+  - {fileID: 2510013305298645749}
+  - {fileID: 1627024359765267669}
   - {fileID: 7363648422107910841}
   m_Father: {fileID: 1821696842912236306}
   m_RootOrder: 0
@@ -765,7 +765,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7625573788699288687}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
