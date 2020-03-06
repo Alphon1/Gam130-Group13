@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Queued_Function
+{
+    public Card Source_Card;
+    public int Function_Start_Point;
+}
 public class Hand_Manager : MonoBehaviour
 {
     [SerializeField]
@@ -13,6 +18,8 @@ public class Hand_Manager : MonoBehaviour
     private int Starting_Function;
     private bool Freeze_Player_Control;
     private int On_Draw_Damage = 0;
+    public List<Queued_Function> Queued_Functions = new List<Queued_Function>();
+    private Queued_Function Function_To_Queue;
 
     //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
     //and calls a function to draw 5 cards
@@ -27,6 +34,16 @@ public class Hand_Manager : MonoBehaviour
     public void End_Of_Turn()
     {
         On_Draw_Damage = 0;
+    }
+
+    public void Start_Of_Turn()
+    {
+        Reset_Hand();
+        for (int i = 0; i < Queued_Functions.Count; i++)
+        {
+            Starting_Function = Queued_Functions[i].Function_Start_Point;
+            Play_Card(Queued_Functions[i].Source_Card);
+        }
     }
     //Goes through each card in the scene by tag, and if they are needed to display a card in the hand it enables them
     //and tells them to update their displayed values. If they aren't needed it disables them
@@ -146,6 +163,12 @@ public class Hand_Manager : MonoBehaviour
                             goto End_Card;
                         case "On Draw Damage":
                             On_Draw_Damage = Played_Card.Function_Values[i];
+                            break;
+                        case "Next Turn":
+                            Function_To_Queue = new Queued_Function();
+                            Function_To_Queue.Source_Card = Played_Card;
+                            Function_To_Queue.Function_Start_Point = i + 1;
+                            Queued_Functions.Add(Function_To_Queue);
                             break;
                         case null:
                             break;
