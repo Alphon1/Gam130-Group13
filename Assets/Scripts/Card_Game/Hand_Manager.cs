@@ -180,7 +180,14 @@ public class Hand_Manager : MonoBehaviour
                             for (int j = 0; j < Played_Card.Function_Values[i]; j++)
                             {
                                 Random_Target = Random.Range(0, GameObject.FindGameObjectsWithTag("Enemy").Length + 1);
-
+                                if (Random_Target == GameObject.FindGameObjectsWithTag("Enemy").Length + 1)
+                                {
+                                    Player.GetComponent<Player_Manager>().Health_Change(1);
+                                }
+                                else
+                                {
+                                    GameObject.FindGameObjectsWithTag("Enemy")[Random_Target].GetComponent<Enemy_Manager>().Damage(1);
+                                }
                             }
                             break;
                         case null:
