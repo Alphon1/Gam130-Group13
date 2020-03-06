@@ -23,6 +23,7 @@ public class Player_Manager : MonoBehaviour
     //when the player first loads, they have max health and energy
     private void Awake()
     {
+        Starting_Energy = 7;
         Temp_Starting_Energy = Starting_Energy;
         Energy = Starting_Energy;
         Health = Max_Health;
