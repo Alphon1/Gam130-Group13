@@ -44,7 +44,6 @@ public class Hand_Manager : MonoBehaviour
             Starting_Function = Queued_Functions[i].Function_Start_Point;
             Play_Card(Queued_Functions[i].Source_Card);
         }
-        Starting_Function = 0;
     }
     //Goes through each card in the scene by tag, and if they are needed to display a card in the hand it enables them
     //and tells them to update their displayed values. If they aren't needed it disables them
@@ -71,16 +70,8 @@ public class Hand_Manager : MonoBehaviour
         {
             if (Hand.Count < 11)
             {
-                if (Deck_Object.GetComponent<Deck_Manager>().Deck[0].Functions[1] == "When Drawn")
-                {
-                    Play_Card(Deck_Object.GetComponent<Deck_Manager>().Deck[0]);
-                }
                 Hand.Add(Deck_Object.GetComponent<Deck_Manager>().Deck[0]);
                 Deck_Object.GetComponent<Deck_Manager>().Deck.RemoveAt(0);
-                if (Hand[Hand.Count - 1].Functions[1] == "When Drawn")
-                {
-                    Play_Card(Hand[Hand.Count - 1]);
-                }
                 if (On_Draw_Damage > 0)
                 {
                     for (int j = 0; j < On_Draw_Damage; j++)

@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class Card_Values : MonoBehaviour
 { 
     public Card Displayed_Card;
     [SerializeField]
-    private TextMeshProUGUI Name_Text;
+    private Text Name_Text;
     [SerializeField]
-    private TextMeshProUGUI Cost_Text;
+    private Text Cost_Text;
     [SerializeField]
-    private TextMeshProUGUI Description_Text;
+    private Text Description_Text;
     [SerializeField]
-    private TextMeshProUGUI Type_Text;
+    private Text Type_Text;
     [SerializeField]
     private Image Artwork;
     [SerializeField]
