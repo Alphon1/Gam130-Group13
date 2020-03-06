@@ -190,6 +190,9 @@ public class Hand_Manager : MonoBehaviour
                                 }
                             }
                             break;
+                        case "Add Temp Max Energy":
+                            Player.GetComponent<Player_Manager>().Temp_Starting_Energy_Change(Played_Card.Function_Values[i]);
+                        break;                                                    
                         case null:
                             break;
                     }
