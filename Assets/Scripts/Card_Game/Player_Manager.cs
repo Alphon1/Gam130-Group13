@@ -63,7 +63,12 @@ public class Player_Manager : MonoBehaviour
 
     public void Temp_Starting_Energy_Change(int Energy_Added)
     {
-        Temp_Starting_Energy = Temp_Starting_Energy + Energy_Added;
+        Temp_Starting_Energy += Energy_Added;
+    }
+
+    public void Starting_Energy_Change(int Energy_Added)
+    {
+        Starting_Energy += Energy_Added;
     }
 
     //changes the player's energy, without letting it go over max
