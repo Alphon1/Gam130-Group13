@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Queued_Function
+{
+    public Card Source_Card;
+    public int Function_Start_Point;
+}
 public class Hand_Manager : MonoBehaviour
 {
     [SerializeField]
@@ -12,6 +17,9 @@ public class Hand_Manager : MonoBehaviour
     private GameObject Deck_Object;
     private int Starting_Function;
     private bool Freeze_Player_Control;
+    private int On_Draw_Damage = 0;
+    public List<Queued_Function> Queued_Functions = new List<Queued_Function>();
+    private Queued_Function Function_To_Queue;
 
     //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
     //and calls a function to draw 5 cards
@@ -23,6 +31,20 @@ public class Hand_Manager : MonoBehaviour
         Starting_Function = 0;
     }
 
+    public void End_Of_Turn()
+    {
+        On_Draw_Damage = 0;
+    }
+
+    public void Start_Of_Turn()
+    {
+        Reset_Hand();
+        for (int i = 0; i < Queued_Functions.Count; i++)
+        {
+            Starting_Function = Queued_Functions[i].Function_Start_Point;
+            Play_Card(Queued_Functions[i].Source_Card);
+        }
+    }
     //Goes through each card in the scene by tag, and if they are needed to display a card in the hand it enables them
     //and tells them to update their displayed values. If they aren't needed it disables them
     public void Enable_Cards()
@@ -50,6 +72,13 @@ public class Hand_Manager : MonoBehaviour
             {
                 Hand.Add(Deck_Object.GetComponent<Deck_Manager>().Deck[0]);
                 Deck_Object.GetComponent<Deck_Manager>().Deck.RemoveAt(0);
+                if (On_Draw_Damage > 0)
+                {
+                    for (int j = 0; j < On_Draw_Damage; j++)
+                    {
+                        GameObject.FindGameObjectsWithTag("Enemy")[Random.Range(0, GameObject.FindGameObjectsWithTag("Enemy").Length)].GetComponent<Enemy_Manager>().Damage(1);
+                    }
+                }
             }
             if (Deck_Object.GetComponent<Deck_Manager>().Deck.Count == 0)
             {
@@ -132,6 +161,15 @@ public class Hand_Manager : MonoBehaviour
                             Freeze_Player_Control = true;
                             Starting_Function = i + 1;
                             goto End_Card;
+                        case "On Draw Damage":
+                            On_Draw_Damage = Played_Card.Function_Values[i];
+                            break;
+                        case "Next Turn":
+                            Function_To_Queue = new Queued_Function();
+                            Function_To_Queue.Source_Card = Played_Card;
+                            Function_To_Queue.Function_Start_Point = i + 1;
+                            Queued_Functions.Add(Function_To_Queue);
+                            break;
                         case null:
                             break;
                     }
@@ -153,6 +191,7 @@ public class Hand_Manager : MonoBehaviour
     Target_Select:;
         while (true)
         {
+        Incorrect_Target:;
             if (Input.GetMouseButtonDown(0))
             {
                 RaycastHit Hit = new RaycastHit();
@@ -186,6 +225,8 @@ public class Hand_Manager : MonoBehaviour
                                 Hit.transform.gameObject.GetComponent<Enemy_Manager>().Set_DOT(Played_Card.Function_Values[Target_Function_Int]);
                                 Play_Card(Played_Card);
                             break;
+                            default:
+                                goto Incorrect_Target;
                         }
                         yield break;
                     }
@@ -204,6 +245,8 @@ public class Hand_Manager : MonoBehaviour
                                     goto Target_Select;
                                 }
                             break;
+                            default:
+                                goto Incorrect_Target;
                         }
                     }
                 }           

@@ -23,6 +23,7 @@ public class Battle_Manager : MonoBehaviour
     {
         if (Is_Player_Turn == true)
         {
+            Hand.GetComponent<Hand_Manager>().End_Of_Turn();
             Is_Player_Turn = false;
             for (int i = 0; i < GameObject.FindGameObjectsWithTag("Enemy").Length; i++)
             {
@@ -33,7 +34,7 @@ public class Battle_Manager : MonoBehaviour
         else
         {
             Is_Player_Turn = true;
-            Hand.GetComponent<Hand_Manager>().Reset_Hand();
+            Hand.GetComponent<Hand_Manager>().Start_Of_Turn();
             Player.GetComponent<Player_Manager>().Reset_Energy();
         }
     }
