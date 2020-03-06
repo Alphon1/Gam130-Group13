@@ -57,7 +57,10 @@ public class Hand_Manager : MonoBehaviour
                 Deck_Object.GetComponent<Deck_Manager>().Deck.RemoveAt(0);
                 if (On_Draw_Damage > 0)
                 {
-                    StartCoroutine(Target_Select("Cardless", null, On_Draw_Damage));
+                    for (int j = 0; j < On_Draw_Damage; j++)
+                    {
+                        GameObject.FindGameObjectsWithTag("Enemy")[Random.Range(0, GameObject.FindGameObjectsWithTag("Enemy").Length)].GetComponent<Enemy_Manager>().Damage(1);
+                    }
                 }
             }
             if (Deck_Object.GetComponent<Deck_Manager>().Deck.Count == 0)
@@ -199,9 +202,6 @@ public class Hand_Manager : MonoBehaviour
                                 Hit.transform.gameObject.GetComponent<Enemy_Manager>().Set_DOT(Played_Card.Function_Values[Target_Function_Int]);
                                 Play_Card(Played_Card);
                             break;
-                            case "Cardless":
-                                Hit.transform.gameObject.GetComponent<Enemy_Manager>().Damage(Played_Card.Function_Values[Target_Function_Int]);
-                                break;
                             default:
                                 goto Incorrect_Target;
                         }
