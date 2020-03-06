@@ -20,6 +20,7 @@ public class Hand_Manager : MonoBehaviour
     private int On_Draw_Damage = 0;
     public List<Queued_Function> Queued_Functions = new List<Queued_Function>();
     private Queued_Function Function_To_Queue;
+    private int Random_Target;
 
     //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
     //and calls a function to draw 5 cards
@@ -174,6 +175,13 @@ public class Hand_Manager : MonoBehaviour
                             Function_To_Queue.Source_Card = Played_Card;
                             Function_To_Queue.Function_Start_Point = i + 1;
                             Queued_Functions.Add(Function_To_Queue);
+                            goto End_Card;
+                        case "Self Random Damage":
+                            for (int j = 0; j < Played_Card.Function_Values[i]; j++)
+                            {
+                                Random_Target = Random.Range(0, GameObject.FindGameObjectsWithTag("Enemy").Length + 1);
+
+                            }
                             break;
                         case null:
                             break;
