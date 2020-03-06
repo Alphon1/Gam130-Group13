@@ -12,6 +12,7 @@ public class Hand_Manager : MonoBehaviour
     private GameObject Deck_Object;
     private int Starting_Function;
     private bool Freeze_Player_Control;
+    private int On_Draw_Damage = 0;
 
     //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
     //and calls a function to draw 5 cards
@@ -23,6 +24,10 @@ public class Hand_Manager : MonoBehaviour
         Starting_Function = 0;
     }
 
+    public void End_Of_Turn()
+    {
+        On_Draw_Damage = 0;
+    }
     //Goes through each card in the scene by tag, and if they are needed to display a card in the hand it enables them
     //and tells them to update their displayed values. If they aren't needed it disables them
     public void Enable_Cards()
@@ -50,6 +55,10 @@ public class Hand_Manager : MonoBehaviour
             {
                 Hand.Add(Deck_Object.GetComponent<Deck_Manager>().Deck[0]);
                 Deck_Object.GetComponent<Deck_Manager>().Deck.RemoveAt(0);
+                if (On_Draw_Damage > 0)
+                {
+                    StartCoroutine(Target_Select("Cardless", null, On_Draw_Damage));
+                }
             }
             if (Deck_Object.GetComponent<Deck_Manager>().Deck.Count == 0)
             {
@@ -132,6 +141,9 @@ public class Hand_Manager : MonoBehaviour
                             Freeze_Player_Control = true;
                             Starting_Function = i + 1;
                             goto End_Card;
+                        case "On Draw Damage":
+                            On_Draw_Damage = Played_Card.Function_Values[i];
+                            break;
                         case null:
                             break;
                     }
@@ -153,6 +165,7 @@ public class Hand_Manager : MonoBehaviour
     Target_Select:;
         while (true)
         {
+        Incorrect_Target:;
             if (Input.GetMouseButtonDown(0))
             {
                 RaycastHit Hit = new RaycastHit();
@@ -186,6 +199,11 @@ public class Hand_Manager : MonoBehaviour
                                 Hit.transform.gameObject.GetComponent<Enemy_Manager>().Set_DOT(Played_Card.Function_Values[Target_Function_Int]);
                                 Play_Card(Played_Card);
                             break;
+                            case "Cardless":
+                                Hit.transform.gameObject.GetComponent<Enemy_Manager>().Damage(Played_Card.Function_Values[Target_Function_Int]);
+                                break;
+                            default:
+                                goto Incorrect_Target;
                         }
                         yield break;
                     }
@@ -204,6 +222,8 @@ public class Hand_Manager : MonoBehaviour
                                     goto Target_Select;
                                 }
                             break;
+                            default:
+                                goto Incorrect_Target;
                         }
                     }
                 }           
