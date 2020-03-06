@@ -20,6 +20,7 @@ public class Hand_Manager : MonoBehaviour
     private int On_Draw_Damage = 0;
     public List<Queued_Function> Queued_Functions = new List<Queued_Function>();
     private Queued_Function Function_To_Queue;
+    private int Random_Target;
 
     //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
     //and calls a function to draw 5 cards
@@ -72,6 +73,11 @@ public class Hand_Manager : MonoBehaviour
             {
                 Hand.Add(Deck_Object.GetComponent<Deck_Manager>().Deck[0]);
                 Deck_Object.GetComponent<Deck_Manager>().Deck.RemoveAt(0);
+                if (Hand[Hand.Count - 1].Functions[0] == "When Drawn")
+                {
+                    Starting_Function = 0;
+                    Play_Card(Hand[Hand.Count - 1]);
+                }
                 if (On_Draw_Damage > 0)
                 {
                     for (int j = 0; j < On_Draw_Damage; j++)
@@ -107,7 +113,7 @@ public class Hand_Manager : MonoBehaviour
                             StartCoroutine(Target_Select("Damage",Played_Card, i));
                             Freeze_Player_Control = true;
                             Starting_Function = i + 1;
-                            goto End_Card;
+                            goto Stop_Card;
                         case "Heal":
                             Player.GetComponent<Player_Manager>().Health_Change(-(Played_Card.Function_Values[i]));
                             break;
@@ -118,7 +124,7 @@ public class Hand_Manager : MonoBehaviour
                             StartCoroutine(Target_Select("Lethal Damage",Played_Card, i));
                             Freeze_Player_Control = true;
                             Starting_Function = i + 1;
-                            goto End_Card;
+                            goto Stop_Card;
                         case "Shuffle Discard":
                             for (int j = 0; j < Deck_Object.GetComponent<Deck_Manager>().Discard.Count; j++)
                             {
@@ -146,13 +152,13 @@ public class Hand_Manager : MonoBehaviour
                             StartCoroutine(Target_Select("Discard", Played_Card, i));
                             Freeze_Player_Control = true;
                             Starting_Function = i + 1;
-                            goto End_Card;
+                            goto Stop_Card;
                         case "Exhaust":
                             Starting_Function = 0;
                             Hand.Remove(Played_Card);
                             Enable_Cards();
                             Exhaust.Add(Played_Card);
-                            goto End_Card;
+                            goto Stop_Card;
                         case "Max HP Change":
                             Player.GetComponent<Player_Manager>().Max_Health_Change(Played_Card.Function_Values[i]);
                             break;
@@ -160,7 +166,7 @@ public class Hand_Manager : MonoBehaviour
                             StartCoroutine(Target_Select("DOT", Played_Card, i));
                             Freeze_Player_Control = true;
                             Starting_Function = i + 1;
-                            goto End_Card;
+                            goto Stop_Card;
                         case "On Draw Damage":
                             On_Draw_Damage = Played_Card.Function_Values[i];
                             break;
@@ -169,18 +175,33 @@ public class Hand_Manager : MonoBehaviour
                             Function_To_Queue.Source_Card = Played_Card;
                             Function_To_Queue.Function_Start_Point = i + 1;
                             Queued_Functions.Add(Function_To_Queue);
+                            goto End_Card;
+                        case "Self Random Damage":
+                            for (int j = 0; j < Played_Card.Function_Values[i]; j++)
+                            {
+                                Random_Target = Random.Range(0, GameObject.FindGameObjectsWithTag("Enemy").Length + 1);
+                                if (Random_Target == GameObject.FindGameObjectsWithTag("Enemy").Length + 1)
+                                {
+                                    Player.GetComponent<Player_Manager>().Health_Change(1);
+                                }
+                                else
+                                {
+                                    GameObject.FindGameObjectsWithTag("Enemy")[Random_Target].GetComponent<Enemy_Manager>().Damage(1);
+                                }
+                            }
                             break;
                         case null:
                             break;
                     }
                 }
+            End_Card:;
                 Starting_Function = 0;        
                 Hand.Remove(Played_Card);
                 Enable_Cards();
                 Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Played_Card);
                 Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
                 Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
-            End_Card:;
+            Stop_Card:;
             }
         }
     }
