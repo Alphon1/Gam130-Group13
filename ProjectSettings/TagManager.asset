@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - MapCam
+  - BossRoom
   - Hand
   - Enemy
   - Battle_Manager
