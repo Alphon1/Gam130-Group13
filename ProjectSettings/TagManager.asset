@@ -6,6 +6,11 @@ TagManager:
   tags:
   - MapCam
   - BossRoom
+  - Hand
+  - Enemy
+  - Battle_Manager
+  - Card
+  - Deck
   layers:
   - Default
   - TransparentFX
