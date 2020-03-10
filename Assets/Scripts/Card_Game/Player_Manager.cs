@@ -19,6 +19,7 @@ public class Player_Manager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI Numerical_Display;
     private int Temp_Starting_Energy;
+    private int Armour;
 
     //when the player first loads, they have max health and energy
     private void Awake()
@@ -35,7 +36,15 @@ public class Player_Manager : MonoBehaviour
     //Changes the player's health, without letting their health go over max
     public void Health_Change(int Health_Removed)
     {
-        Health -= Health_Removed;
+        if (Armour - Health_Removed < 0)
+        {
+            Health = Health - (Health_Removed - Armour);
+            Armour = 0;
+        }
+        else
+        {
+            Armour -= Health_Removed;
+        }
         if (Health > Max_Health)
         {
             Health = Max_Health;
