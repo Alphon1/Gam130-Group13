@@ -183,7 +183,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Deck_Text
       value: 
-      objectReference: {fileID: 928221310}
+      objectReference: {fileID: 1272876745}
     - target: {fileID: 7614593859953537493, guid: fc5593afbc19b6a46a2ef4ea5fa69702,
         type: 3}
       propertyPath: Deck.Array.data[4]
@@ -536,7 +536,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &928221310 stripped
+--- !u!114 &1272876745 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3172171698670754221, guid: fc5593afbc19b6a46a2ef4ea5fa69702,
     type: 3}
