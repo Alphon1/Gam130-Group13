@@ -8,7 +8,7 @@ public class Player_Manager : MonoBehaviour
 {
     [SerializeField]
     private int Max_Health;
-    private int Health;
+    public int Health;
     [SerializeField]
     private int Starting_Energy;
     private int Energy;

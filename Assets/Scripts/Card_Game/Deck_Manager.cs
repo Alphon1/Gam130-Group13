@@ -25,7 +25,6 @@ public class Deck_Manager : MonoBehaviour
         Display_Deck_Count();
         Display_Discard_Count();
         Shuffle_Deck();
-        Hand.GetComponent<Hand_Manager>().Draw_Card(5);
     }
 
     //moves the cards in the deck around randomly

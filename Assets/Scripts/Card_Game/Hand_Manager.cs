@@ -14,6 +14,7 @@ public class Hand_Manager : MonoBehaviour
     private List<Card> Exhaust;
     private GameObject Player;
     private GameObject Turn_Order;
+    [SerializeField]
     private GameObject Deck_Object;
     private int Starting_Function;
     private bool Freeze_Player_Control;
@@ -30,6 +31,7 @@ public class Hand_Manager : MonoBehaviour
         Turn_Order = GameObject.FindWithTag("Battle_Manager");
         Deck_Object = GameObject.FindWithTag("Deck");
         Starting_Function = 0;
+        Draw_Card(5);
     }
 
     public void End_Of_Turn()
