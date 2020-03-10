@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Deck_Manager : MonoBehaviour
 {
@@ -12,9 +13,9 @@ public class Deck_Manager : MonoBehaviour
     private int Random_Position;
     private Card Temp_Card;
     [SerializeField]
-    private Text Discard_Text;
+    private TextMeshProUGUI Discard_Text;
     [SerializeField]
-    private Text Deck_Text;
+    private TextMeshProUGUI Deck_Text;
     private int Random_Int;
     private GameObject Hand;
 
