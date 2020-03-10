@@ -64,7 +64,7 @@ public class LevelBuilder : MonoBehaviour {
         AddDoorwaysToList(startRoom, ref availableDoorways);
 
         //Position room
-        startRoom.transform.position = Vector3.zero;
+        startRoom.transform.position = this.transform.position;
 		startRoom.transform.rotation = Quaternion.identity;
     }
 

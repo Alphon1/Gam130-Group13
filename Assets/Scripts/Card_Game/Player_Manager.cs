@@ -8,7 +8,7 @@ public class Player_Manager : MonoBehaviour
 {
     [SerializeField]
     private int Max_Health;
-    private int Health;
+    public int Health;
     [SerializeField]
     private int Starting_Energy;
     private int Energy;
@@ -18,10 +18,13 @@ public class Player_Manager : MonoBehaviour
     private Slider Health_Display;
     [SerializeField]
     private TextMeshProUGUI Numerical_Display;
+    private int Temp_Starting_Energy;
 
     //when the player first loads, they have max health and energy
     private void Awake()
     {
+        Starting_Energy = 7;
+        Temp_Starting_Energy = Starting_Energy;
         Energy = Starting_Energy;
         Health = Max_Health;
         Health_Display.value = Health;
@@ -59,6 +62,16 @@ public class Player_Manager : MonoBehaviour
         Max_Health += Change;
     }
 
+    public void Temp_Starting_Energy_Change(int Energy_Added)
+    {
+        Temp_Starting_Energy += Energy_Added;
+    }
+
+    public void Starting_Energy_Change(int Energy_Added)
+    {
+        Starting_Energy += Energy_Added;
+    }
+
     //changes the player's energy, without letting it go over max
     public void Energy_Change(int Energy_Removed)
     {
@@ -69,7 +82,8 @@ public class Player_Manager : MonoBehaviour
     //resets the player's energy to full
     public void Reset_Energy()
     {
-        Energy = Starting_Energy;
+        Energy = Temp_Starting_Energy;
+        Temp_Starting_Energy = Starting_Energy;
         Energy_Display.text = "Energy: " + Energy.ToString();
     }
 }

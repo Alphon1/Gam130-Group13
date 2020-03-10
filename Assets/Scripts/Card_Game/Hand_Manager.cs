@@ -14,6 +14,7 @@ public class Hand_Manager : MonoBehaviour
     private List<Card> Exhaust;
     private GameObject Player;
     private GameObject Turn_Order;
+    [SerializeField]
     private GameObject Deck_Object;
     private int Starting_Function;
     private bool Freeze_Player_Control;
@@ -30,6 +31,7 @@ public class Hand_Manager : MonoBehaviour
         Turn_Order = GameObject.FindWithTag("Battle_Manager");
         Deck_Object = GameObject.FindWithTag("Deck");
         Starting_Function = 0;
+        Draw_Card(5);
     }
 
     public void End_Of_Turn()
@@ -189,6 +191,12 @@ public class Hand_Manager : MonoBehaviour
                                     GameObject.FindGameObjectsWithTag("Enemy")[Random_Target].GetComponent<Enemy_Manager>().Damage(1);
                                 }
                             }
+                            break;
+                        case "Add Temp Max Energy":
+                            Player.GetComponent<Player_Manager>().Temp_Starting_Energy_Change(Played_Card.Function_Values[i]);
+                        break;
+                        case "Add Max Energy":
+                            Player.GetComponent<Player_Manager>().Starting_Energy_Change(Played_Card.Function_Values[i]);
                             break;
                         case null:
                             break;
