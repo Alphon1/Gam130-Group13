@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
-  m_Name: Satisfying stomp
+  m_Name: Data Stream
   m_EditorClassIdentifier: 
-  Name: Satisfying stomp
-  Type: Attack
-  Description: Deal 11 damage and gain 1 energy next turn
+  Name: Data Stream
+  Type: Special
+  Description: Gain an energy slot for this combat. Delete.
   Art: {fileID: 0}
-  Cost: 4
+  Cost: 2
   Functions:
-  - Damage
-  - Add Temp Max Energy
-  Function_Values: 0b00000001000000
+  - Add Max Energy
+  - Exhaust
+  Function_Values: 0100000001000000
