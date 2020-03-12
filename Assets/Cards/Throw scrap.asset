@@ -18,5 +18,5 @@ MonoBehaviour:
   Art: {fileID: 0}
   Cost: 1
   Functions:
-  - Damage
+  - Random Damage
   Function_Values: 04000000
