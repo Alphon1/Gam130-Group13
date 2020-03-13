@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
-  m_Name: Throw scrap
+  m_Name: Energy Bank
   m_EditorClassIdentifier: 
-  Name: Throw scrap
-  Type: Attack
-  Description: Deal 4 damage randomly split amongst all enemies
+  Name: Energy Bank
+  Type: Special
+  Description: +2 energy next turn
   Art: {fileID: 0}
-  Cost: 1
+  Cost: 2
   Functions:
-  - Random Damage
-  Function_Values: 04000000
+  - Add Temp Max Energy
+  Function_Values: 01000000

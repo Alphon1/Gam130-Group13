@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
-  m_Name: Throw scrap
+  m_Name: Volatile Equipment
   m_EditorClassIdentifier: 
-  Name: Throw scrap
+  Name: Volatile Equipment
   Type: Attack
-  Description: Deal 4 damage randomly split amongst all enemies
+  Description: When you draw this card, immediately deal 6 damage. Lose 2hp
   Art: {fileID: 0}
-  Cost: 1
+  Cost: 0
   Functions:
-  - Random Damage
-  Function_Values: 04000000
+  - When Drawn
+  - AOE Damage
+  Function_Values: 0000000006000000

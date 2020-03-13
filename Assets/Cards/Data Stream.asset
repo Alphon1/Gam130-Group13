@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
-  m_Name: Throw scrap
+  m_Name: Data Stream
   m_EditorClassIdentifier: 
-  Name: Throw scrap
-  Type: Attack
-  Description: Deal 4 damage randomly split amongst all enemies
+  Name: Data Stream
+  Type: Special
+  Description: Gain an energy slot for this combat. Delete.
   Art: {fileID: 0}
-  Cost: 1
+  Cost: 2
   Functions:
-  - Random Damage
-  Function_Values: 04000000
+  - Add Max Energy
+  - Exhaust
+  Function_Values: 0100000001000000

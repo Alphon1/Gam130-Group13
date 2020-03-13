@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f37385c214e8e5d419e8e775818e92e3, type: 3}
-  m_Name: Throw scrap
+  m_Name: Fury Node
   m_EditorClassIdentifier: 
-  Name: Throw scrap
+  Name: Fury Node
   Type: Attack
-  Description: Deal 4 damage randomly split amongst all enemies
+  Description: Deal 7 damage for 3 turns
   Art: {fileID: 0}
-  Cost: 1
+  Cost: 5
   Functions:
-  - Random Damage
-  Function_Values: 04000000
+  - DOT
+  Function_Values: 07000000

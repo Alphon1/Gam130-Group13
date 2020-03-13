@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Satisfying stomp
   Type: Attack
-  Description: Deal 11 damage and gain 1 energy
+  Description: Deal 11 damage and gain 1 energy next turn
   Art: {fileID: 0}
   Cost: 4
   Functions:
   - Damage
-  - Add Energy
+  - Add Temp Max Energy
   Function_Values: 0b00000001000000
