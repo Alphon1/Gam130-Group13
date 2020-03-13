@@ -1129,6 +1129,16 @@ PrefabInstance:
       propertyPath: description
       value: PRESS TAB TO SKIP TO POST FIGHT
       objectReference: {fileID: 0}
+    - target: {fileID: 8991705803798090697, guid: f02e30c1a33bc6e4d8912fff36998a43,
+        type: 3}
+      propertyPath: text
+      value: Ignore RU-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991705803798090699, guid: f02e30c1a33bc6e4d8912fff36998a43,
+        type: 3}
+      propertyPath: blockName
+      value: RU-3 Ignored
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8991705803798090703, guid: f02e30c1a33bc6e4d8912fff36998a43, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f02e30c1a33bc6e4d8912fff36998a43, type: 3}
