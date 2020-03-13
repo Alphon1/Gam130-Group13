@@ -12,7 +12,7 @@ public class SCR_HMove : MonoBehaviour
     public void Move()
     {
         player = GameObject.Find("Player");
-        room = GameObject.FindGameObjectWithTag("Room 1");
+        room = GameObject.FindGameObjectWithTag("HealthRoom");
         Debug.Log("Player Move Health");
         player.transform.position = room.transform.position;
         player.transform.position = player.transform.position + new Vector3(offsetX, offsetY, offsetZ);
