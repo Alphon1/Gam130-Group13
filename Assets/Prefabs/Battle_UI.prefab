@@ -2653,7 +2653,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3464855733851859039}
+  - component: {fileID: 9183591681026312394}
   m_Layer: 0
   m_Name: Battle_UI
   m_TagString: Untagged
@@ -2661,15 +2661,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3464855733851859039
-Transform:
+--- !u!224 &9183591681026312394
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4113906129807138994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.599903, y: 0, z: -8.443869}
+  m_LocalPosition: {x: 0, y: 0, z: -8.443869}
   m_LocalScale: {x: 1.6724739, y: 1.6724739, z: 1.6724739}
   m_Children:
   - {fileID: 2014594103958741330}
@@ -2677,6 +2677,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 57.599903, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4202237274184066009
 GameObject:
   m_ObjectHideFlags: 0
@@ -5266,7 +5271,7 @@ RectTransform:
   - {fileID: 2845299126725682696}
   - {fileID: 8276276614688401088}
   - {fileID: 405446345317680214}
-  m_Father: {fileID: 3464855733851859039}
+  m_Father: {fileID: 9183591681026312394}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5916,8 +5921,13 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3464855733851859039}
+    m_TransformParent: {fileID: 9183591681026312394}
     m_Modifications:
+    - target: {fileID: 6940134753690117808, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
+        type: 3}
+      propertyPath: m_Name
+      value: Battle_Manager
+      objectReference: {fileID: 0}
     - target: {fileID: 1180397715561354553, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -5978,10 +5988,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.59791666
       objectReference: {fileID: 0}
-    - target: {fileID: 6940134753690117808, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
+    - target: {fileID: 1180397715561354553, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
         type: 3}
-      propertyPath: m_Name
-      value: Battle_Manager
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937006754114512194, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937006754114512194, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623646950038456949, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
+        type: 3}
+      propertyPath: Is_Player_Turn
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3724397515147684251, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
         type: 3}
@@ -6036,21 +6061,6 @@ PrefabInstance:
     - target: {fileID: 3724397515147684251, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8937006754114512194, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8937006754114512194, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5623646950038456949, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
-        type: 3}
-      propertyPath: Is_Player_Turn
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
