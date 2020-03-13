@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SCR_BRMove : MonoBehaviour
+public class SCR_CMove : MonoBehaviour
 {
     public GameObject player;
     public GameObject room;
@@ -13,7 +13,7 @@ public class SCR_BRMove : MonoBehaviour
     public void Move()
     {
         player = GameObject.Find("Player");
-        room = GameObject.FindGameObjectWithTag("BossRoom");
+        room = GameObject.FindGameObjectWithTag("Room 3");
         //battleUI = GameObject.Find("Temp_Battle_UI");
         Debug.Log("Player Move");
         player.transform.position = room.transform.position;
