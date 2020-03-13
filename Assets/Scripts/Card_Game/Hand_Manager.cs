@@ -83,10 +83,7 @@ public class Hand_Manager : MonoBehaviour
                 }
                 if (On_Draw_Damage > 0)
                 {
-                    for (int j = 0; j < On_Draw_Damage; j++)
-                    {
-                        GameObject.FindGameObjectsWithTag("Enemy")[Random.Range(0, GameObject.FindGameObjectsWithTag("Enemy").Length)].GetComponent<Enemy_Manager>().Damage(1);
-                    }
+                    GameObject.FindGameObjectsWithTag("Enemy")[Random.Range(0, GameObject.FindGameObjectsWithTag("Enemy").Length)].GetComponent<Enemy_Manager>().Damage(On_Draw_Damage);
                 }
             }
             if (Deck_Object.GetComponent<Deck_Manager>().Deck.Count == 0)
