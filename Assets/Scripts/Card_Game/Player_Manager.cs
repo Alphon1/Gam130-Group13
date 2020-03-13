@@ -20,6 +20,10 @@ public class Player_Manager : MonoBehaviour
     private TextMeshProUGUI Numerical_Display;
     private int Temp_Starting_Energy;
     private int Armour;
+    private int HOT_Duration;
+    private int HOT_Healing;
+    [SerializeField]
+    private TextMeshProUGUI Armour_Display;
 
     //when the player first loads, they have max health and energy
     private void Awake()
@@ -28,31 +32,42 @@ public class Player_Manager : MonoBehaviour
         Temp_Starting_Energy = Starting_Energy;
         Energy = Starting_Energy;
         Health = Max_Health;
-        Health_Display.value = Health;
-        Numerical_Display.text = Health.ToString();
-        Energy_Display.text = "Energy: " + Energy.ToString();
+        Display_Values();
     }
 
     //Changes the player's health, without letting their health go over max
     public void Health_Change(int Health_Removed)
     {
-        if (Armour - Health_Removed < 0)
+        if (Health_Removed > 0)
         {
-            Health = Health - (Health_Removed - Armour);
-            Armour = 0;
+            if (Armour - Health_Removed < 0)
+            {
+                Health = Health - (Health_Removed - Armour);
+                Armour = 0;
+            }
+            else
+            {
+                Armour -= Health_Removed;
+            }
         }
         else
         {
-            Armour -= Health_Removed;
+            Health -= Health_Removed;
         }
         if (Health > Max_Health)
         {
             Health = Max_Health;
         }
-        Health_Display.value = Health;
-        Numerical_Display.text = Health.ToString();
+        Display_Values();
     }
 
+    public void Display_Values()
+    {
+        Health_Display.value = Health;
+        Numerical_Display.text = Health.ToString();
+        Armour_Display.text = Armour.ToString();
+        Energy_Display.text = "Energy: " + Energy.ToString();
+    }
     //checks if the player has enough energy for that action
     public bool Can_Play(int Energy_Cost)
     {
@@ -85,7 +100,7 @@ public class Player_Manager : MonoBehaviour
     public void Energy_Change(int Energy_Removed)
     {
         Energy -= Energy_Removed;
-        Energy_Display.text = "Energy: " + Energy.ToString();
+        Display_Values();
     }
 
     //resets the player's energy to full
@@ -93,6 +108,21 @@ public class Player_Manager : MonoBehaviour
     {
         Energy = Temp_Starting_Energy;
         Temp_Starting_Energy = Starting_Energy;
-        Energy_Display.text = "Energy: " + Energy.ToString();
+        Display_Values();
+    }
+
+    public void Set_HOT(int Healing)
+    {
+        HOT_Duration = 3;
+        HOT_Healing = Healing;
+    }
+
+    public void HOT_Tick()
+    {
+        if (HOT_Duration > 0)
+        {
+            HOT_Duration -= 1;
+            Health_Change(-HOT_Healing);
+        }
     }
 }

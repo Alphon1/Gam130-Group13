@@ -42,6 +42,7 @@ public class Hand_Manager : MonoBehaviour
     public void Start_Of_Turn()
     {
         Reset_Hand();
+        Player.GetComponent<Player_Manager>().HOT_Tick();
         for (int i = 0; i < Queued_Functions.Count; i++)
         {
             Starting_Function = Queued_Functions[i].Function_Start_Point;
@@ -197,6 +198,9 @@ public class Hand_Manager : MonoBehaviour
                         break;
                         case "Add Max Energy":
                             Player.GetComponent<Player_Manager>().Starting_Energy_Change(Played_Card.Function_Values[i]);
+                            break;
+                        case "HOT":
+                            Player.GetComponent<Player_Manager>().Set_HOT(Played_Card.Function_Values[i]);
                             break;
                         case null:
                             break;
