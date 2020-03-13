@@ -73,6 +73,10 @@ public class Enemy_Manager : MonoBehaviour
     {
         Health -= Damage_Taking;
         Health_Display.text = Health.ToString();
+        if (Player.GetComponent<Player_Manager>().Check_Life_Steal() > 0)
+        {
+            Player.GetComponent<Player_Manager>().Health_Change(-Mathf.RoundToInt(Player.GetComponent<Player_Manager>().Check_Life_Steal() * Damage_Taking));
+        }
         Death_Check();
     }
     public void Death_Check()

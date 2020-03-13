@@ -39,6 +39,7 @@ public class Hand_Manager : MonoBehaviour
     {
         On_Draw_Damage = 0;
         On_Draw_Healing = 0;
+        Player.GetComponent<Player_Manager>().Set_Life_Steal(0);
     }
 
     public void Start_Of_Turn()
@@ -207,6 +208,9 @@ public class Hand_Manager : MonoBehaviour
                             break;
                         case "On Draw Heal":
                             On_Draw_Healing = Played_Card.Function_Values[i];
+                            break;
+                        case "Life Steal":
+                            Player.GetComponent<Player_Manager>().Set_Life_Steal(Played_Card.Function_Values[i]);
                             break;
                         case null:
                             break;
