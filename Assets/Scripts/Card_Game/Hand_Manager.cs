@@ -19,6 +19,7 @@ public class Hand_Manager : MonoBehaviour
     private int Starting_Function;
     private bool Freeze_Player_Control;
     private int On_Draw_Damage = 0;
+    private int On_Draw_Healing = 0;
     public List<Queued_Function> Queued_Functions = new List<Queued_Function>();
     private Queued_Function Function_To_Queue;
     private int Random_Target;
@@ -37,6 +38,7 @@ public class Hand_Manager : MonoBehaviour
     public void End_Of_Turn()
     {
         On_Draw_Damage = 0;
+        On_Draw_Healing = 0;
     }
 
     public void Start_Of_Turn()
@@ -84,6 +86,10 @@ public class Hand_Manager : MonoBehaviour
                 if (On_Draw_Damage > 0)
                 {
                     GameObject.FindGameObjectsWithTag("Enemy")[Random.Range(0, GameObject.FindGameObjectsWithTag("Enemy").Length)].GetComponent<Enemy_Manager>().Damage(On_Draw_Damage);
+                }
+                if (On_Draw_Healing > 0)
+                {
+                    Player.GetComponent<Player_Manager>().Health_Change(-On_Draw_Healing);
                 }
             }
             if (Deck_Object.GetComponent<Deck_Manager>().Deck.Count == 0)
@@ -198,6 +204,9 @@ public class Hand_Manager : MonoBehaviour
                             break;
                         case "HOT":
                             Player.GetComponent<Player_Manager>().Set_HOT(Played_Card.Function_Values[i]);
+                            break;
+                        case "On Draw Heal":
+                            On_Draw_Healing = Played_Card.Function_Values[i];
                             break;
                         case null:
                             break;
