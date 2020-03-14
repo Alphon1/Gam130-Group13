@@ -12,17 +12,11 @@ GameObject:
   - component: {fileID: 8991705803798090709}
   - component: {fileID: 8991705803798090739}
   - component: {fileID: 8991705803798090738}
-  - component: {fileID: 8991705803798090749}
   - component: {fileID: 8991705803798090748}
   - component: {fileID: 8991705803798090751}
   - component: {fileID: 8991705803798090750}
   - component: {fileID: 8991705803798090745}
   - component: {fileID: 8991705803798090744}
-  - component: {fileID: 8991705803798090747}
-  - component: {fileID: 8991705803798090746}
-  - component: {fileID: 8991705803798090693}
-  - component: {fileID: 8991705803798090692}
-  - component: {fileID: 8991705803798090695}
   - component: {fileID: 8991705803798090694}
   - component: {fileID: 8991705803798090689}
   - component: {fileID: 8991705803798090688}
@@ -70,11 +64,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 79.82297, y: 252.7878}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.73000026
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -82,7 +76,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 8991705803798090698}
+  - {fileID: 8991705803798090699}
   selectedCommands: []
   variables: []
   description: 
@@ -120,7 +114,6 @@ MonoBehaviour:
   description: A neutral state where the player has no objective/quest to complete
   eventHandler: {fileID: 0}
   commandList: []
-  suppressAllAutoSelections: 0
 --- !u!114 &8991705803798090738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,24 +137,8 @@ MonoBehaviour:
   itemId: 1
   blockName: Tutorial
   description: 
-  eventHandler: {fileID: 8991705803798090749}
+  eventHandler: {fileID: 0}
   commandList: []
-  suppressAllAutoSelections: 0
---- !u!114 &8991705803798090749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8991705803798090708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 8991705803798090738}
-  suppressBlockAutoSelect: 0
-  waitForFrames: 1
 --- !u!114 &8991705803798090748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,18 +155,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 268
     y: 136
-    width: 123
+    width: 122.602715
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 2
   blockName: Health Room
   description: 
-  eventHandler: {fileID: 8991705803798090692}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 8991705803798090694}
   - {fileID: 8991705803798090689}
-  suppressAllAutoSelections: 0
 --- !u!114 &8991705803798090751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,17 +182,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 326
     y: 90
-    width: 149
+    width: 147.26024
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 3
   blockName: Communal Room
   description: 
-  eventHandler: {fileID: 8991705803798090746}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 8991705803798090690}
-  suppressAllAutoSelections: 0
 --- !u!114 &8991705803798090750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,17 +208,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 397
     y: 133
-    width: 132
+    width: 130.8219
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 4
   blockName: Combat Room
   description: 
-  eventHandler: {fileID: 8991705803798090695}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 8991705803798090688}
-  suppressAllAutoSelections: 0
 --- !u!114 &8991705803798090745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,17 +234,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 128
     y: 137
-    width: 132
+    width: 129.45203
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 5
   blockName: Storage Room
   description: 
-  eventHandler: {fileID: 8991705803798090693}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 8991705803798090691}
-  suppressAllAutoSelections: 0
 --- !u!114 &8991705803798090744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,92 +260,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 171
     y: 85
-    width: 133
+    width: 133.56161
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 6
   blockName: RU-3 Pre-Fight
   description: 
-  eventHandler: {fileID: 8991705803798090747}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 8991705803798090700}
-  suppressAllAutoSelections: 0
---- !u!114 &8991705803798090747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8991705803798090708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 8991705803798090744}
-  suppressBlockAutoSelect: 0
-  targetButton: {fileID: 0}
---- !u!114 &8991705803798090746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8991705803798090708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 8991705803798090751}
-  suppressBlockAutoSelect: 0
-  targetButton: {fileID: 0}
---- !u!114 &8991705803798090693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8991705803798090708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 8991705803798090745}
-  suppressBlockAutoSelect: 0
-  targetButton: {fileID: 0}
---- !u!114 &8991705803798090692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8991705803798090708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 8991705803798090748}
-  suppressBlockAutoSelect: 0
-  targetButton: {fileID: 0}
---- !u!114 &8991705803798090695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8991705803798090708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 8991705803798090750}
-  suppressBlockAutoSelect: 0
-  targetButton: {fileID: 0}
 --- !u!114 &8991705803798090694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +434,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 499
     y: 86
-    width: 138
+    width: 139.04106
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -549,7 +446,6 @@ MonoBehaviour:
   - {fileID: 8991705803798090702}
   - {fileID: 8991705803798090697}
   - {fileID: 8991705803798090696}
-  suppressAllAutoSelections: 0
 --- !u!114 &8991705803798090700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +488,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 8991705803798090701}
-  suppressBlockAutoSelect: 0
   targetButton: {fileID: 0}
 --- !u!114 &8991705803798090702
 MonoBehaviour:
@@ -664,7 +559,7 @@ MonoBehaviour:
   indentLevel: 0
   text: Help RU-3
   description: 
-  targetBlock: {fileID: 8991705803798090698}
+  targetBlock: {fileID: 0}
   hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
@@ -689,7 +584,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 586
     y: 193
-    width: 121
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -698,7 +593,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList: []
-  suppressAllAutoSelections: 0
 --- !u!114 &8991705803798090698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,7 +609,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 459
     y: 195
-    width: 121
+    width: 121.23285
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -724,4 +618,3 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList: []
-  suppressAllAutoSelections: 0
