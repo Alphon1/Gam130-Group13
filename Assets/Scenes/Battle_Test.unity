@@ -1654,17 +1654,17 @@ PrefabInstance:
     - target: {fileID: 8120600038904756852, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120600038904756852, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120600038904756852, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8120600038904756852, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
         type: 3}
@@ -1674,7 +1674,7 @@ PrefabInstance:
     - target: {fileID: 8120600038904756852, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
         type: 3}
       propertyPath: m_fontSize
-      value: 22.8
+      value: 22.3
       objectReference: {fileID: 0}
     - target: {fileID: 8120600038904756852, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
         type: 3}
@@ -1689,7 +1689,7 @@ PrefabInstance:
     - target: {fileID: 8120600038904756852, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
         type: 3}
       propertyPath: m_text
-      value: 22
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8120600038904756852, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
         type: 3}
@@ -1954,7 +1954,7 @@ PrefabInstance:
     - target: {fileID: 7902319702177907391, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 233.1
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 7641650407514211260, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
         type: 3}
@@ -1975,7 +1975,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 224822153470e42339f6e828e4402928,
+      objectReference: {fileID: 21300000, guid: d2fbcfd2c64e94de694d5e9def68d8d2,
         type: 3}
     - target: {fileID: 4522642782743250081, guid: ae1b4a59f08581749a564e9c2d3cb5e7,
         type: 3}
