@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -36.995003, y: 63.8}
-  m_SizeDelta: {x: 13.93, y: 12.43}
+  m_AnchoredPosition: {x: -37.1, y: 63.988}
+  m_SizeDelta: {x: 14.85, y: 15.653}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5381504907770363018
 CanvasRenderer:
@@ -65,11 +65,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 8
+  m_text: 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a00320df8f16ac8428d53c0aaa7987e7, type: 2}
-  m_sharedMaterial: {fileID: 21867443448028786, guid: a00320df8f16ac8428d53c0aaa7987e7,
-    type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 692bd6f4b2c3d412fb1a414bfef3ac14, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -94,7 +93,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10.35
+  m_fontSize: 13
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -550,12 +549,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 7
+  m_fontSize: 10
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 72
+  m_fontSizeMax: 10
   m_fontStyle: 0
   m_textAlignment: 257
   m_characterSpacing: 0
@@ -596,7 +595,7 @@ MonoBehaviour:
     spaceCount: 3
     wordCount: 4
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
