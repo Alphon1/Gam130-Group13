@@ -46,6 +46,7 @@ public class Hand_Manager : MonoBehaviour
     {
         Reset_Hand();
         Player.GetComponent<Player_Manager>().HOT_Tick();
+        Player.GetComponent<Player_Manager>().Set_Damage_Reduction(0);
         for (int i = 0; i < Queued_Functions.Count; i++)
         {
             Starting_Function = Queued_Functions[i].Function_Start_Point;
@@ -203,6 +204,9 @@ public class Hand_Manager : MonoBehaviour
                         case "Add Max Energy":
                             Player.GetComponent<Player_Manager>().Starting_Energy_Change(Played_Card.Function_Values[i]);
                             break;
+                        case "Add Armour":
+                            Player.GetComponent<Player_Manager>().Add_Armour(Played_Card.Function_Values[i]);
+                            break;
                         case "HOT":
                             Player.GetComponent<Player_Manager>().Set_HOT(Played_Card.Function_Values[i]);
                             break;
@@ -211,6 +215,9 @@ public class Hand_Manager : MonoBehaviour
                             break;
                         case "Life Steal":
                             Player.GetComponent<Player_Manager>().Set_Life_Steal(Played_Card.Function_Values[i]);
+                            break;
+                        case "Reduce Damage":
+                            Player.GetComponent<Player_Manager>().Set_Damage_Reduction(Played_Card.Function_Values[i]);
                             break;
                         case null:
                             break;

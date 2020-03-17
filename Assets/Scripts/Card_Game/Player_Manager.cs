@@ -25,6 +25,7 @@ public class Player_Manager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI Armour_Display;
     private float Life_Stolen_Percentage;
+    private float Damage_Reduction;
 
     //when the player first loads, they have max health and energy
     private void Awake()
@@ -35,12 +36,23 @@ public class Player_Manager : MonoBehaviour
         Health = Max_Health;
         Display_Values();
     }
-
+    public void Add_Armour(int Armour_Added)
+    {
+        Armour += Armour_Added;
+    }
+    public void Set_Damage_Reduction(int Percentage_Damage_Reduced)
+    {
+        Damage_Reduction = 1- (Percentage_Damage_Reduced * 0.01f); 
+    }
     //Changes the player's health, without letting their health go over max
     public void Health_Change(int Health_Removed)
     {
         if (Health_Removed > 0)
         {
+            if (Damage_Reduction > 0)
+            {
+                Health_Removed = Mathf.RoundToInt(Health_Removed * Damage_Reduction);
+            }
             if (Armour - Health_Removed < 0)
             {
                 Health = Health - (Health_Removed - Armour);
