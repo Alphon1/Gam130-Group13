@@ -14,10 +14,10 @@ public class SCR_BRMove : MonoBehaviour
     {
         player = GameObject.Find("Player");
         room = GameObject.FindGameObjectWithTag("BossRoom");
-        battleUI = GameObject.Find("Temp_Battle_UI");
+        //battleUI = GameObject.Find("Temp_Battle_UI");
         Debug.Log("Player Move");
         player.transform.position = room.transform.position;
         player.transform.position = player.transform.position + new Vector3(offsetX, offsetY, offsetZ);
-        battleUI.SetActive(true);
+        //battleUI.SetActive(true);
     }
 }

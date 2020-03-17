@@ -11,6 +11,10 @@ TagManager:
   - Battle_Manager
   - Card
   - Deck
+  - CombatRoom
+  - DialogueRoom
+  - StorageRoom
+  - HealthRoom
   layers:
   - Default
   - TransparentFX

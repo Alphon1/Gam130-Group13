@@ -24,6 +24,7 @@ public class Player_Manager : MonoBehaviour
     private int HOT_Healing;
     [SerializeField]
     private TextMeshProUGUI Armour_Display;
+    private float Life_Stolen_Percentage;
 
     //when the player first loads, they have max health and energy
     private void Awake()
@@ -124,5 +125,15 @@ public class Player_Manager : MonoBehaviour
             HOT_Duration -= 1;
             Health_Change(-HOT_Healing);
         }
+    }
+
+    public void Set_Life_Steal(int Percentage_Stolen)
+    {
+        Life_Stolen_Percentage = Percentage_Stolen * 0.01f;
+    }
+
+    public float Check_Life_Steal()
+    {
+        return Life_Stolen_Percentage;
     }
 }
