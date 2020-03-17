@@ -39,6 +39,7 @@ public class Player_Manager : MonoBehaviour
     public void Add_Armour(int Armour_Added)
     {
         Armour += Armour_Added;
+        Armour_Display.text = Armour.ToString();
     }
     public void Set_Damage_Reduction(int Percentage_Damage_Reduced)
     {
@@ -147,5 +148,9 @@ public class Player_Manager : MonoBehaviour
     public float Check_Life_Steal()
     {
         return Life_Stolen_Percentage;
+    }
+    public void Double_Armour()
+    {
+        Add_Armour(Armour);
     }
 }

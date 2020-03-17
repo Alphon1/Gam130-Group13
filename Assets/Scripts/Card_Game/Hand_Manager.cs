@@ -219,6 +219,9 @@ public class Hand_Manager : MonoBehaviour
                         case "Reduce Damage":
                             Player.GetComponent<Player_Manager>().Set_Damage_Reduction(Played_Card.Function_Values[i]);
                             break;
+                        case "Double Armour":
+                            Player.GetComponent<Player_Manager>().Double_Armour();
+                            break;
                         case null:
                             break;
                     }
