@@ -29,6 +29,11 @@ public class Battle_Manager : MonoBehaviour
             {
                 GameObject.FindGameObjectsWithTag("Enemy")[i].GetComponent<Enemy_Manager>().Enemy_Turn();
             }
+            if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+            {
+                Hand.GetComponent<Hand_Manager>().Reset_Exhaust();
+                gameObject.SetActive(false);
+            }
             Turn_Switch();
         }
         else

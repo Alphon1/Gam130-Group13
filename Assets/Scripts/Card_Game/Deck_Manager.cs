@@ -9,20 +9,16 @@ public class Deck_Manager : MonoBehaviour
     [SerializeField]
     public List<Card> Deck;
     public List<Card> Discard;
-    private List<Card> Exhaust;
-    private int Random_Position;
     private Card Temp_Card;
     [SerializeField]
     private TextMeshProUGUI Discard_Text;
     [SerializeField]
     private TextMeshProUGUI Deck_Text;
     private int Random_Int;
-    private GameObject Hand;
 
     //when the deck is loaded, displays how many cards are in it and the discard pile
     public void Awake()
     {
-        Hand = GameObject.FindWithTag("Hand");
         Display_Deck_Count();
         Display_Discard_Count();
         Shuffle_Deck();

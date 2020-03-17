@@ -35,6 +35,14 @@ public class Hand_Manager : MonoBehaviour
         Draw_Card(5);
     }
 
+    public void Reset_Exhaust()
+    {
+        for (int i = 0; i < Exhaust.Count; i++)
+        {
+            Deck_Object.GetComponent<Deck_Manager>().Deck.Add(Exhaust[i]);
+        }
+        Exhaust.Clear();
+    }
     public void End_Of_Turn()
     {
         On_Draw_Damage = 0;
