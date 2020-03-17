@@ -164,10 +164,10 @@ public class Hand_Manager : MonoBehaviour
                                 GameObject.FindGameObjectsWithTag("Enemy")[j].GetComponent<Enemy_Manager>().Damage(Played_Card.Function_Values[i]);
                             }
                             break;
-                        case "Discard":
-                            StartCoroutine(Target_Select("Discard", Played_Card, i));
+                        case "Discard":       
+                            StartCoroutine(Target_Select("Discard", Played_Card, Played_Card.Function_Values[i]));
                             Freeze_Player_Control = true;
-                            Starting_Function = i + 1;
+                            Starting_Function = i+1;
                             goto Stop_Card;
                         case "Exhaust":
                             Starting_Function = 0;
@@ -296,14 +296,17 @@ public class Hand_Manager : MonoBehaviour
                         switch (Target_Function)
                         {
                             case "Discard":
-                                Hand.Remove(Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card);
-                                Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card);
-                                Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
-                                Hit.transform.gameObject.GetComponent<Card_Values>().Disable_Display();
-                                Target_Function_Int -= 1;
-                                if (Target_Function_Int > 0)
+                                if (Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card != Played_Card)
                                 {
-                                    goto Target_Select;
+                                    Hand.Remove(Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card);
+                                    Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card);
+                                    Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
+                                    Hit.transform.gameObject.GetComponent<Card_Values>().Disable_Display();
+                                    Target_Function_Int -= 1;
+                                    if (Target_Function_Int > 0)
+                                    {
+                                        goto Target_Select;
+                                    }
                                 }
                             break;
                             default:
