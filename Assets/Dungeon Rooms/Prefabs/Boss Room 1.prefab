@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 9044957395376698577}
   - component: {fileID: 6657435960144692973}
   - component: {fileID: 5593739359184649167}
-  - component: {fileID: 5553767048192799430}
   m_Layer: 0
   m_Name: Boss Room 1
   m_TagString: BossRoom
@@ -124,23 +123,6 @@ MonoBehaviour:
   roomTypes: []
   roomType: 
   index: 0
---- !u!114 &5553767048192799430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9044957395374762513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3fbae07e26adf0458984aec623d1ee2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 8808604900766398283, guid: 5a7ae7a714917204d8fa2558ab5ffe09, type: 3}
-  room: {fileID: 9044957395374762513}
-  offsetX: 7
-  offsetY: -19.5
-  offsetZ: 0
 --- !u!1001 &3119072300996644707
 PrefabInstance:
   m_ObjectHideFlags: 0
