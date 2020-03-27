@@ -41,7 +41,7 @@ public class Player_Manager : MonoBehaviour
     public void Set_Deflection(int Percentage_Damage_Deflected)
     {
         Set_Damage_Reduction(Percentage_Damage_Deflected);
-        Damage_Deflected = 1 - (Percentage_Damage_Deflected * 0.01f);
+        Damage_Deflected = (Percentage_Damage_Deflected * 0.01f);
     }
 
     public float Check_Deflection()
