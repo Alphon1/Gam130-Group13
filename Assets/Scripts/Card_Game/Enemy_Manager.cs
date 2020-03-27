@@ -50,6 +50,7 @@ public class Enemy_Manager : MonoBehaviour
             {
                 case 0:
                     Player.GetComponent<Player_Manager>().Health_Change(Damage_Dealt);
+                    Damage(Mathf.RoundToInt(Damage_Dealt * Player.GetComponent<Player_Manager>().Check_Deflection()));
                     break;
                 case 1:
                     Healing = Random.Range(Min_Healing, Max_Healing);

@@ -55,6 +55,7 @@ public class Hand_Manager : MonoBehaviour
         Reset_Hand();
         Player.GetComponent<Player_Manager>().HOT_Tick();
         Player.GetComponent<Player_Manager>().Set_Damage_Reduction(0);
+        Player.GetComponent<Player_Manager>().Set_Deflection(0);
         for (int i = 0; i < Queued_Functions.Count; i++)
         {
             Starting_Function = Queued_Functions[i].Function_Start_Point;
@@ -229,6 +230,9 @@ public class Hand_Manager : MonoBehaviour
                             break;
                         case "Double Armour":
                             Player.GetComponent<Player_Manager>().Double_Armour();
+                            break;
+                        case "Deflect":
+                            Player.GetComponent<Player_Manager>().Set_Deflection(Played_Card.Function_Values[i]);
                             break;
                         case null:
                             break;
