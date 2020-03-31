@@ -55,6 +55,7 @@ public class Hand_Manager : MonoBehaviour
     {
         Reset_Hand();
         Player.GetComponent<Player_Manager>().HOT_Tick();
+        Player.GetComponent<Player_Manager>().AOT_Tick();
         Player.GetComponent<Player_Manager>().Set_Damage_Reduction(0);
         Player.GetComponent<Player_Manager>().Set_Deflection(0);
         for (int i = 0; i < Queued_Functions.Count; i++)
@@ -250,6 +251,9 @@ public class Hand_Manager : MonoBehaviour
                             }
                             Loops -= 1;
                             Starting_Function = i;
+                            break;
+                        case "AOT":
+                            Player.GetComponent<Player_Manager>().Set_AOT(Played_Card.Function_Values[i]);
                             break;
                         case null:
                             break;

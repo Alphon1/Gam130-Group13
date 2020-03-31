@@ -22,6 +22,8 @@ public class Player_Manager : MonoBehaviour
     private int Armour;
     private int HOT_Duration;
     private int HOT_Healing;
+    private int AOT_Duration;
+    private int AOT_Armour;
     [SerializeField]
     private TextMeshProUGUI Armour_Display;
     private float Life_Stolen_Percentage;
@@ -152,6 +154,21 @@ public class Player_Manager : MonoBehaviour
         {
             HOT_Duration -= 1;
             Health_Change(-HOT_Healing);
+        }
+    }
+
+    public void Set_AOT(int Armour_Gain)
+    {
+        AOT_Duration = 3;
+        AOT_Armour = Armour_Gain;
+    }
+
+    public void AOT_Tick()
+    {
+        if (AOT_Duration > 0)
+        {
+            AOT_Duration -= 1;
+            Add_Armour(AOT_Armour);
         }
     }
 
