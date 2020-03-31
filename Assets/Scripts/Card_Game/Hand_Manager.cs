@@ -23,6 +23,7 @@ public class Hand_Manager : MonoBehaviour
     public List<Queued_Function> Queued_Functions = new List<Queued_Function>();
     private Queued_Function Function_To_Queue;
     private int Random_Target;
+    private int Loops = 0;
 
     //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
     //and calls a function to draw 5 cards
@@ -234,11 +235,32 @@ public class Hand_Manager : MonoBehaviour
                         case "Deflect":
                             Player.GetComponent<Player_Manager>().Set_Deflection(Played_Card.Function_Values[i]);
                             break;
+                        case "For Cards in Pile":
+                            if (Loops == 0)
+                            {
+                                switch (Played_Card.Function_Values[i])
+                                {
+                                    case 0:
+                                        Loops = Mathf.FloorToInt(Deck_Object.GetComponent<Deck_Manager>().Discard.Count / 3);
+                                        break;
+                                    case 1:
+                                        Loops = Mathf.FloorToInt(Deck_Object.GetComponent<Deck_Manager>().Deck.Count / 3);
+                                        break;
+                                }
+                            }
+                            Loops -= 1;
+                            Starting_Function = i;
+                            break;
                         case null:
                             break;
                     }
                 }
             End_Card:;
+                if (Loops != 0)
+                {
+                    Play_Card(Played_Card);
+                    goto Stop_Card;
+                }
                 Starting_Function = 0;        
                 Hand.Remove(Played_Card);
                 Enable_Cards();
