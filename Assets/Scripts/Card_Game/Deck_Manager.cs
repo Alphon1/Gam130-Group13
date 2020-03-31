@@ -37,6 +37,11 @@ public class Deck_Manager : MonoBehaviour
         }
     }
 
+    public void Add_to_Discard(Card Added_Card)
+    {
+        Discard.Add(Added_Card);
+        Display_Discard_Count();
+    }
     //Displays how many cards are in the deck
     public void Display_Deck_Count()
     {

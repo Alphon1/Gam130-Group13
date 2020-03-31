@@ -40,6 +40,14 @@ public class Player_Manager : MonoBehaviour
         Display_Values();
     }
 
+    public void Start_Turn()
+    {
+        HOT_Tick();
+        AOT_Tick();
+        Set_Damage_Reduction(0);
+        Set_Deflection(0);
+    }
+
     public void Set_Deflection(int Percentage_Damage_Deflected)
     {
         Set_Damage_Reduction(Percentage_Damage_Deflected);

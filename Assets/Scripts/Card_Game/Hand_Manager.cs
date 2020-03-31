@@ -24,6 +24,7 @@ public class Hand_Manager : MonoBehaviour
     private Queued_Function Function_To_Queue;
     private int Random_Target;
     private int Loops = 0;
+    private MonoBehaviour Player_Script;
 
     //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
     //and calls a function to draw 5 cards
@@ -32,6 +33,7 @@ public class Hand_Manager : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
         Turn_Order = GameObject.FindWithTag("Battle_Manager");
         Deck_Object = GameObject.FindWithTag("Deck");
+        Player_Script = Player.GetComponent<Player_Manager>();
         Starting_Function = 0;
         Draw_Card(5);
     }
@@ -54,10 +56,7 @@ public class Hand_Manager : MonoBehaviour
     public void Start_Of_Turn()
     {
         Reset_Hand();
-        Player.GetComponent<Player_Manager>().HOT_Tick();
-        Player.GetComponent<Player_Manager>().AOT_Tick();
-        Player.GetComponent<Player_Manager>().Set_Damage_Reduction(0);
-        Player.GetComponent<Player_Manager>().Set_Deflection(0);
+        Player.GetComponent<Player_Manager>().Start_Turn();
         for (int i = 0; i < Queued_Functions.Count; i++)
         {
             Starting_Function = Queued_Functions[i].Function_Start_Point;
@@ -145,14 +144,7 @@ public class Hand_Manager : MonoBehaviour
                             Starting_Function = i + 1;
                             goto Stop_Card;
                         case "Shuffle Discard":
-                            for (int j = 0; j < Deck_Object.GetComponent<Deck_Manager>().Discard.Count; j++)
-                            {
-                                Deck_Object.GetComponent<Deck_Manager>().Deck.Add(Deck_Object.GetComponent<Deck_Manager>().Discard[j]);
-                                Deck_Object.GetComponent<Deck_Manager>().Display_Deck_Count();
-                                Deck_Object.GetComponent<Deck_Manager>().Discard.RemoveAt(j);
-                                Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
-                            }
-                            Deck_Object.GetComponent<Deck_Manager>().Shuffle_Deck();
+                            Deck_Object.GetComponent<Deck_Manager>().Deck_Out();
                             break;
                         case "Random Damage":
                             for (int j = 0; j < Played_Card.Function_Values[i]; j++)
@@ -268,8 +260,7 @@ public class Hand_Manager : MonoBehaviour
                 Starting_Function = 0;        
                 Hand.Remove(Played_Card);
                 Enable_Cards();
-                Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Played_Card);
-                Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
+                Deck_Object.GetComponent<Deck_Manager>().Add_to_Discard(Played_Card);
                 Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
             Stop_Card:;
             }
@@ -307,8 +298,7 @@ public class Hand_Manager : MonoBehaviour
                                     Starting_Function = 0;
                                     Hand.Remove(Played_Card);
                                     Enable_Cards();
-                                    Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Played_Card);
-                                    Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
+                                    Deck_Object.GetComponent<Deck_Manager>().Add_to_Discard(Played_Card);
                                     Player.GetComponent<Player_Manager>().Energy_Change(Played_Card.Cost);
                                 }
                             break;
@@ -328,9 +318,8 @@ public class Hand_Manager : MonoBehaviour
                             case "Discard":
                                 if (Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card != Played_Card)
                                 {
-                                    Hand.Remove(Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card);
-                                    Deck_Object.GetComponent<Deck_Manager>().Discard.Add(Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card);
-                                    Deck_Object.GetComponent<Deck_Manager>().Display_Discard_Count();
+                                    Hand.Remove(Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card);                                 
+                                    Deck_Object.GetComponent<Deck_Manager>().Add_to_Discard(Hit.transform.gameObject.GetComponent<Card_Values>().Displayed_Card);
                                     Hit.transform.gameObject.GetComponent<Card_Values>().Disable_Display();
                                     Target_Function_Int -= 1;
                                     if (Target_Function_Int > 0)
