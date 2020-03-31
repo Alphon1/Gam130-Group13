@@ -24,7 +24,6 @@ public class Hand_Manager : MonoBehaviour
     private Queued_Function Function_To_Queue;
     private int Random_Target;
     private int Loops = 0;
-    private MonoBehaviour Player_Script;
 
     //When the hand is first loaded, finds which objects are the deck, the player, and the battle manager,
     //and calls a function to draw 5 cards
@@ -33,7 +32,6 @@ public class Hand_Manager : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
         Turn_Order = GameObject.FindWithTag("Battle_Manager");
         Deck_Object = GameObject.FindWithTag("Deck");
-        Player_Script = Player.GetComponent<Player_Manager>();
         Starting_Function = 0;
         Draw_Card(5);
     }
