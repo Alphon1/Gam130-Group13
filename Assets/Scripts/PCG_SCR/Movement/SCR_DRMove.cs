@@ -14,12 +14,12 @@ public class SCR_DRMove : MonoBehaviour
     public void Start()
     {
         player = GameObject.Find("Player");
-        room = GameObject.FindGameObjectWithTag("DialogueRoom");
         battleUI = GameObject.Find("Battle_UI_V3");
     }
 
     public void Move()
     {
+        room = GameObject.FindGameObjectWithTag("DialogueRoom");
         Debug.Log("Player Move Dialogue/other room");
         player.transform.position = room.transform.position;
         player.transform.position = player.transform.position + new Vector3(offsetX, offsetY, offsetZ);

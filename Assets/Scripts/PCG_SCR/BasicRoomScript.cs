@@ -12,16 +12,4 @@ public class BasicRoomScript : MonoBehaviour {
     {
         get { return boxCollider.bounds; }
     }
-
-    public void Start()
-    {
-        roomTypes = new string[3];
-        roomTypes[0] = "healthRoom";
-        roomTypes[1] = "questRoom";
-        roomTypes[2] = "encounterRoom";
-
-        index = Random.Range(0, roomTypes.Length);
-        roomType = roomTypes[index];
-        print(roomType);
-    }
 }

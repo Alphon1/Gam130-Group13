@@ -15,6 +15,7 @@ TagManager:
   - DialogueRoom
   - StorageRoom
   - HealthRoom
+  - StartRoom
   layers:
   - Default
   - TransparentFX

@@ -14,12 +14,12 @@ public class SCR_CMove : MonoBehaviour
     public void Start()
     {
         player = GameObject.Find("Player");
-        room = GameObject.FindGameObjectWithTag("CombatRoom");
         battleUI = GameObject.Find("Battle_UI_V3");
     }
 
     public void Move()
     {
+        room = GameObject.FindGameObjectWithTag("CombatRoom");
         Debug.Log("Player Move");
         player.transform.position = room.transform.position;
         player.transform.position = player.transform.position + new Vector3(offsetX, offsetY, offsetZ);
