@@ -32,6 +32,17 @@ public class Card_Values : MonoBehaviour
         Card_Number = Get_Card_Number();
     }
 
+    public void Expand()
+    {
+        Card_Button.transform.position += new Vector3(0, 100, 0);
+        Card_Button.transform.localScale = new Vector3(2, 2, 1);    
+    }
+
+    public void Shrink()
+    {
+        Card_Button.transform.position -= new Vector3(0, 100, 0);
+        Card_Button.transform.localScale = new Vector3(1, 1, 1);
+    }
 
     //finds which card this is based on it's name
     public int Get_Card_Number()
