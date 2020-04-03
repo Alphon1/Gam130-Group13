@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Attack with opportunity
   Type: Attack
   Description: Deal 6 damage and draw a card
-  Art: {fileID: 0}
+  Art: {fileID: 21300004, guid: 15267d92813c73f40ac2e9d14350a0b9, type: 3}
   Cost: 3
   Functions:
   - Damage

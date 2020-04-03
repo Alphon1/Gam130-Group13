@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: A chink in the system
   Type: Attack
   Description: Deal 6 damage and heal 4 hp
-  Art: {fileID: 0}
+  Art: {fileID: 21300000, guid: 15267d92813c73f40ac2e9d14350a0b9, type: 3}
   Cost: 3
   Functions:
   - Damage

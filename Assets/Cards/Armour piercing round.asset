@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Armour piercing round
   Type: Attack
   Description: Deal 10 damage. Ignore all defensive attributes
-  Art: {fileID: 0}
+  Art: {fileID: 21300002, guid: 15267d92813c73f40ac2e9d14350a0b9, type: 3}
   Cost: 4
   Functions:
   - Damage

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Data Stream
   Type: Special
   Description: Gain an energy slot for this combat. Delete.
-  Art: {fileID: 0}
+  Art: {fileID: 21300014, guid: 15267d92813c73f40ac2e9d14350a0b9, type: 3}
   Cost: 2
   Functions:
   - Add Max Energy

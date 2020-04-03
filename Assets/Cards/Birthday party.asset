@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Birthday party
   Type: Attack
   Description: Deal 9 damage. If this kills the enemy, draw 2 cards
-  Art: {fileID: 0}
+  Art: {fileID: 21300008, guid: 15267d92813c73f40ac2e9d14350a0b9, type: 3}
   Cost: 4
   Functions:
   - Lethal Damage

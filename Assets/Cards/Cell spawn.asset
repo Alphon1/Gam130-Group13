@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Cell spawn
   Type: Special
   Description: Gain 3 energy
-  Art: {fileID: 0}
+  Art: {fileID: 21300012, guid: 15267d92813c73f40ac2e9d14350a0b9, type: 3}
   Cost: 2
   Functions:
   - Add Energy

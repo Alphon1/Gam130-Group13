@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Ballistic therapy
   Type: Attack
   Description: Deal 12 damage. Heal 6hp
-  Art: {fileID: 0}
+  Art: {fileID: 21300006, guid: 15267d92813c73f40ac2e9d14350a0b9, type: 3}
   Cost: 5
   Functions:
   - Damage

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Energy Bank
   Type: Special
   Description: +2 energy next turn
-  Art: {fileID: 0}
+  Art: {fileID: 21300018, guid: 15267d92813c73f40ac2e9d14350a0b9, type: 3}
   Cost: 2
   Functions:
   - Add Temp Max Energy

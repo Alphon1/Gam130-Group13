@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Boosted punch
   Type: Attack
   Description: Deal 11 damage
-  Art: {fileID: 0}
+  Art: {fileID: 21300010, guid: 15267d92813c73f40ac2e9d14350a0b9, type: 3}
   Cost: 4
   Functions:
   - Damage

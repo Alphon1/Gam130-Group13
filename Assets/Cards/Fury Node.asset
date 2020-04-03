@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Fury Node
   Type: Attack
   Description: Deal 7 damage for 3 turns
-  Art: {fileID: 0}
+  Art: {fileID: 21300022, guid: 15267d92813c73f40ac2e9d14350a0b9, type: 3}
   Cost: 5
   Functions:
   - DOT
