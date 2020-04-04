@@ -182,9 +182,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 292097126}
-  selectedCommands:
-  - {fileID: 292097141}
+  - {fileID: 292097125}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -325,8 +324,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  text: '*Damage report, Log 1: Station may have taken severe damage. Need to run
-    some checks.* '
+  text: "McCaw:\n\n\u201CThe station may have taken severe damage. I need to run some
+    checks.\u201D "
   description: 
   targetBlock: {fileID: 292097125}
   hideIfVisited: 0
@@ -670,7 +669,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 23
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CYou go into the other rooms. You keep ignoring me.\u201D "
+  storyText: "Alley:\n\n\u201CThere's some machines in the other rooms. Something
+    in there can help me, right?\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -697,8 +697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 22
   indentLevel: 0
-  storyText: "*Damage report, Log update: AI sounds like its worried, afraid, if I
-    ignore it. I\u2019ll continue and see how it responds goes.* "
+  storyText: "McCaw:\n\n\u201CYep, but we can fix it.\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -725,8 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 21
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CI think I've got your help now, right? Are you...?  are
-    you still listening?\u201D "
+  storyText: "Alley:\n\n\u201CIs that bad?\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -753,8 +751,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 20
   indentLevel: 0
-  storyText: "*Damage report, Log update: AI needs a deep system clean, a full program
-    review and repair. I\u2019ll do a full repair run later. Damn things never work.* "
+  storyText: "McCaw:\n\n\u201CYeah, I\u2019ll run some checks on you too, just to
+    be safe. Yeah, your system is going haywire.\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -781,8 +779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CWhat are you doing? You\u2019re playing with that...that....
-    THING. Wha- no, nevermind.\u201D "
+  storyText: "Alley:\n\n\u201CI feel strange. I think I need to be checked too.\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1054,7 +1051,6 @@ GameObject:
   - component: {fileID: 836832533}
   - component: {fileID: 836832532}
   - component: {fileID: 836832531}
-  - component: {fileID: 836832530}
   - component: {fileID: 836832529}
   - component: {fileID: 836832528}
   - component: {fileID: 836832527}
@@ -1083,7 +1079,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 29
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CI\u2019ll help you, if you\u2019ll let me help!\u201D "
+  storyText: "Alley:\n\n\u201CIt\u2019s name is RU-3, but I think I need more help
+    right now John...\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1110,8 +1107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 28
   indentLevel: 0
-  storyText: "*Damage report, Log update: the computers are getting stranger as this
-    crazy day goes on. I\u2019ll see if this robot, RU-3, can direct me there.* "
+  storyText: "McCaw:\n\n\u201CLet me fix the robot first. What did you say your name
+    is?\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1165,8 +1162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 26
   indentLevel: 0
-  storyText: "*Log update: The robot is being unusually helpful. It calls itself \u2018RU-3\u2019,
-    as if it has a name.* "
+  storyText: "McCaw:\n\n\u201CIt\u2019s ok buddy, its part of the job after all. Now,
+    what needs doing first?\u201D"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1193,9 +1190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 25
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CVery well sir. I shall stop bothering you with my self-pity.\u201D\n\n\u201CBut
-    I think we could find a way to help you, not as I am now but with a significant
-    boost.\u201D "
+  storyText: "RU-3:\n\n\u201CI think you might be the first engineer to be willing
+    to fix me. All the other engineers told me I am difficult to work on.\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1222,8 +1218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 24
   indentLevel: 0
-  storyText: '*Damage report, Log update: The robot keeps apologising for attacking
-    me. Interesting.* '
+  storyText: "McCaw:\n\n\u201CWhats up?\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1251,35 +1246,6 @@ MonoBehaviour:
   itemId: 23
   indentLevel: 0
   storyText: "RU-3:\n\n\u201CSir?\u201D "
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &836832530
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836832522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 22
-  indentLevel: 0
-  storyText: "*Damage report, Log update: Much like the AI, the robots are defective,
-    too. Though this one seems to be operating on its own initiative. Interesting.*
-    \r\n\r\n "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1541,7 +1507,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 836832538}
   commandList:
-  - {fileID: 836832530}
   - {fileID: 836832529}
   - {fileID: 836832528}
   - {fileID: 836832527}
@@ -1789,8 +1754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  text: "*Damage report, Log update: Much like the AI, the robots are defective, too.
-    Though this one seems to be operating on its own initiative. Interesting.* \r\n\r\n "
+  text: "McCaw:\n\n\u201CYeah, we can fix you up buddy. What do you need?\u201D "
   description: 
   targetBlock: {fileID: 836832540}
   hideIfVisited: 0
@@ -1981,7 +1945,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 836832541}
+  - {fileID: 836832555}
   selectedCommands: []
   variables: []
   description: 
@@ -2375,7 +2339,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CI assume I must now operate alone then\u201D "
+  storyText: "RU-3:\n\n\u201CI will operate on my own until your tasks are complete,
+    John.\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2402,7 +2367,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CSir are you even paying attention?\u201D "
+  storyText: "RU-3:\n\n\u201CMost of the power is directed through the power coils.
+    If you intercept the flow and direct it to my system on the network, I can begin
+    basic repairs.\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2429,8 +2396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 0
-  storyText: "*Log update: The computers keep on asking if I\u2019m paying attention.
-    I\u2019m still paying attention. Of course, I am* "
+  storyText: "McCaw:\n\n\u201CLets get to it, then RU-3.\""
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2527,7 +2493,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "RU-3:\n\n\u201CMost of the power is directed through the power coils.
     If you intercept the flow and direct it to my system on the network, I can begin
-    repairs.\u201D "
+    system repairs.\u201D "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2691,8 +2657,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  text: "*Log update: RU-3 wants me to repair its system. I\u2019ll see how I can
-    best put this new asset to use.* "
+  text: "McCaw:\n\n\u201CYep, you said so earlier so lets get to it, then. What\u2019s
+    first?\u201D "
   description: 
   targetBlock: {fileID: 1539448277}
   hideIfVisited: 0
@@ -2894,7 +2860,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1539448277}
   selectedCommands:
-  - {fileID: 1539448259}
+  - {fileID: 1539448260}
   variables: []
   description: 
   stepPause: 0
@@ -2978,6 +2944,22 @@ GameObject:
   - component: {fileID: 1823974917}
   - component: {fileID: 1823974916}
   - component: {fileID: 1823974915}
+  - component: {fileID: 1823974933}
+  - component: {fileID: 1823974932}
+  - component: {fileID: 1823974931}
+  - component: {fileID: 1823974930}
+  - component: {fileID: 1823974929}
+  - component: {fileID: 1823974928}
+  - component: {fileID: 1823974927}
+  - component: {fileID: 1823974926}
+  - component: {fileID: 1823974925}
+  - component: {fileID: 1823974924}
+  - component: {fileID: 1823974923}
+  - component: {fileID: 1823974922}
+  - component: {fileID: 1823974921}
+  - component: {fileID: 1823974920}
+  - component: {fileID: 1823974919}
+  - component: {fileID: 1823974918}
   m_Layer: 0
   m_Name: '[IGNORE] RU-3'
   m_TagString: Untagged
@@ -3009,7 +2991,11 @@ MonoBehaviour:
   blockName: Conversation Start
   description: 
   eventHandler: {fileID: 0}
-  commandList: []
+  commandList:
+  - {fileID: 1823974933}
+  - {fileID: 1823974932}
+  - {fileID: 1823974930}
+  - {fileID: 1823974929}
 --- !u!114 &1823974913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3035,7 +3021,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1823974915}
+  - {fileID: 1823974912}
   selectedCommands: []
   variables: []
   description: 
@@ -3076,17 +3062,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 643
-    y: 93
-    width: 135.56702
+    x: 597.6391
+    y: 100.21651
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 3
-  blockName: Core Branch 3
+  blockName: Branch 3
   description: 
-  eventHandler: {fileID: 0}
-  commandList: []
+  eventHandler: {fileID: 1823974927}
+  commandList:
+  - {fileID: 1823974920}
+  - {fileID: 1823974919}
+  - {fileID: 1823974918}
 --- !u!114 &1823974916
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3101,17 +3090,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 374
-    y: 260
-    width: 135.56702
+    x: 404.92786
+    y: 102.268005
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 2
-  blockName: Core Branch 2
+  blockName: Branch 2
   description: 
-  eventHandler: {fileID: 0}
-  commandList: []
+  eventHandler: {fileID: 1823974928}
+  commandList:
+  - {fileID: 1823974923}
+  - {fileID: 1823974921}
+  - {fileID: 1823974922}
 --- !u!114 &1823974917
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3126,14 +3118,412 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 110
-    y: 113
-    width: 135.56702
+    x: 201.75266
+    y: 102.69073
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 1
-  blockName: Core Branch 1
+  blockName: Branch 1
   description: 
-  eventHandler: {fileID: 0}
-  commandList: []
+  eventHandler: {fileID: 1823974931}
+  commandList:
+  - {fileID: 1823974926}
+  - {fileID: 1823974925}
+  - {fileID: 1823974924}
+--- !u!114 &1823974918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  storyText: "Alley:\n\n\u201CThanks John!\u201D "
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1823974919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 15
+  indentLevel: 0
+  storyText: "McCaw:\n\n\u201CHehe. Ok Alley, I\u2019ll get to it\u201D "
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1823974920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  storyText: "Alley:\n\n\u201CFirst you need to fix the sub-thingies, then the sys-tem,
+    then make a call to the repair team.\u201D "
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1823974921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  storyText: "McCaw:\n\n\u201CIts pronounced \u2018sub-routines\u2019, Alley. Ok?\u201D "
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1823974922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  indentLevel: 0
+  storyText: "Alley:\n\n\u201CYEAH! Thanks John! Go and fix those sub-thingies, then
+    my systems. And then go make a phone call to the \u2018res-cue team\u2019.\u201D "
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1823974923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  storyText: "Alley:\n\n\u201COK then! Just go into the tunnel network, fix the subrou-
+    no, subroutes. No, that\u2019s not right. The sub-route-ins. NO! AAAAA!\u201D "
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1823974924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  storyText: "Alley:\n\n\u201CYeah, those.... Anyway, go do that, fix those and my
+    system, go send that distress call.\u201D "
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1823974925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  storyText: "McCaw:\n\n\u201CYou mean, \u2018subroutines\u2019?\u201D "
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1823974926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  storyText: "Alley:\n\n\u201CWell aren\u2019t you just a big meanie! Fine then! Go
+    into the tunnel network, fix the sub-routes- no, that\u2019s not it. The sub-routins.
+    No, thats not it either\u201D "
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1823974927
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1823974915}
+  targetButton: {fileID: 0}
+--- !u!114 &1823974928
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1823974916}
+  targetButton: {fileID: 0}
+--- !u!114 &1823974929
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  text: "McCaw:\n\n\u201CTime to fix this mess. Lets go.\u201D "
+  description: 
+  targetBlock: {fileID: 1823974915}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1823974930
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  text: "McCaw:\n\n\u201CYeah, let's go get off this junk heap. What do I have to
+    do then Alley?\u201D "
+  description: 
+  targetBlock: {fileID: 1823974916}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1823974931
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1823974917}
+  targetButton: {fileID: 0}
+--- !u!114 &1823974932
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  text: "McCaw:\n\n\u201CYou\u2019re bothering me already. Just tell me what I have
+    to do so I can get this over with.\u201D "
+  description: 
+  targetBlock: {fileID: 1823974917}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1823974933
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823974911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  storyText: "Alley:\n\n\u201CYAAAY! LETS WORK TOGETHER JOHN!\u201D "
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
