@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public GameObject currentRoom;
+    public GameObject player;
     public bool canForward;
     public bool canBackward;
 
@@ -14,7 +15,7 @@ public class Movement : MonoBehaviour
     {
         canForward = false;
         canBackward = false;
-        coroutine = WaitDisable(1.0f);
+        coroutine = WaitDisable(3.0f);
         StartCoroutine(coroutine);
     }
 
@@ -31,21 +32,23 @@ public class Movement : MonoBehaviour
         }
     }
 
-    void Forward()
+    public void Forward()
     {
         if (canForward == true)
         {
             currentRoom = currentRoom.transform.parent.GetChild(currentRoom.transform.GetSiblingIndex() + 1).gameObject;
             canBackward = true;
+            player.transform.position = currentRoom.transform.position;
         } 
     }
 
-    void Backward()
+    public void Backward()
     {
         if (canBackward == true)
         {
             currentRoom = currentRoom.transform.parent.GetChild(currentRoom.transform.GetSiblingIndex() - 1).gameObject;
             canForward = true;
+            player.transform.position = currentRoom.transform.position;
         }
     }
 
@@ -53,7 +56,8 @@ public class Movement : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         currentRoom = GameObject.FindGameObjectWithTag("StartRoom");
+        player = GameObject.FindGameObjectWithTag("Player");
         canForward = true;
-        canBackward = true;
+        canBackward = false;
     }
 }
