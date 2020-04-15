@@ -8,8 +8,13 @@ public class Movement : MonoBehaviour
     public GameObject player;
     public bool canForward;
     public bool canBackward;
-
+    public GameObject battleUI;
     private IEnumerator coroutine;
+    public GameObject[] CRooms;
+
+    public float offsetX;
+    public float offsetY;
+    public float offsetZ;
 
     void Start()
     {
@@ -17,6 +22,8 @@ public class Movement : MonoBehaviour
         canBackward = false;
         coroutine = WaitDisable(3.0f);
         StartCoroutine(coroutine);
+        battleUI = GameObject.Find("Battle_UI_V3");
+
     }
 
     void Update()
@@ -29,6 +36,7 @@ public class Movement : MonoBehaviour
         if (currentRoom == GameObject.FindGameObjectWithTag("BossRoom"))
         {
             canForward = false;
+            battleUI.SetActive(true);
         }
     }
 
@@ -38,7 +46,15 @@ public class Movement : MonoBehaviour
         {
             currentRoom = currentRoom.transform.parent.GetChild(currentRoom.transform.GetSiblingIndex() + 1).gameObject;
             canBackward = true;
-            player.transform.position = currentRoom.transform.position;
+            Move();
+            battleUI.SetActive(false);
+            foreach (GameObject CRoom in CRooms)
+            {
+                if (currentRoom == CRoom)
+                {
+                    battleUI.SetActive(true);
+                }
+            }
         } 
     }
 
@@ -48,8 +64,15 @@ public class Movement : MonoBehaviour
         {
             currentRoom = currentRoom.transform.parent.GetChild(currentRoom.transform.GetSiblingIndex() - 1).gameObject;
             canForward = true;
-            player.transform.position = currentRoom.transform.position;
+            Move();
+            battleUI.SetActive(false);
         }
+    }
+
+    public void Move()
+    {
+        player.transform.position = currentRoom.transform.position;
+        player.transform.position = player.transform.position + new Vector3(offsetX, offsetY, offsetZ);
     }
 
     private IEnumerator WaitDisable(float waitTime)
@@ -59,5 +82,6 @@ public class Movement : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         canForward = true;
         canBackward = false;
+        CRooms = GameObject.FindGameObjectsWithTag("CombatRoom");
     }
 }

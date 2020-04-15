@@ -10,7 +10,7 @@ public class SCR_CombatTrigger : MonoBehaviour
     void Start()
     {
         battleUI = GameObject.Find("Battle_UI_V3");
-        coroutine = WaitDisable(1.0f);
+        coroutine = WaitDisable(2.0f);
         StartCoroutine(coroutine);
     }
 
