@@ -34,7 +34,7 @@ public class Enemy_Manager : MonoBehaviour
     {
         Max_Health = Random.Range(Min_Possible_Health, Max_Possible_Health);
         Health = Max_Health;
-        Player = GameObject.FindWithTag("Player");
+        Player = GameObject.FindWithTag("Player_UI");
         Health_Display.text = Health.ToString();
     }
 

@@ -13,7 +13,7 @@ public class Battle_Manager : MonoBehaviour
     void Start()
     {
         Is_Player_Turn = true;
-        Player = GameObject.FindWithTag("Player");
+        Player = GameObject.FindWithTag("Player_UI");
         Hand = GameObject.FindWithTag("Hand");
     }
 
