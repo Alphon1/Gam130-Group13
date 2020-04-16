@@ -28,12 +28,14 @@ public class Enemy_Manager : MonoBehaviour
     private TextMeshProUGUI Health_Display;
     private int DOT_Duration;
     private int DOT_Damage;
+    private GameObject Battle_Manager;
 
     //when an enemy is first loaded it has max health
     private void Awake()
     {
         Max_Health = Random.Range(Min_Possible_Health, Max_Possible_Health);
         Health = Max_Health;
+        Battle_Manager = GameObject.FindWithTag("Battle_Manager");
         Player = GameObject.FindWithTag("Player_UI");
         Health_Display.text = Health.ToString();
     }
@@ -84,6 +86,10 @@ public class Enemy_Manager : MonoBehaviour
     {
         if (Health <= 0)
         {
+            if (GameObject.FindGameObjectsWithTag("Enemy").Length <= 1)
+            {
+                Battle_Manager.GetComponent<Battle_Manager>().End_Battle();
+            }
             gameObject.SetActive(false);
         }
     }

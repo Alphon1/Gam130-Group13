@@ -27,12 +27,8 @@ public class Battle_Manager : MonoBehaviour
             Is_Player_Turn = false;
             for (int i = 0; i < GameObject.FindGameObjectsWithTag("Enemy").Length; i++)
             {
+                Debug.Log("Active Enemy");
                 GameObject.FindGameObjectsWithTag("Enemy")[i].GetComponent<Enemy_Manager>().Enemy_Turn();
-            }
-            if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
-            {
-                Hand.GetComponent<Hand_Manager>().Reset_Exhaust();
-                gameObject.SetActive(false);
             }
             Turn_Switch();
         }
@@ -44,6 +40,11 @@ public class Battle_Manager : MonoBehaviour
         }
     }
 
+    public void End_Battle()
+    {
+            Hand.GetComponent<Hand_Manager>().Reset_Exhaust();
+            gameObject.SetActive(false);
+    }
     //checks if the player can end their turn, if they can then it changes turn
     public void End_Turn()
     {
