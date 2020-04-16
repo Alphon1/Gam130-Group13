@@ -799,22 +799,22 @@ PrefabInstance:
     - target: {fileID: 5351884529048536623, guid: a8db553a34d1ccd41aece9c515184b20,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -78.876
+      value: -141.2
       objectReference: {fileID: 0}
     - target: {fileID: 5351884529048536623, guid: a8db553a34d1ccd41aece9c515184b20,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.22623807
+      value: 0.3070718
       objectReference: {fileID: 0}
     - target: {fileID: 5351884529048536623, guid: a8db553a34d1ccd41aece9c515184b20,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.23927046
+      value: 0.29439276
       objectReference: {fileID: 0}
     - target: {fileID: 5351884529048536623, guid: a8db553a34d1ccd41aece9c515184b20,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -394
+      value: -570
       objectReference: {fileID: 0}
     - target: {fileID: 1065128602383095234, guid: a8db553a34d1ccd41aece9c515184b20,
         type: 3}
@@ -2327,6 +2327,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 803111408348004892, guid: 0d0af6e683e09e4419818707796433de,
+        type: 3}
+      propertyPath: offsetY
+      value: -19.5
+      objectReference: {fileID: 0}
     - target: {fileID: 803111408348004870, guid: 0d0af6e683e09e4419818707796433de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2381,11 +2386,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 803111408348004892, guid: 0d0af6e683e09e4419818707796433de,
-        type: 3}
-      propertyPath: offsetY
-      value: -19.5
       objectReference: {fileID: 0}
     - target: {fileID: 803111409705037069, guid: 0d0af6e683e09e4419818707796433de,
         type: 3}
