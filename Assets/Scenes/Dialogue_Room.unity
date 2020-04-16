@@ -1307,7 +1307,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 305672132}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 305672136}
   variables: []
   description: 
   stepPause: 0
@@ -1818,7 +1819,7 @@ MonoBehaviour:
   itemId: 23
   indentLevel: 0
   storyText: "Alley:\n\n\u201CThere's some machines in the other rooms. Something
-    in there can help me, right?\u201D "
+    in there can help me, right?\u201D"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2513,7 +2514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 355.74756, y: 290.8924}
+  scrollPos: {x: 250.25308, y: 411.77155}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -2526,7 +2527,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 520912922}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 520912904}
   variables: []
   description: 
   stepPause: 0
@@ -3507,7 +3509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 305672129}
+  selectedFlowchart: {fileID: 520912931}
 --- !u!4 &1365454984
 Transform:
   m_ObjectHideFlags: 1
