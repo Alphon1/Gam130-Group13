@@ -34,6 +34,7 @@ public class Card_Values : MonoBehaviour
 
     public void Expand()
     {
+        transform.SetAsLastSibling();
         Card_Button.transform.position += new Vector3(0, 50, 0);
         Card_Button.transform.localScale = new Vector3(2, 2, 1);    
     }
