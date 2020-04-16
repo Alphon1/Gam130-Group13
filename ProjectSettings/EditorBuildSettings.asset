@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Battle_Test.unity
     guid: f02cc55e54269384eb0668fec0c5a9b9
+  - enabled: 0
+    path: Assets/Scenes/Tutorial_Test.unity
+    guid: 8ee76fd6b0032c54f8ea0990761979d8
   - enabled: 1
-    path: Assets/Scenes/PCG_Test.unity
-    guid: 16473dc9b9231f84d8004671746d2f39
+    path: Assets/Scenes/Dialogue_Room.unity
+    guid: cc9d0e410e157164fa99dcbe814a3ea9
   m_configObjects: {}
