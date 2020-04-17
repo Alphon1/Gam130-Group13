@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 119.75001}
+  m_AnchoredPosition: {x: -357, y: 119.75001}
   m_SizeDelta: {x: 804.1, y: 167.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4420356844616452870
@@ -168,7 +168,7 @@ Animator:
   m_GameObject: {fileID: 1808344349846788541}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 243eb89e9618543479d4fa1a880b8cea, type: 2}
+  m_Controller: {fileID: 9100000, guid: 25c6cf8ed15e04488b3242e6e609e2f9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 1879030827786174417}
   - component: {fileID: 1879030827786174419}
   - component: {fileID: 1879030827786174418}
+  - component: {fileID: 634828091935496217}
   m_Layer: 5
   m_Name: Battle_UI_V3
   m_TagString: Untagged
@@ -257,6 +258,25 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!95 &634828091935496217
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879030827786174416}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 25c6cf8ed15e04488b3242e6e609e2f9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1879030829171350839
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 119.75001}
+  m_AnchoredPosition: {x: -625, y: 119.75001}
   m_SizeDelta: {x: 804.1, y: 167.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6635964730328127390
@@ -619,7 +639,7 @@ Animator:
   m_GameObject: {fileID: 6401328596755654385}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 243eb89e9618543479d4fa1a880b8cea, type: 2}
+  m_Controller: {fileID: 9100000, guid: f85eecc1aba664b5ea2ce6d501c6e3de, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1140,6 +1160,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 149.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5623646950038456949, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
+        type: 3}
+      propertyPath: Anim_Turn
+      value: 
+      objectReference: {fileID: 634828091935496217}
     - target: {fileID: 8812536803654484438, guid: b135e9d8751ee0d48a2f3d0d1fe8166c,
         type: 3}
       propertyPath: m_LocalScale.x

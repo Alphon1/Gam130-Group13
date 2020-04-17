@@ -6,6 +6,8 @@ using TMPro;
 
 public class Player_Manager : MonoBehaviour
 {
+    [SerializeField] 
+    private Animator Player;
     [SerializeField]
     private int Max_Health;
     public int Health;
@@ -96,6 +98,12 @@ public class Player_Manager : MonoBehaviour
         if (Health > Max_Health)
         {
             Health = Max_Health;
+        }
+
+        if (Health < Max_Health)
+        {
+            Debug.Log("Player died");
+            Player.SetTrigger("Death");
         }
         Display_Values();
     }
