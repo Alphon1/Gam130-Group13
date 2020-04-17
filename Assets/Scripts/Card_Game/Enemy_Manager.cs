@@ -6,6 +6,7 @@ using TMPro;
 
 public class Enemy_Manager : MonoBehaviour
 {
+    public Animator Anim_Damage_Taken;
     [SerializeField]
     private int Min_Possible_Health;
     [SerializeField]
@@ -80,6 +81,7 @@ public class Enemy_Manager : MonoBehaviour
         {
             Player.GetComponent<Player_Manager>().Health_Change(-Mathf.RoundToInt(Player.GetComponent<Player_Manager>().Check_Life_Steal() * Damage_Taking));
         }
+        Anim_Damage_Taken.SetTrigger("takeDamage");
         Death_Check();
     }
     public void Death_Check()

@@ -281,6 +281,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3293142886590345404, guid: 3800f1d6212c3174c98ef25129aebb84,
+        type: 3}
+      propertyPath: Anim_Damage_Taken
+      value: 
+      objectReference: {fileID: 126502756}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3800f1d6212c3174c98ef25129aebb84, type: 3}
 --- !u!1 &126502755 stripped
