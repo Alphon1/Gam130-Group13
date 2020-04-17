@@ -5,6 +5,7 @@ using UnityEngine;
 public class Battle_Manager : MonoBehaviour
 {
     [SerializeField]
+    private Animator Anim_Turn;
     private bool Is_Player_Turn;
     private GameObject Player;
     private GameObject Hand;
@@ -37,6 +38,7 @@ public class Battle_Manager : MonoBehaviour
             Is_Player_Turn = true;
             Hand.GetComponent<Hand_Manager>().Start_Of_Turn();
             Player.GetComponent<Player_Manager>().Reset_Energy();
+            Anim_Turn.SetTrigger("PlayerTurn");
         }
     }
 
@@ -51,6 +53,7 @@ public class Battle_Manager : MonoBehaviour
         if (Is_Player_Turn)
         {        
             Turn_Switch();
+            Anim_Turn.SetTrigger("EnemyTurn");
         }
     }
 
