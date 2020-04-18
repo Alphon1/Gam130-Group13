@@ -30,9 +30,9 @@ public class Battle_Manager : MonoBehaviour
             {
                 Debug.Log("Active Enemy");
                 GameObject.FindGameObjectsWithTag("Enemy")[i].GetComponent<Enemy_Manager>().Enemy_Turn();
-                Anim_Turn.ResetTrigger("PlayerTurn");
-                Anim_Turn.SetTrigger("EnemyTurn");
             }
+            Anim_Turn.ResetTrigger("PlayerTurn");
+            Anim_Turn.SetTrigger("EnemyTurn");
             Turn_Switch();
         }
         else
