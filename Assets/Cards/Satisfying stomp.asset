@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Satisfying stomp
   Type: Attack
   Description: Deal 11 damage and gain 1 energy next turn
-  Art: {fileID: 0}
+  Art: {fileID: 21300014, guid: f58bd7a6a22e4be4cbcadccb363bf928, type: 3}
   Cost: 4
   Functions:
   - Damage

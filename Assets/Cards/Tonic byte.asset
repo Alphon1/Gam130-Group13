@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Tonic byte
   Type: Defence
   Description: Heal 5 hp
-  Art: {fileID: 0}
+  Art: {fileID: 21300006, guid: 68a60c96edf00174997828ed7008aef9, type: 3}
   Cost: 2
   Functions:
   - Heal

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Sine wave
   Type: Special
   Description: Lose 5 hp, gain 2 energy
-  Art: {fileID: 0}
+  Art: {fileID: 21300022, guid: f58bd7a6a22e4be4cbcadccb363bf928, type: 3}
   Cost: 0
   Functions:
   - Heal

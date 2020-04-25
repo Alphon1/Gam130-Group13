@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Headshot
   Type: Attack
   Description: Deal 14 damage
-  Art: {fileID: 0}
+  Art: {fileID: 21300002, guid: f58bd7a6a22e4be4cbcadccb363bf928, type: 3}
   Cost: 5
   Functions:
   - Damage

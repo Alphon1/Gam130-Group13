@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Setup
   Type: Special
   Description: Draw an extra card next turn
-  Art: {fileID: 0}
+  Art: {fileID: 21300018, guid: f58bd7a6a22e4be4cbcadccb363bf928, type: 3}
   Cost: 1
   Functions:
   - Next Turn

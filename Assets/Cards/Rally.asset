@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Rally
   Type: Defence
   Description: Heal 5hp and draw a card
-  Art: {fileID: 0}
+  Art: {fileID: 21300010, guid: f58bd7a6a22e4be4cbcadccb363bf928, type: 3}
   Cost: 2
   Functions:
   - Heal

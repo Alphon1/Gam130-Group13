@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Volatile Equipment
   Type: Attack
   Description: When you draw this card, immediately deal 6 damage. Lose 2hp
-  Art: {fileID: 0}
+  Art: {fileID: 21300010, guid: 68a60c96edf00174997828ed7008aef9, type: 3}
   Cost: 0
   Functions:
   - When Drawn

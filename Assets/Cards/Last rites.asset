@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Last rites
   Type: Attack
   Description: Deal 15 damage. Take damage equal to the enemy's remaining health
-  Art: {fileID: 0}
+  Art: {fileID: 21300004, guid: f58bd7a6a22e4be4cbcadccb363bf928, type: 3}
   Cost: 3
   Functions:
   - Damage

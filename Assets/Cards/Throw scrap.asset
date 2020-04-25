@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Throw scrap
   Type: Attack
   Description: Deal 4 damage randomly split amongst all enemies
-  Art: {fileID: 0}
+  Art: {fileID: 21300004, guid: 68a60c96edf00174997828ed7008aef9, type: 3}
   Cost: 1
   Functions:
   - Random Damage

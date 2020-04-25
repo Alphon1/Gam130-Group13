@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Quickdraw
   Type: Attack
   Description: Whenever you draw a card this turn, deal 4 damage to a random enemy
-  Art: {fileID: 0}
+  Art: {fileID: 21300008, guid: f58bd7a6a22e4be4cbcadccb363bf928, type: 3}
   Cost: 1
   Functions:
   - On Draw Damage

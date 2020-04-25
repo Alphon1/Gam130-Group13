@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Restoration
   Type: Defence
   Description: Heal 9hp
-  Art: {fileID: 0}
+  Art: {fileID: 21300012, guid: f58bd7a6a22e4be4cbcadccb363bf928, type: 3}
   Cost: 3
   Functions:
   - Heal

@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Spray and pray
   Type: Attack
   Description: Deal 10 damage randomly split amongst all enemies
-  Art: {fileID: 0}
+  Art: {fileID: 21300000, guid: 68a60c96edf00174997828ed7008aef9, type: 3}
   Cost: 3
   Functions:
   - Random Damage

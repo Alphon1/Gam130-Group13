@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Grenade
   Type: Attack
   Description: Deal 7 damage to all enemies
-  Art: {fileID: 0}
+  Art: {fileID: 21300000, guid: f58bd7a6a22e4be4cbcadccb363bf928, type: 3}
   Cost: 3
   Functions:
   - AOE Damage

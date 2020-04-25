@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Punch
   Type: Attack
   Description: Deal 5 damage
-  Art: {fileID: 0}
+  Art: {fileID: 21300006, guid: f58bd7a6a22e4be4cbcadccb363bf928, type: 3}
   Cost: 2
   Functions:
   - Damage

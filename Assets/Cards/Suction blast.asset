@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Suction blast
   Type: Attack
   Description: Deal 8 damage, draw a card
-  Art: {fileID: 0}
+  Art: {fileID: 21300002, guid: 68a60c96edf00174997828ed7008aef9, type: 3}
   Cost: 2
   Functions:
   - Damage

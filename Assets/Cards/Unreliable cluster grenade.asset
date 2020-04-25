@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Unreliable cluster grenade
   Type: Attack
   Description: Deal 6 damage randomly split across all characters
-  Art: {fileID: 0}
+  Art: {fileID: 21300008, guid: 68a60c96edf00174997828ed7008aef9, type: 3}
   Cost: 1
   Functions:
   - Self Random Damage
