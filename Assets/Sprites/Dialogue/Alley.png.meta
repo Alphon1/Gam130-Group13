@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 0bf34e84ff35b5f4290a45ce870e59d4
+guid: 887fe68d3bef2914d8f10ba53894dccf
 TextureImporter:
   fileIDToRecycleName:
-    21300000: AlleyHappy
-    21300002: AlleyNeutral
-    21300004: AlleyBlink
-    21300006: AlleyAngry
-    21300008: AlleyUpset
-    21300010: AlleyLaughter
+    21300000: Alley_Happy
+    21300002: Alley_Neutral
+    21300004: Alley_Suspicion
+    21300006: Alley_Angry
+    21300008: Alley_Upset
+    21300010: Alley_Laughter
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -90,13 +90,53 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AlleyHappy
+      name: Alley_Happy
       rect:
         serializedVersion: 2
-        x: 60
+        x: 151
+        y: 434
+        width: 232
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5690a7ac4d46e254c890b90cbbe8a096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alley_Neutral
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 443
+        width: 231
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5084cc845b76e7c47bb8b103e6368bfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alley_Suspicion
+      rect:
+        serializedVersion: 2
+        x: 763
         y: 438
-        width: 311
-        height: 325
+        width: 234
+        height: 234
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,19 +144,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc5db8d6e3dadd7459a66ef4d0ea0700
+      spriteID: ea003157d1d8d3c4b99a29ab9da91f5e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlleyNeutral
+      name: Alley_Angry
       rect:
         serializedVersion: 2
-        x: 393
-        y: 439
-        width: 288
-        height: 321
+        x: 146
+        y: 143
+        width: 233
+        height: 233
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,19 +164,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25250d4bb6a1bba4d903f99483f3a930
+      spriteID: e95ab75db0c4df4458c82b8f692a5a25
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlleyBlink
+      name: Alley_Upset
       rect:
         serializedVersion: 2
-        x: 722
-        y: 446
-        width: 296
-        height: 318
+        x: 455
+        y: 138
+        width: 231
+        height: 232
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,19 +184,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a25f30ca4134b6340b5bb5a9cbdf3363
+      spriteID: a0b5b8dccf8b9a1468800f5fa5cb5f05
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlleyAngry
+      name: Alley_Laughter
       rect:
         serializedVersion: 2
-        x: 72
-        y: 26
-        width: 307
-        height: 361
+        x: 766
+        y: 134
+        width: 233
+        height: 233
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,47 +204,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d81c735abd4a8c48a26a4c0013937ba
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AlleyUpset
-      rect:
-        serializedVersion: 2
-        x: 440
-        y: 59
-        width: 274
-        height: 343
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2fbb3f8f51645047888e1aa4ec42b1f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AlleyLaughter
-      rect:
-        serializedVersion: 2
-        x: 780
-        y: 75
-        width: 292
-        height: 344
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 474336b2da614414485c72f11145e26f
+      spriteID: bf9743baae5c72e4899163fffe0507ce
       vertices: []
       indices: 
       edges: []
@@ -212,7 +212,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 97cfad6db70655c469c7173ddf223b58
+    spriteID: 1f69e2a65f3b44e4f9d0472b823712b9
     vertices: []
     indices: 
     edges: []

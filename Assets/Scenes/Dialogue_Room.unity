@@ -314,7 +314,6 @@ GameObject:
   - component: {fileID: 212405654}
   - component: {fileID: 212405653}
   - component: {fileID: 212405652}
-  - component: {fileID: 212405651}
   - component: {fileID: 212405650}
   - component: {fileID: 212405649}
   - component: {fileID: 212405648}
@@ -331,6 +330,14 @@ GameObject:
   - component: {fileID: 212405658}
   - component: {fileID: 212405657}
   - component: {fileID: 212405656}
+  - component: {fileID: 212405662}
+  - component: {fileID: 212405651}
+  - component: {fileID: 212405666}
+  - component: {fileID: 212405665}
+  - component: {fileID: 212405664}
+  - component: {fileID: 212405663}
+  - component: {fileID: 212405668}
+  - component: {fileID: 212405667}
   m_Layer: 0
   m_Name: Post Tutorial Dialogue
   m_TagString: Untagged
@@ -352,9 +359,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 30
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CSo you will aid me? Sir?\u201D "
+  storyText: So you will aid me? Sir?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 873621634}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -379,10 +386,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 21
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CSo you'll help me? Right?\u201D "
+  storyText: So you'll help me? Right?
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 2134024341}
+  portrait: {fileID: 21300002, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -406,9 +413,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 20
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CYeah, I know. We have a lot of work to do.\u201D "
+  storyText: Yeah, I know. We have a lot of work to do.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -433,9 +440,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 0
-  storyText: "Alley:\n\r\n\u201CJohn, there\u2019s so many things to fix...\u201D "
+  storyText: "John, there\u2019s so many things to fix..."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -460,10 +467,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CIts ok, you\u2019ve done enough. Thankyou. Now, maybe
-    we can fix you up. What would need doing?\u201D "
+  storyText: "Its ok, you\u2019ve done enough. Thank you. Now, maybe we can fix you
+    up. What would need doing?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -488,12 +495,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CI cannot tell you the extent of the damage, however.
-    This bothers me, being unable to be as useful as I could. But unfortunately, I
-    cannot help you as I am now. Maybe if you increased my power, I could be of better
-    use.\u201D"
+  storyText: 'I cannot tell you the extent of the damage, however. This bothers me,
+    being unable to be as useful as I could. '
   description: 
-  character: {fileID: 0}
+  character: {fileID: 873621634}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -518,10 +523,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CWell thanks for the information. At least you could
-    help a little.\u201D "
+  storyText: Well thanks for the information. At least you could help a little.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -546,12 +550,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CLike most electronics on this ship, they were damaged
-    by the electrical storm we passed through. Everything on the ship is acting in
-    strange ways. It concerns me that even the AI seems affected.\u201D "
+  storyText: 'Like most electronics on this ship, they were damaged by the electrical
+    storm we passed through. '
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 873621634}
+  portrait: {fileID: 21300000, guid: 7a79bbd18069ec1458e77bb28deddc17, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -589,9 +592,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 217
+    x: 218.03093
     y: 164
-    width: 121
+    width: 123.19588
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 1
@@ -601,8 +604,10 @@ MonoBehaviour:
   eventHandler: {fileID: 212405649}
   commandList:
   - {fileID: 212405648}
+  - {fileID: 212405666}
   - {fileID: 212405647}
   - {fileID: 212405646}
+  - {fileID: 212405665}
   - {fileID: 212405645}
   - {fileID: 212405644}
   - {fileID: 212405643}
@@ -619,23 +624,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 212405640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 3
+  itemId: 36
   indentLevel: 0
-  text: "McCaw:\n\n\u201CIntroducctions aside, why are the other service robots ripping
-    the ship to pieces?\u201D "
-  description: 
+  targetFlowchart: {fileID: 0}
   targetBlock: {fileID: 212405650}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
 --- !u!114 &212405652
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -650,11 +650,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CI am so dearly sorry sir. This is not a part of my directive,
-    I assure you. I do not know what came over me. Allow me to introduce myself; I
-    am Repair Unit Type 3, code designation RU-3.\u201D "
+  storyText: I am so dearly sorry sir. This is not a part of my directive, I assure
+    you. I do not know what came over me. Allow me to introduce myself; I am Repair
+    Unit Type 3, code designation RU-3.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 873621634}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -679,9 +679,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 206
-    y: 40
-    width: 144
+    x: 207
+    y: 42.06186
+    width: 146.90721
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -690,7 +690,10 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 212405668}
   - {fileID: 212405652}
+  - {fileID: 212405667}
+  - {fileID: 212405662}
   - {fileID: 212405651}
 --- !u!114 &212405654
 MonoBehaviour:
@@ -705,11 +708,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -2, y: 1}
+  scrollPos: {x: 77.17526, y: 68.19585}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -717,7 +720,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 212405661}
+  - {fileID: 212405653}
   selectedCommands: []
   variables: []
   description: 
@@ -841,7 +844,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 360
-    y: 293
+    y: 295.0309
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -850,7 +853,8 @@ MonoBehaviour:
   blockName: Help RU-3
   description: 
   eventHandler: {fileID: 212405659}
-  commandList: []
+  commandList:
+  - {fileID: 212405663}
 --- !u!114 &212405661
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -865,8 +869,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 86
-    y: 294
+    x: 84.96907
+    y: 296
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -875,7 +879,194 @@ MonoBehaviour:
   blockName: Help Alley
   description: 
   eventHandler: {fileID: 212405658}
-  commandList: []
+  commandList:
+  - {fileID: 212405664}
+--- !u!114 &212405662
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212405640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
+  storyText: Introductions aside, why are the other service robots ripping the ship
+    to pieces?
+  description: 
+  character: {fileID: 2015363990}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &212405663
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212405640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 0
+  targetFlowchart: {fileID: 398003083}
+  targetBlock: {fileID: 398003082}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &212405664
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212405640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 39
+  indentLevel: 0
+  targetFlowchart: {fileID: 1172844062}
+  targetBlock: {fileID: 1172844061}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &212405665
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212405640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  indentLevel: 0
+  storyText: But unfortunately, I cannot help you as I am now. Maybe if you increased
+    my power, I could be of better use.
+  description: 
+  character: {fileID: 873621634}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &212405666
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212405640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 37
+  indentLevel: 0
+  storyText: Everything on the ship is acting in strange ways. It concerns me that
+    even the AI seems affected.
+  description: 
+  character: {fileID: 873621634}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &212405667
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212405640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 42
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2015363990}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 275020a402ad0b14193b81bc143562e8, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &212405668
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212405640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 41
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 873621634}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 7a79bbd18069ec1458e77bb28deddc17, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!1 &305672128
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +1078,6 @@ GameObject:
   - component: {fileID: 305672135}
   - component: {fileID: 305672129}
   - component: {fileID: 305672134}
-  - component: {fileID: 305672133}
   - component: {fileID: 305672132}
   - component: {fileID: 305672130}
   - component: {fileID: 305672131}
@@ -976,7 +1166,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 2134024341}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 0bf34e84ff35b5f4290a45ce870e59d4, type: 3}
+  portrait: {fileID: 21300000, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1065773623}
@@ -1002,8 +1192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 66.70843
-    y: 160.61154
+    x: 67.80733
+    y: 161.71045
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1015,20 +1205,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 305672131}
   - {fileID: 305672136}
---- !u!114 &305672133
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305672128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 305672134}
-  waitForFrames: 1
 --- !u!114 &305672134
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1052,7 +1228,7 @@ MonoBehaviour:
   itemId: 0
   blockName: New Block
   description: 
-  eventHandler: {fileID: 305672133}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 305672130}
 --- !u!4 &305672135
@@ -1129,6 +1305,10 @@ GameObject:
   - component: {fileID: 398003065}
   - component: {fileID: 398003064}
   - component: {fileID: 398003063}
+  - component: {fileID: 398003087}
+  - component: {fileID: 398003086}
+  - component: {fileID: 398003089}
+  - component: {fileID: 398003088}
   m_Layer: 0
   m_Name: '[HELP] RU-3'
   m_TagString: Untagged
@@ -1150,10 +1330,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CI will operate on my own until your tasks are complete,
-    John.\u201D "
+  storyText: I will operate on my own until your tasks are complete, John.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 873621634}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1178,11 +1357,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CMost of the power is directed through the power coils.
-    If you intercept the flow and direct it to my system on the network, I can begin
-    basic repairs.\u201D "
+  storyText: Most of the power is directed through the power coils. If you intercept
+    the flow and direct it to my system on the network, I can begin basic repairs.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 873621634}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1207,9 +1385,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CLets get to it, then RU-3.\""
+  storyText: Lets get to it, then RU-3.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1248,9 +1426,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CThank you, sir\u201D "
+  storyText: Thank you, sir.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 873621634}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1275,9 +1453,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201COk, I\u2019ll get on it\u201D "
+  storyText: "Ok, I\u2019ll get on it."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1302,11 +1480,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CMost of the power is directed through the power coils.
-    If you intercept the flow and direct it to my system on the network, I can begin
-    system repairs.\u201D "
+  storyText: Most of the power is directed through the power coils. If you intercept
+    the flow and direct it to my system on the network, I can begin system repairs.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 873621634}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1345,7 +1522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 263
+    x: 264
     y: 194
     width: 120
     height: 40
@@ -1387,9 +1564,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CWell then, let us get to it\u201D "
+  storyText: Well then, let us get to it.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 873621634}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1414,9 +1591,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CSure, whatever\u201D "
+  storyText: Sure, whatever.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1441,9 +1618,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: "RU-3:\n\n\u201CYes but, with a little less of a dismissive tone....\u201D "
+  storyText: Yes but, with a little less of a dismissive tone...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 873621634}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1468,8 +1645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  text: "McCaw:\n\n\u201CYep, you said so earlier so lets get to it, then. What\u2019s
-    first?\u201D "
+  text: "Yep, you said so earlier so lets get to it, then. What\u2019s first?"
   description: 
   targetBlock: {fileID: 398003081}
   hideIfVisited: 0
@@ -1494,7 +1670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  text: "McCaw:\n\n\u201COk RU-3, I\u2019ll help you. What do I need to do?\u201D "
+  text: "Ok RU-3, I\u2019ll help you. What do I need to do?"
   description: 
   targetBlock: {fileID: 398003071}
   hideIfVisited: 0
@@ -1519,7 +1695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  text: "McCaw\n\n\u201CYeah, fix you first. Whatever.\u201D "
+  text: Yeah, fix you first. Whatever.
   description: 
   targetBlock: {fileID: 398003080}
   hideIfVisited: 0
@@ -1544,11 +1720,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: "RU-3\n\n\u201CSir I am most grateful for the offer of assistance. Now,
-    if I am to help repair the station, I must first repair myself. My systems are
-    not what they once were, you see.\u201D "
+  storyText: 'Sir I am most grateful for the offer of assistance. Now, if I am to
+    help repair the station, I must first repair myself. '
   description: 
-  character: {fileID: 0}
+  character: {fileID: 873621634}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1601,7 +1776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 436
+    x: 438
     y: 172
     width: 120
     height: 40
@@ -1640,7 +1815,11 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 398003089}
+  - {fileID: 398003088}
   - {fileID: 398003079}
+  - {fileID: 398003086}
+  - {fileID: 398003087}
   - {fileID: 398003078}
   - {fileID: 398003077}
   - {fileID: 398003076}
@@ -1657,7 +1836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 8, y: 10}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -1696,6 +1875,120 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &398003086
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398003062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  storyText: My systems are not what they once were, you see.
+  description: 
+  character: {fileID: 873621634}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &398003087
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398003062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  storyText: How do you respond?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &398003088
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398003062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2015363990}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 275020a402ad0b14193b81bc143562e8, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 2101064939}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &398003089
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398003062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 24
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 873621634}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 7a79bbd18069ec1458e77bb28deddc17, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!1 &414658971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,9 +2254,61 @@ Transform:
   m_Children:
   - {fileID: 2134024342}
   - {fileID: 2015363991}
+  - {fileID: 873621633}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &873621632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 873621633}
+  - component: {fileID: 873621634}
+  m_Layer: 0
+  m_Name: RU-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &873621633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873621632}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 38.72737, y: -0.3265524, z: -61.99444}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 683907178}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &873621634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873621632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: RU-3
+  nameColor: {r: 0.3019608, g: 0.3219666, b: 0.43529412, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: 7a79bbd18069ec1458e77bb28deddc17, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
 --- !u!1 &991257215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,7 +2320,6 @@ GameObject:
   - component: {fileID: 991257245}
   - component: {fileID: 991257244}
   - component: {fileID: 991257243}
-  - component: {fileID: 991257242}
   - component: {fileID: 991257241}
   - component: {fileID: 991257240}
   - component: {fileID: 991257239}
@@ -2002,6 +2346,16 @@ GameObject:
   - component: {fileID: 991257218}
   - component: {fileID: 991257217}
   - component: {fileID: 991257216}
+  - component: {fileID: 991257242}
+  - component: {fileID: 991257247}
+  - component: {fileID: 991257246}
+  - component: {fileID: 991257249}
+  - component: {fileID: 991257253}
+  - component: {fileID: 991257252}
+  - component: {fileID: 991257251}
+  - component: {fileID: 991257250}
+  - component: {fileID: 991257254}
+  - component: {fileID: 991257248}
   m_Layer: 0
   m_Name: Pre Tutuorial Dialogue
   m_TagString: Untagged
@@ -2023,10 +2377,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 25
   indentLevel: 0
-  storyText: "Alley: \n\n\u201CYou\u2019re on S-45, going to a place called \u2018Andromeda\u2019.
-    That\u2019s what it says in your logs.\u201D "
+  storyText: "You\u2019re on S-45, going to a place called \u2018Andromeda\u2019.
+    That\u2019s what it says in your logs."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2051,10 +2405,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 23
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CThere's some machines in the other rooms. Something
-    in there can help me, right?\u201D "
+  storyText: There's some machines in the other rooms. Something in there can help
+    me, right?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2079,9 +2433,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 22
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CYep, but we can fix it.\u201D "
+  storyText: Yep, but we can fix it.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2106,9 +2460,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 21
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CIs that bad?\u201D "
+  storyText: Is that bad?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2133,10 +2487,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 20
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CYeah, I\u2019ll run some checks on you too, just to
-    be safe. Yeah, your system is going haywire.\u201D "
+  storyText: "Yeah, I\u2019ll run some checks on you too, just to be safe. Yeah, your
+    system is going haywire."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2161,9 +2515,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CI feel strange. I think I need to be checked too.\u201D "
+  storyText: I feel strange. I think I need to be checked too.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2188,10 +2542,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 0
-  storyText: "Alley;\n\n\u201COOH! OOH! If you can get to the room with the big machines,
-    maybe there's something there that can help!\u201D "
+  storyText: OOH! OOH! If you can get to the room with the big machines, maybe there's
+    something there that can help!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2216,10 +2570,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CThey haven\u2019t updated you in 11 YEARS! God, we need
-    to fix you ASAP!\u201D "
+  storyText: "They haven\u2019t updated you in 11 YEARS! God, we need to fix you ASAP!"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2244,10 +2597,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CI have a thing I can look at\u2026 AI up-date log? It
-    says \u2018Last... entry... 07, 11, 2056.\u201D "
+  storyText: "I have a thing I can look at\u2026 AI up-date log? It says \u2018Last...
+    entry... 07, 11, 2056."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2272,12 +2625,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CI\u2019ll try. I\u2019ll investigate your system. Hmmm...Your
-    program is operating on a whole new system. I\u2019m not sure if EmTec pushed
-    an update whilst we were out here, or if there\u2019s some new feature in your
-    program that\u2019s doing this.\u201D "
+  storyText: "I\u2019ll try. I\u2019ll investigate your system. Hmmm...Your program
+    is operating on a whole new system. "
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2302,10 +2653,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 13
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CI don\u2019t know what\u2019s wrong with me. Can you
-    help me?\u201D "
+  storyText: "I don\u2019t know what\u2019s wrong with me. Can you help me?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2330,10 +2680,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: "Alley: \n\n\"Maybe something in that big machine room will help fix
-    this. That\u2019s what you do, right? Fix things?\""
+  storyText: "Maybe something in that big machine room will help fix this. That\u2019s
+    what you do, right? Fix things?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2358,9 +2708,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  storyText: "McCaw: \n\n\"No. I\u2019ll repair it.\""
+  storyText: "No. I\u2019ll repair it."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2385,9 +2735,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: "Alley: \n\n\"Is that supposed to happen?\""
+  storyText: Is that supposed to happen?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2412,10 +2762,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CI\u2019ll run a system diagnosis to see what\u2019s
-    wrong. Hmm... Your program is running on a new system.\u201D "
+  storyText: "I\u2019ll run a system diagnosis to see what\u2019s wrong. Hmm... Your
+    program is running on a new system."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2440,10 +2790,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CI can\u2019t read the logs. I can\u2019t read. What\u2019s
-    wrong with me?\u201D"
+  storyText: "I can\u2019t read the logs. I can\u2019t read. What\u2019s wrong with
+    me?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2523,8 +2873,10 @@ MonoBehaviour:
   commandList:
   - {fileID: 991257221}
   - {fileID: 991257220}
+  - {fileID: 991257251}
   - {fileID: 991257219}
   - {fileID: 991257218}
+  - {fileID: 991257250}
   - {fileID: 991257217}
 --- !u!114 &991257236
 MonoBehaviour:
@@ -2551,10 +2903,13 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 991257233}
   commandList:
+  - {fileID: 991257253}
   - {fileID: 991257226}
   - {fileID: 991257225}
+  - {fileID: 991257249}
   - {fileID: 991257224}
   - {fileID: 991257223}
+  - {fileID: 991257252}
   - {fileID: 991257222}
 --- !u!114 &991257237
 MonoBehaviour:
@@ -2581,10 +2936,12 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 991257234}
   commandList:
+  - {fileID: 991257254}
   - {fileID: 991257231}
   - {fileID: 991257230}
   - {fileID: 991257229}
   - {fileID: 991257228}
+  - {fileID: 991257248}
   - {fileID: 991257227}
 --- !u!114 &991257238
 MonoBehaviour:
@@ -2600,7 +2957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  text: "McCaw: \n\n\"Something is definitely wrong.\""
+  text: Something is definitely wrong.
   description: 
   targetBlock: {fileID: 991257236}
   hideIfVisited: 0
@@ -2625,8 +2982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  text: "McCaw:\n\n\u201CThe station may have taken severe damage. I need to run some
-    checks.\u201D "
+  text: The station may have taken severe damage. I need to run some checks.
   description: 
   targetBlock: {fileID: 991257235}
   hideIfVisited: 0
@@ -2651,7 +3007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  text: 'McCaw: "Yeah, whatever. What in hell has happened here?"'
+  text: Yeah, whatever. What in hell has happened here?
   description: 
   targetBlock: {fileID: 991257237}
   hideIfVisited: 0
@@ -2676,10 +3032,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: "McCaw: \n\n\"What\u2019s this? Where am I? This feels wrong. What\u2019s
-    going on?\""
+  storyText: "What\u2019s this? Where am I? This feels wrong. What\u2019s going on?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2699,11 +3054,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 991257215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 991257243}
-  waitForFrames: 1
+  itemId: 26
+  indentLevel: 0
+  storyText: How do you respond?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &991257243
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2718,8 +3086,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 48.318672
-    y: -225.60457
+    x: 48.318665
+    y: -225.60455
     width: 165.38461
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2727,10 +3095,13 @@ MonoBehaviour:
   itemId: 0
   blockName: Conversation_Start
   description: 
-  eventHandler: {fileID: 991257242}
+  eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 991257247}
   - {fileID: 991257241}
+  - {fileID: 991257246}
   - {fileID: 991257216}
+  - {fileID: 991257242}
   - {fileID: 991257240}
   - {fileID: 991257238}
   - {fileID: 991257239}
@@ -2747,7 +3118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 355.74756, y: 290.8924}
+  scrollPos: {x: 275.52777, y: 441.44186}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -2759,8 +3130,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 991257235}
-  selectedCommands: []
+  - {fileID: 991257243}
+  selectedCommands:
+  - {fileID: 991257239}
   variables: []
   description: 
   stepPause: 0
@@ -2786,6 +3158,274 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &991257246
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991257215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 28
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300002, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &991257247
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991257215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 27
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2015363990}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 275020a402ad0b14193b81bc143562e8, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 2101064939}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &991257248
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991257215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300002, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &991257249
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991257215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  storyText: "I\u2019m not sure if EmTec pushed an update whilst we were out here,
+    or if there\u2019s some new feature in your program that\u2019s doing this."
+  description: 
+  character: {fileID: 2015363990}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &991257250
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991257215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 33
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300002, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &991257251
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991257215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 32
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300008, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &991257252
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991257215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 31
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300002, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &991257253
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991257215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 30
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300008, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &991257254
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991257215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 34
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300008, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!1 &1065773622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,7 +3460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 460.43, y: -900}
+  m_AnchoredPosition: {x: 460.43, y: -774}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1065773624
@@ -2890,6 +3530,16 @@ GameObject:
   - component: {fileID: 1172844044}
   - component: {fileID: 1172844043}
   - component: {fileID: 1172844042}
+  - component: {fileID: 1172844064}
+  - component: {fileID: 1172844072}
+  - component: {fileID: 1172844071}
+  - component: {fileID: 1172844070}
+  - component: {fileID: 1172844069}
+  - component: {fileID: 1172844068}
+  - component: {fileID: 1172844067}
+  - component: {fileID: 1172844066}
+  - component: {fileID: 1172844065}
+  - component: {fileID: 1172844073}
   m_Layer: 0
   m_Name: '[HELP] Alley'
   m_TagString: Untagged
@@ -2911,9 +3561,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CThanks John!\u201D "
+  storyText: Thanks John!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2938,9 +3588,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CHehe. Ok Alley, I\u2019ll get to it\u201D "
+  storyText: "Hehe. Ok Alley, I\u2019ll get to it\u201D "
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2965,10 +3615,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CFirst you need to fix the sub-thingies, then the sys-tem,
-    then make a call to the repair team.\u201D "
+  storyText: First you need to fix the sub-thingies, then the sys-tem, then make a
+    call to the repair team.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2993,9 +3643,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 13
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CIts pronounced \u2018sub-routines\u2019, Alley. Ok?\u201D "
+  storyText: "Its pronounced \u2018sub-routines\u2019, Alley. Ok?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3020,10 +3670,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CYEAH! Thanks John! Go and fix those sub-thingies, then
-    my systems. And then go make a phone call to the \u2018res-cue team\u2019.\u201D "
+  storyText: "YEAH! Thanks John! Go and fix those sub-thingies, then my systems. And
+    then go make a phone call to the \u2018res-cue team\u2019."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3048,10 +3698,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  storyText: "Alley:\n\n\u201COK then! Just go into the tunnel network, fix the subrou-
-    no, subroutes. No, that\u2019s not right. The sub-route-ins. NO! AAAAA!\u201D "
+  storyText: "OK then! Just go into the tunnel network, fix the subrou- no, subroutes.
+    No, that\u2019s not right. The sub-route-ins. NO! AAAAA!"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3076,10 +3726,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CYeah, those.... Anyway, go do that, fix those and my
-    system, go send that distress call.\u201D "
+  storyText: Yeah, those... Anyway, go do that, fix those and my system, go send that
+    distress call.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3104,9 +3754,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: "McCaw:\n\n\u201CYou mean, \u2018subroutines\u2019?\u201D "
+  storyText: "You mean, \u2018subroutines\u2019?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2015363990}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3131,11 +3781,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CWell aren\u2019t you just a big meanie! Fine then! Go
-    into the tunnel network, fix the sub-routes- no, that\u2019s not it. The sub-routins.
-    No, thats not it either\u201D "
+  storyText: "Well aren\u2019t you just a big meanie! Fine then! Go into the tunnel
+    network, fix the sub-routes- no, that\u2019s not it. The sub-routins. No, thats
+    not it either"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3188,7 +3838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  text: "McCaw:\n\n\u201CTime to fix this mess. Lets go.\u201D "
+  text: Time to fix this mess. Lets go.
   description: 
   targetBlock: {fileID: 1172844058}
   hideIfVisited: 0
@@ -3213,8 +3863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  text: "McCaw:\n\n\u201CYeah, let's go get off this junk heap. What do I have to
-    do then Alley?\u201D "
+  text: Yeah, let's go get off this junk heap. What do I have to do then Alley?
   description: 
   targetBlock: {fileID: 1172844059}
   hideIfVisited: 0
@@ -3253,8 +3902,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  text: "McCaw:\n\n\u201CYou\u2019re bothering me already. Just tell me what I have
-    to do so I can get this over with.\u201D "
+  text: "You\u2019re bothering me already. Just tell me what I have to do so I can
+    get this over with."
   description: 
   targetBlock: {fileID: 1172844060}
   hideIfVisited: 0
@@ -3279,9 +3928,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: "Alley:\n\n\u201CYAAAY! LETS WORK TOGETHER JOHN!\u201D "
+  storyText: YAAAY! LETS WORK TOGETHER JOHN!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2134024341}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3317,8 +3966,10 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1172844051}
   commandList:
+  - {fileID: 1172844066}
   - {fileID: 1172844044}
   - {fileID: 1172844043}
+  - {fileID: 1172844067}
   - {fileID: 1172844042}
 --- !u!114 &1172844059
 MonoBehaviour:
@@ -3334,7 +3985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 404.92786
+    x: 405.95877
     y: 102.268005
     width: 120
     height: 40
@@ -3345,8 +3996,10 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1172844052}
   commandList:
+  - {fileID: 1172844069}
   - {fileID: 1172844047}
   - {fileID: 1172844045}
+  - {fileID: 1172844068}
   - {fileID: 1172844046}
 --- !u!114 &1172844060
 MonoBehaviour:
@@ -3362,7 +4015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 201.75266
+    x: 200.72173
     y: 102.69073
     width: 120
     height: 40
@@ -3373,8 +4026,10 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1172844055}
   commandList:
+  - {fileID: 1172844070}
   - {fileID: 1172844050}
   - {fileID: 1172844049}
+  - {fileID: 1172844065}
   - {fileID: 1172844048}
 --- !u!114 &1172844061
 MonoBehaviour:
@@ -3399,9 +4054,12 @@ MonoBehaviour:
   itemId: 0
   blockName: Conversation Start
   description: 
-  eventHandler: {fileID: 0}
+  eventHandler: {fileID: 1172844073}
   commandList:
+  - {fileID: 1172844072}
+  - {fileID: 1172844071}
   - {fileID: 1172844057}
+  - {fileID: 1172844064}
   - {fileID: 1172844056}
   - {fileID: 1172844054}
   - {fileID: 1172844053}
@@ -3431,7 +4089,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1172844058}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1172844042}
   variables: []
   description: 
   stepPause: 0
@@ -3457,6 +4116,287 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1172844064
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172844041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  indentLevel: 0
+  storyText: How do you respond?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1172844065
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172844041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300002, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1172844066
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172844041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 24
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300002, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1172844067
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172844041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 23
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300010, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1172844068
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172844041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300004, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1172844069
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172844041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300002, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1172844070
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172844041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300004, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1172844071
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172844041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2015363990}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 275020a402ad0b14193b81bc143562e8, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 2101064939}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1172844072
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172844041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2134024341}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1065773623}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1172844073
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172844041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1172844061}
+  waitForFrames: 1
 --- !u!1 &1243541130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3598,7 +4538,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1243541133}
   selectedCommands:
-  - {fileID: 1243541131}
+  - {fileID: 1243541132}
   variables: []
   description: 
   stepPause: 0
@@ -3722,7 +4662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 212405654}
+  selectedFlowchart: {fileID: 1172844062}
 --- !u!4 &1365454984
 Transform:
   m_ObjectHideFlags: 1
@@ -3967,8 +4907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: John
-  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  nameText: McCaw
+  nameColor: {r: 0.8113208, g: 0.4919069, b: 0.25640798, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: 275020a402ad0b14193b81bc143562e8, type: 3}
@@ -4023,7 +4963,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -460.43, y: -900}
+  m_AnchoredPosition: {x: -460.43, y: -780}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2101064940
@@ -4093,15 +5033,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Alley
-  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  nameColor: {r: 0.67251176, g: 0.39716092, b: 0.7075472, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 0bf34e84ff35b5f4290a45ce870e59d4, type: 3}
-  - {fileID: 21300002, guid: 0bf34e84ff35b5f4290a45ce870e59d4, type: 3}
-  - {fileID: 21300004, guid: 0bf34e84ff35b5f4290a45ce870e59d4, type: 3}
-  - {fileID: 21300006, guid: 0bf34e84ff35b5f4290a45ce870e59d4, type: 3}
-  - {fileID: 21300008, guid: 0bf34e84ff35b5f4290a45ce870e59d4, type: 3}
-  - {fileID: 21300010, guid: 0bf34e84ff35b5f4290a45ce870e59d4, type: 3}
+  - {fileID: 21300000, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  - {fileID: 21300002, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  - {fileID: 21300004, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  - {fileID: 21300006, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  - {fileID: 21300008, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
+  - {fileID: 21300010, guid: 887fe68d3bef2914d8f10ba53894dccf, type: 3}
   portraitsFace: 1
   setSayDialog: {fileID: 0}
   description: 
