@@ -12,7 +12,7 @@ public class Enemy_Manager : MonoBehaviour
     [SerializeField]
     private int Max_Possible_Health;
     private int Max_Health;
-    private int Health;
+    public int Health;
     [SerializeField]
     private int Min_Damage;
     [SerializeField]
