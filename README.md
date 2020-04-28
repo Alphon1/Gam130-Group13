@@ -16,3 +16,6 @@
 
 ## Writer
 * Ellie Withers
+
+## Asset pack used
+* Synty studio - Polygon Sci-Fi pack. Available at: https://syntystore.com/products/polygon-sci-fi-city
