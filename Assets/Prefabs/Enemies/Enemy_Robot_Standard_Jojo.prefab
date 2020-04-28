@@ -1668,6 +1668,7 @@ MonoBehaviour:
   Anim_Damage_Taken: {fileID: 0}
   Min_Possible_Health: 26
   Max_Possible_Health: 34
+  Health: 0
   Min_Damage: 4
   Max_Damage: 8
   Min_Healing: 3
