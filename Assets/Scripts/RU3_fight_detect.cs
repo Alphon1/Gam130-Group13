@@ -9,9 +9,14 @@ public class RU3_fight_detect : MonoBehaviour
     public bool fightOver = false;
     private Enemy_Manager Enemyscript;
 
+    void Start()
+    {
+        Enemyscript = RU3.GetComponent<Enemy_Manager>();
+    }
+
     void Update()
     {
-        if (Enemyscript.Health >= 0)
+        if (Enemyscript.Health <= 0)
         {
             //fightOver = true;
             PostDialogue.SetActive(true);
