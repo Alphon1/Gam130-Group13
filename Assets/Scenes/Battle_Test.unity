@@ -332,12 +332,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74ba70c2386aa47579d67dbb9edba379, type: 3}
---- !u!95 &433684046 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7351894422220167234, guid: 74ba70c2386aa47579d67dbb9edba379,
-    type: 3}
-  m_PrefabInstance: {fileID: 433684044}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &433684047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7351894422291827796, guid: 74ba70c2386aa47579d67dbb9edba379,
@@ -587,6 +581,7 @@ Transform:
   - {fileID: 7351894422127222567}
   - {fileID: 433684047}
   - {fileID: 1386433113}
+  - {fileID: 2074701630}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -665,6 +660,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 019787161d9504442a549473eb202943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1681957719
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1388493305}
+    m_Modifications:
+    - target: {fileID: 7058071250131654536, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy_Robot_Standard_Jojo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -25.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00000028088027
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -179.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4bcfcc15aa7f84f6db5ba32d5574e059, type: 3}
 --- !u!1 &1740150855
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +1007,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d2d26a531a02c74fa3b807ac76c6419, type: 3}
+--- !u!4 &2074701630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+    type: 3}
+  m_PrefabInstance: {fileID: 1681957719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1879030828078942624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1588,6 +1658,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9099786288286666799, guid: a8db553a34d1ccd41aece9c515184b20, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8db553a34d1ccd41aece9c515184b20, type: 3}
+--- !u!95 &4098094859672061125 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4098094859672061125, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
+    type: 3}
+  m_PrefabInstance: {fileID: 7058071250909650384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7058071250909650384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1599,11 +1675,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_Robot_Standard_Jojo
-      objectReference: {fileID: 0}
-    - target: {fileID: 7058071250131654536, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7058071250131654537, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
         type: 3}
@@ -1660,21 +1731,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4098094859672061122, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 4098094859672061123, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
         type: 3}
       propertyPath: Anim_Damage_Taken
       value: 
-      objectReference: {fileID: 433684046}
-    - target: {fileID: 4098094859672061124, guid: 4bcfcc15aa7f84f6db5ba32d5574e059,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4098094859672061125}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bcfcc15aa7f84f6db5ba32d5574e059, type: 3}
 --- !u!1001 &7351894422127222566
