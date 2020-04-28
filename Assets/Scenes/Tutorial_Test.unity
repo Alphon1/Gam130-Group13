@@ -4017,6 +4017,12 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 1242627719}
+    - target: {fileID: 7255195408385575656, guid: 1cbfbb5ec3d1fbc40852f2cd696f653d,
+        type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300002, guid: 887fe68d3bef2914d8f10ba53894dccf,
+        type: 3}
     - target: {fileID: 7255195408385575659, guid: 1cbfbb5ec3d1fbc40852f2cd696f653d,
         type: 3}
       propertyPath: character
