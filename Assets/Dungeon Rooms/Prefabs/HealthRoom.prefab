@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 2033178317193910834}
   - component: {fileID: 8459496441974129832}
   - component: {fileID: 4915380662110094759}
+  - component: {fileID: 4096147803655426887}
+  - component: {fileID: 9010252496442223703}
   m_Layer: 0
   m_Name: HealthRoom
   m_TagString: HealthRoom
@@ -125,6 +127,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.23010243, y: 0.23015814, z: 0.23008439}
   m_Center: {x: 0.015051223, y: -0.015079074, z: -0.015042201}
+--- !u!114 &4096147803655426887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033178317195838706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73d177377058b64b8e53bf151d24f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+--- !u!54 &9010252496442223703
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033178317195838706}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!114 &1773875824294984918
 MonoBehaviour:
   m_ObjectHideFlags: 0
