@@ -408,18 +408,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -77.702, z: 0}
---- !u!114 &435995635 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8497136470784429284, guid: 99d8fbe7b20fdf04b9e28106b673226a,
-    type: 3}
-  m_PrefabInstance: {fileID: 8497136470646296343}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &572944830
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 435995635}
+  selectedFlowchart: {fileID: 398003083}
 --- !u!4 &1365454984
 Transform:
   m_ObjectHideFlags: 1
@@ -2091,6 +2079,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tutorial Dialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 8497136470784429284, guid: 99d8fbe7b20fdf04b9e28106b673226a,
+        type: 3}
+      propertyPath: selectedBlocks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8497136470784429283, guid: 99d8fbe7b20fdf04b9e28106b673226a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2145,11 +2138,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8497136470784429284, guid: 99d8fbe7b20fdf04b9e28106b673226a,
-        type: 3}
-      propertyPath: selectedBlocks.Array.size
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8497136470784429305, guid: 99d8fbe7b20fdf04b9e28106b673226a,
         type: 3}
