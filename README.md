@@ -17,5 +17,6 @@
 ## Writer
 * Ellie Withers
 
-## Asset pack used
+## External Assets used
 * Synty studio - Polygon Sci-Fi pack. Available at: https://syntystore.com/products/polygon-sci-fi-city
+* Future Ramen - Cyberpunk Vol. 1 Music Pack. Available at: https://forum.unity.com/threads/free-cyberpunk-vol-1-music-pack-future-ramen.856546/
